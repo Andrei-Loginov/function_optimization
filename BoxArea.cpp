@@ -3,19 +3,21 @@
 BoxArea::BoxArea(){
 }
 
-BoxArea::BoxArea(double up, double low, double lft, double rght) : upper(up), lower(low),
-                                                                    left(lft), right(rght){
+BoxArea::BoxArea(int ndim, const std::vector<dimension_limits>& lim) : ndim_(ndim), limits_(lim){
+    assert(limits_.size() == size_t(ndim));
 }
 
-BoxArea::BoxArea(const BoxArea& other) : upper(other.upper), lower(other.lower),
-                                        left(other.left), right(other.right){
+BoxArea::BoxArea(const BoxArea& other) : ndim_(other.ndim_), limits_(other.limits_){
 }
 
-BoxArea::BoxArea(BoxArea&& other) : upper(other.upper), lower(other.lower),
-    left(other.left), right(other.right) {
-    other.left = other.right = other.lower = other.upper = 0;
+BoxArea::BoxArea(BoxArea&& other) : ndim_(other.ndim_), limits_(other.limits_) {
+    other.ndim_ = 0;
+    other.limits_.resize(0);
 }
 
-bool BoxArea::is_in(double x, double y) const{
-    return (x >= left && x <= right && y >= lower && y <= upper);
+bool BoxArea::is_in(const std::vector<double>& point) const{
+    if (point.size() != limits_.size()) return false;
+    for (size_t i = 0; i < point.size(); ++i)
+        if (point[i] < limits_[i].lower || point[i] > limits_[i].upper) return false;
+    return true;
 }

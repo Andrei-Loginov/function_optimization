@@ -9,6 +9,9 @@ CONFIG -= app_bundle
 
 SOURCES += \
         BoxArea.cpp \
+        OptimizationMethod.cpp \
+        SingletonGenerator.cpp \
+        StopCriterion.cpp \
         function.cpp \
         main.cpp
 
@@ -19,4 +22,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     BoxArea.h \
+    OptimizationMethod.h \
+    SingletonGenerator.h \
+    StopCriterion.h \
     function.h

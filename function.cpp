@@ -1,5 +1,9 @@
 #include "function.h"
 
+Function::Function() {
+
+}
+
 Function::Function(int dim, double (*func)(std::vector<double>)) : ndim(dim), function(func){
 
 }

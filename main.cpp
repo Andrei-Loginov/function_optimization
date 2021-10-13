@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "Function.h"
+#include "function.h"
 
 double sqr(std::vector<double> x){
     return x[0]*x[0];

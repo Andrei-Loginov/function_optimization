@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SINGLETONGENERATOR_H
 #define SINGLETONGENERATOR_H
 #include <random>

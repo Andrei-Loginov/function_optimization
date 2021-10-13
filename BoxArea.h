@@ -1,6 +1,8 @@
+#pragma once
 #ifndef BOXAREA_H
 #include <vector>
 #include <cassert>
+#include <fstream>
 #define BOXAREA_H
 
 struct dimension_limits{
@@ -12,15 +14,22 @@ struct dimension_limits{
 
 class BoxArea
 {
-    int ndim_ = 0;
+protected:
+    size_t ndim_ = 0;
     std::vector<dimension_limits> limits_;
+
 public:
     BoxArea();
-    BoxArea(int dim, const std::vector<dimension_limits>& lim);
+    BoxArea(size_t dim, const std::vector<dimension_limits>& lim);
     BoxArea(const BoxArea& other);
     BoxArea(BoxArea&& other);
 
+    size_t dim() const;
+    void swap(BoxArea& other) noexcept;
+    BoxArea& operator=(BoxArea& other) noexcept;
     bool is_in(const std::vector<double>& point) const;
+    friend void BoxSwap(BoxArea& lhs, BoxArea& rhs);
+    friend std::ostream& operator<<(std::ostream& stream, const BoxArea& area);
 };
 
 #endif // BOXAREA_H

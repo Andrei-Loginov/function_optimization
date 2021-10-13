@@ -35,7 +35,7 @@ Function& Function::operator=(Function other){
     return *this;
 }
 
-int Function::dim() const {
+size_t Function::dim() const {
     return ndim;
 }
 

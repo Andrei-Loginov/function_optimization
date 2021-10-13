@@ -1,3 +1,4 @@
+#pragma once
 #ifndef STOPCRITERION_H
 #include <vector>
 #include <string>
@@ -8,10 +9,17 @@ class OptimizationMethod;
 class StopCriterion
 {
 protected:
-    const std::string name;
-public:
+    std::string name;
+    void swap(StopCriterion& other) noexcept;
+
     StopCriterion();
+    StopCriterion(const StopCriterion& other);
+    StopCriterion(StopCriterion&& other) noexcept;
+public:
+
     virtual bool criterion(OptimizationMethod*) = 0;
+
+    StopCriterion& operator=(StopCriterion& other) noexcept;
 };
 
 #endif

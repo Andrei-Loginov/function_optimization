@@ -32,7 +32,7 @@ void BoxSwap(BoxArea& lhs, BoxArea& rhs){
     lhs.swap(rhs);
 }
 
-BoxArea& BoxArea::operator=(BoxArea &other) noexcept {
+BoxArea& BoxArea::operator=(BoxArea other) noexcept {
     this->swap(other);
     return *this;
 }
@@ -46,4 +46,8 @@ std::ostream& operator<<(std::ostream& stream, const BoxArea& area){
 
 size_t BoxArea::dim() const{
     return limits_.size();
+}
+
+dimension_limits BoxArea::get_limits(size_t i) const {
+    return limits_[i];
 }

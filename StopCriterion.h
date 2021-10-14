@@ -18,8 +18,7 @@ protected:
 public:
 
     virtual bool criterion(OptimizationMethod*) = 0;
-
-    StopCriterion& operator=(StopCriterion& other) noexcept;
+    bool operator()(OptimizationMethod*);
 };
 
 #endif

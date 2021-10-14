@@ -26,10 +26,12 @@ public:
 
     size_t dim() const;
     void swap(BoxArea& other) noexcept;
-    BoxArea& operator=(BoxArea& other) noexcept;
+    BoxArea& operator=(BoxArea other) noexcept;
     bool is_in(const std::vector<double>& point) const;
+    dimension_limits get_limits(size_t i) const;
     friend void BoxSwap(BoxArea& lhs, BoxArea& rhs);
     friend std::ostream& operator<<(std::ostream& stream, const BoxArea& area);
+
 };
 
 #endif // BOXAREA_H

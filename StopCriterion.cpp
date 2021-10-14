@@ -12,7 +12,6 @@ void StopCriterion::swap(StopCriterion& other) noexcept {
     std::swap(name, other.name);
 }
 
-StopCriterion& StopCriterion::operator=(StopCriterion &other) noexcept {
-    this->swap(other);
-    return *this;
+bool StopCriterion::operator()(OptimizationMethod* method){
+    return criterion(method);
 }

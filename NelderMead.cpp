@@ -38,6 +38,7 @@ Result NelderMead::optimize(){
     if (start_simplex_.size() == 0)
         init_simplex();
     curr_simplex_ = start_simplex_;
+
     search();
     return Result(x_trajectory_.back(), target_func_->eval(x_trajectory_.back()), niter_);
 }

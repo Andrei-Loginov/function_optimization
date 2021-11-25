@@ -37,7 +37,36 @@ double OptimizationMethod::get_unif(double lower, double upper){
 }
 
 void OptimizationMethod::search(){
-    while (!stop_crit_->criterion(this)){
+    while (!stop_crit_->criterion(get_status())){
         make_iter();
     }
+}
+
+std::vector<double> operator+(const std::vector<double>& lhs, const std::vector<double>& rhs){
+    if (lhs.size() != rhs.size())
+        throw std::domain_error("Inequal sizes of vectors");
+    std::vector<double> ans(lhs.size());
+    for (size_t i = 0; i < lhs.size(); ++i)
+        ans[i] = lhs[i] + rhs[i];
+    return ans;
+}
+
+std::vector<double> operator*(const std::vector<double>& v, double a){
+    std::vector<double> ans(v.size());
+    for (size_t i = 0; i < ans.size(); ++i)
+        ans[i] = v[i] * a;
+    return ans;
+}
+
+std::vector<double> operator*(double a, const std::vector<double>& v){
+    return v*a;
+}
+
+std::vector<double> operator/(const std::vector<double>& v, double a){
+    if (fabs(a) < eps)
+        throw std::domain_error("Division by zero");
+    std::vector<double> ans(v.size());
+    for (size_t i = 0; i < v.size(); ++i)
+        ans[i] = v[i] / a;
+    return ans;
 }

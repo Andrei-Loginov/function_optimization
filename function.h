@@ -22,7 +22,6 @@ public:
     double eval(const std::vector<double>& args) const;
 
     void set_func(int new_dim, double (*new_func)(std::vector<double>));
-
     size_t dim() const;
 };
 

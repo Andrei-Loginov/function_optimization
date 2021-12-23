@@ -3,6 +3,7 @@
 #include <vector>
 #define FUNCTION_H
 
+#define debug
 
 class Function
 {

@@ -10,6 +10,8 @@ CONFIG -= app_bundle
 SOURCES += \
         BoxArea.cpp \
         MethodStatus.cpp \
+        NMSDstop.cpp \
+        NMStatus.cpp \
         NelderMead.cpp \
         OptimizationMethod.cpp \
         SingletonGenerator.cpp \
@@ -25,6 +27,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     BoxArea.h \
     MethodStatus.h \
+    NMSDstop.h \
+    NMStatus.h \
     NelderMead.h \
     OptimizationMethod.h \
     SingletonGenerator.h \

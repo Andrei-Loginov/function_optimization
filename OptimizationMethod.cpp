@@ -39,6 +39,7 @@ double OptimizationMethod::get_unif(double lower, double upper){
 void OptimizationMethod::search(){
     while (!stop_crit_->criterion(get_status())){
         make_iter();
+        ++niter_;
     }
 }
 
@@ -48,6 +49,15 @@ std::vector<double> operator+(const std::vector<double>& lhs, const std::vector<
     std::vector<double> ans(lhs.size());
     for (size_t i = 0; i < lhs.size(); ++i)
         ans[i] = lhs[i] + rhs[i];
+    return ans;
+}
+
+std::vector<double> operator-(const std::vector<double>& lhs, const std::vector<double>& rhs){
+    if (lhs.size() != rhs.size())
+        throw std::domain_error("Inequal sizes of vectors");
+    std::vector<double> ans(lhs.size());
+    for (size_t i = 0; i < lhs.size(); ++i)
+        ans[i] = lhs[i] - rhs[i];
     return ans;
 }
 
@@ -69,4 +79,15 @@ std::vector<double> operator/(const std::vector<double>& v, double a){
     for (size_t i = 0; i < v.size(); ++i)
         ans[i] = v[i] / a;
     return ans;
+}
+
+std::ostream& operator<<(std::ostream& stream, const std::vector<double>& v){
+    stream << "Vector of size " << v.size() << ": ";
+    for (auto iter = v.begin(); iter != v.end(); ++iter)
+        stream << *iter << " ";
+    return stream;
+}
+
+size_t OptimizationMethod::get_n_iter() const{
+    return niter_;
 }

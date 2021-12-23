@@ -9,11 +9,13 @@ public:
     MethodStatus();
     MethodStatus(const MethodStatus& other);
     MethodStatus(MethodStatus&& other) noexcept;
+    MethodStatus(size_t niter);
     void swap(MethodStatus& other) noexcept;
     MethodStatus& operator=(MethodStatus other);
     size_t get_n_iter() const;
 protected:
     size_t n_iter_;
+
 
 };
 

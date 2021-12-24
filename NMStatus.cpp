@@ -8,7 +8,8 @@ NMStatus::NMStatus(const NMStatus& other) : MethodStatus(other), value(other.val
 
 }
 
-NMStatus::NMStatus(size_t niter, const std::vector<double>* values) : MethodStatus(niter), value(values){
+NMStatus::NMStatus(size_t niter, const std::vector<double>* values, bool area_flg) : MethodStatus(niter), value(values),
+                                                                                     out_of_area_flg_(area_flg){
 
 }
 
@@ -16,6 +17,7 @@ NMStatus::NMStatus(size_t niter, const std::vector<double>* values) : MethodStat
 void NMStatus::swap(NMStatus& other) noexcept{
     MethodStatus::swap(other);
     std::swap(value, other.value);
+    std::swap(out_of_area_flg_, other.out_of_area_flg_);
 }
 
 NMStatus& NMStatus::operator=(NMStatus other){
@@ -29,4 +31,8 @@ double NMStatus::get_value(size_t ind){
 
 size_t NMStatus::get_npoints() noexcept{
     return value->size();
+}
+
+bool NMStatus::get_out_of_area_flg() const{
+    return out_of_area_flg_;
 }

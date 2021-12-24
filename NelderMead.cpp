@@ -16,17 +16,23 @@ NelderMead::NelderMead(Function* func, BoxArea* area, StopCriterion* crit,
 NelderMead::NelderMead(const NelderMead& other) : OptimizationMethod(other), simplex_(other.simplex_),
                                                   simplex_fun_value_(other.simplex_fun_value_), curr_point_(other.curr_point_),
                                                   index_h(other.index_h), index_l(other.index_l), index_g(other.index_g),
-                                                  alpha_(other.alpha_), beta_(other.beta_), gamma_(other.gamma_){
+                                                  alpha_(other.alpha_), beta_(other.beta_), gamma_(other.gamma_),
+                                                  out_of_area_flg_(other.out_of_area_flg_) {
 }
 
 NelderMead::NelderMead(NelderMead&& other) : OptimizationMethod(other), simplex_(std::move(other.simplex_)),
                                              simplex_fun_value_(std::move(other.simplex_fun_value_)),
                                                curr_point_(std::move(other.curr_point_)),
                                                index_h(other.index_h), index_l(other.index_l), index_g(other.index_g),
-                                               alpha_(other.alpha_), beta_(other.beta_), gamma_(other.gamma_){
+                                               alpha_(other.alpha_), beta_(other.beta_), gamma_(other.gamma_),
+                                                out_of_area_flg_(other.out_of_area_flg_) {
     other.index_h = 0;
     other.index_l = 0;
     other.index_g = 0;
+    other.alpha_ = 0;
+    other.beta_ = 0;
+    other.gamma_ = 0;
+    other.out_of_area_flg_ = 0;
 }
 
 void NelderMead::swap(NelderMead &other) noexcept {
@@ -40,6 +46,7 @@ void NelderMead::swap(NelderMead &other) noexcept {
     std::swap(alpha_, other.alpha_);
     std::swap(beta_, other.beta_);
     std::swap(gamma_, other.gamma_);
+    std::swap(out_of_area_flg_, other.out_of_area_flg_);
 }
 
 NelderMead& NelderMead::operator=(NelderMead other){
@@ -71,7 +78,7 @@ Result NelderMead::optimize(){
         init_simplex();
     evaluate_fun_simplex();
     search();
-    return Result(x_trajectory_.back(), target_func_->eval(x_trajectory_.back()), niter_);
+    return Result(x_trajectory_.back(), target_func_->eval(x_trajectory_.back()), niter_, out_of_area_flg_);
 }
 
 
@@ -89,14 +96,28 @@ void NelderMead::make_iter(){
     }
     find_indices();
     update_trajectory();
+    for (size_t i = 0; i < simplex_.size(); ++i)
+        if (!area_->is_in(simplex_[i])){
+            out_of_area_flg_ = true;
+            std::cout << "Point outside area: " << simplex_[i] << "\n";
+            return;
+        }
     evaluate_fun_simplex();
     std::vector<double> x_r, x_e, x_c;
     double f_r, f_e, f_c;
 
     x_r = -alpha_ * simplex_[index_h] + (1+alpha_) * x_trajectory_[niter_];
+    //std::cout << "x_r:" << x_r << "\n";
+    if (!area_->is_in(x_r)){
+        out_of_area_flg_ = true;
+        //std::cout << "x_h: " << simplex_[index_h] << "\n";
+        //std::cout << "x_0: " << x_trajectory_[niter_] << "\n";
+        //std::cout << "Point outside area x_r: " << x_r << "\n";
+        return;
+    }
     f_r = target_func_->eval(x_r);
-
 /*
+    std::cout << "Iteration " << niter_ << "\n";
     std::cout << "Simplex values:\n";
     for (size_t i = 0; i < simplex_.size(); ++i)
         std::cout << "\t" << simplex_[i] << "\n\tf(x) = " << simplex_fun_value_[i] << '\n';
@@ -106,6 +127,11 @@ void NelderMead::make_iter(){
 */
     if (f_r < simplex_fun_value_[index_l]){
         x_e = (1 - gamma_) * x_trajectory_[niter_] + gamma_ * x_r;
+        if (!area_->is_in(x_e)){
+            out_of_area_flg_ = true;
+            //std::cout << "Point outside area x_e: " << x_e << "\n";
+            return;
+        }
         f_e = target_func_->eval(x_e);
         if (f_e < f_r){
             simplex_[index_h] = x_e;
@@ -128,6 +154,11 @@ void NelderMead::make_iter(){
             std::swap(simplex_fun_value_[index_h], f_r);
         }
         x_c = beta_ * simplex_[index_h] + (1 - beta_) * x_trajectory_[niter_];
+        if (!area_->is_in(x_c)){
+            //std::cout << "Point outside area x_c: " << x_c << "\n";
+            out_of_area_flg_ = true;
+            return;
+        }
         f_c = target_func_->eval(x_c);
         if (f_c < simplex_fun_value_[index_h]) {
             simplex_[index_h] = x_c;
@@ -146,7 +177,7 @@ void NelderMead::make_iter(){
 
 MethodStatus* NelderMead::get_status() const{
     //std::cout << "\n";
-    return new NMStatus(niter_, &simplex_fun_value_);
+    return new NMStatus(niter_, &simplex_fun_value_, out_of_area_flg_);
 }
 
 std::vector<double> NelderMead::update_trajectory(){

@@ -45,7 +45,7 @@ bool NMSDstop::criterion(MethodStatus *status){
     if (!info) throw std::bad_cast();
 
     if (info->get_n_iter() > max_iter) return true;
-
+    if (info->get_out_of_area_flg()) return true;
     if (info->get_npoints() == 0) throw std::invalid_argument("NMStatus::value has length NMStatus::get_n() = 0.");
 
     //std::cout << "Iteration " << status->get_n_iter() << "\n";

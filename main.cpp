@@ -29,9 +29,9 @@ double Rosenbrock_3d(std::vector<double> x){
 }
 
 int main(){
-    SingletonGenerator::get_mt().seed(15995);
+    SingletonGenerator::get_mt().seed(195);
     Function f(2, parabolic);
-    std::vector<dimension_limits> lim = {dimension_limits(-3, 3), dimension_limits(-3, 3)};
+    std::vector<dimension_limits> lim = {dimension_limits(-10, 10), dimension_limits(-10, 10)};
     NelderMead optimizer(&f, new BoxArea(2, lim), new NMSDstop(1000));
     //Result res = optimizer.optimize();
     //std::cout << res.x[0] << " " << res.x[1] << " " << res.y << "\n";
@@ -41,13 +41,15 @@ int main(){
     std::cout << "Evaluate ros at (1, 1): " << ros.eval(arg) << "\n\n";
     std::vector<std::vector<double>> init_simplex(3);
     init_simplex[0] = {0, 0}; init_simplex[1] = {-1, -1}; init_simplex[2] = {1.5, 1.5};
-    NelderMead optimRos(&ros, new BoxArea(2, lim), new NMSDstop(100), 1, 0.5, 2);
+    NelderMead optimRos(&ros, new BoxArea(2, lim), new NMSDstop(100), 1, 0.5, 2, init_simplex);
     Result res = optimRos.optimize();
-    std::cout << res.x[0] << " " << res.x[1] << " " << res.y << "\n";
-    std::vector<dimension_limits> lim3 = {dimension_limits(-3, 3), dimension_limits(-3, 3), dimension_limits(-3, 3)};
+    if (res.out_of_area_flg)
+        std::cout << "The method was stopped becuase one of points has gone outside the are. The lsast iteration: ";
+    std::cout << "f(" << res.x[0] << ", " << res.x[1] << ") = " << res.y << "\n";
+    std::vector<dimension_limits> lim3 = {dimension_limits(-10, 10), dimension_limits(-10, 10), dimension_limits(-10, 10)};
     Function ros3(3, Rosenbrock_3d);
     NelderMead optimRos3(&ros3, new BoxArea(3, lim3), new NMSDstop(100), 1, 0.5, 2);
     res = optimRos3.optimize();
-    std::cout << res.x[0] << " " << res.x[1] << " " << res.x[2] << " " << res.y << "\n";
+    std::cout << res.out_of_area_flg << " " << res.x[0] << " " << res.x[1] << " " << res.x[2] << " " << res.y << "\n";
     return 0;
 }

@@ -16,6 +16,7 @@ protected:
     MethodStatus* get_status() const;
     std::vector<double> update_trajectory();
     double alpha_ = 1, beta_ = 0.5, gamma_ = 2;
+    bool out_of_area_flg_ = false;
 
 public:
     NelderMead();

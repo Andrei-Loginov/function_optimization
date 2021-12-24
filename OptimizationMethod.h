@@ -17,7 +17,11 @@ struct Result{
     std::vector<double> x;
     double y;
     size_t niter;
-    Result(std::vector<double> point, double value, size_t iterations) : x(point), y(value), niter(iterations){}
+    bool out_of_area_flg = false;
+    Result(std::vector<double> point, double value, size_t iterations, bool area_flg = false) : x(point),
+                                                                                                y(value),
+                                                                                                niter(iterations),
+                                                                                                out_of_area_flg(area_flg){}
 };
 
 std::vector<double> operator+(const std::vector<double>& lhs, const std::vector<double>& rhs);
@@ -43,6 +47,7 @@ protected:
     size_t ndim_;
     size_t niter_ = 0;
     std::vector<std::vector<double>> x_trajectory_;
+    //bool out_of_range_flg_ = false;
 
 
     virtual MethodStatus* get_status() const = 0;

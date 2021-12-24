@@ -3,6 +3,8 @@
 #include "function.h"
 #include "NelderMead.h"
 #include "NMSDstop.h"
+#include "StohasticOptimization.h"
+#include "StohIterStop.h"
 
 double sqr(std::vector<double> x){
     return x[0]*x[0];
@@ -29,7 +31,7 @@ double Rosenbrock_3d(std::vector<double> x){
 }
 
 int main(){
-    SingletonGenerator::get_mt().seed(195);
+    SingletonGenerator::get_mt().seed(1905);
     Function f(2, parabolic);
     std::vector<dimension_limits> lim = {dimension_limits(-10, 10), dimension_limits(-10, 10)};
     NelderMead optimizer(&f, new BoxArea(2, lim), new NMSDstop(1000));
@@ -55,5 +57,10 @@ int main(){
     res = optimRos3.optimize();
     std::cout << "Iterations: " << res.niter << "\n";
     std::cout << res.out_of_area_flg << " " << res.x[0] << " " << res.x[1] << " " << res.x[2] << " " << res.y << "\n";
+
+    StohasticOptimization random_optim(&ros, new BoxArea(2, lim), new StohIterStop(1000000, 100000));
+    res = random_optim.optimize();
+    std::cout << "Ierations: " << res.niter << "\n";
+    std::cout << res.x[0] << " " << res.x[1] << " " << res.y << "\n";
     return 0;
 }

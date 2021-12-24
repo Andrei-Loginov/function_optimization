@@ -90,10 +90,10 @@ void NelderMead::evaluate_fun_simplex(){
 }
 
 void NelderMead::make_iter(){
-    if (!simplex_.size()){
+    /*if (!simplex_.size()){
         init_simplex();
         evaluate_fun_simplex();
-    }
+    }*/
     find_indices();
     update_trajectory();
     for (size_t i = 0; i < simplex_.size(); ++i)

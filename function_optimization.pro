@@ -17,6 +17,7 @@ SOURCES += \
         SingletonGenerator.cpp \
         StohIterStop.cpp \
         StohStatus.cpp \
+        StohasticOptimization.cpp \
         StopCriterion.cpp \
         function.cpp \
         main.cpp
@@ -36,5 +37,6 @@ HEADERS += \
     SingletonGenerator.h \
     StohIterStop.h \
     StohStatus.h \
+    StohasticOptimization.h \
     StopCriterion.h \
     function.h

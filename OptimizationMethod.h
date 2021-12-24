@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <cmath>
 #include <array>
+#include <stdexcept>
 
 #define eps 1e-5
 

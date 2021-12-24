@@ -20,7 +20,8 @@ OptimizationMethod::OptimizationMethod(Function* func, BoxArea* area, StopCriter
                                                                                              area_(area),
                                                                                              stop_crit_(crit),
                                                                                              ndim_(area_->dim()){
-    assert(area->dim() == func->dim());
+    if (target_func_->dim() != area->dim())
+        throw std::invalid_argument("OptimizationMethod(Function*, BoxArea*, StopCriterion*): inequal number of dimensions.");
 }
 
 void OptimizationMethod::swap(OptimizationMethod& other){

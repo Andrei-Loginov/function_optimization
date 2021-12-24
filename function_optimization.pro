@@ -15,8 +15,8 @@ SOURCES += \
         NelderMead.cpp \
         OptimizationMethod.cpp \
         SingletonGenerator.cpp \
-        StohCritStatus.cpp \
-        StohRandIterStop.cpp \
+        StohIterStop.cpp \
+        StohStatus.cpp \
         StopCriterion.cpp \
         function.cpp \
         main.cpp
@@ -34,7 +34,7 @@ HEADERS += \
     NelderMead.h \
     OptimizationMethod.h \
     SingletonGenerator.h \
-    StohCritStatus.h \
-    StohRandIterStop.h \
+    StohIterStop.h \
+    StohStatus.h \
     StopCriterion.h \
     function.h

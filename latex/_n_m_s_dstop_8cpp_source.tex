@@ -1,0 +1,63 @@
+\hypertarget{_n_m_s_dstop_8cpp_source}{}\doxysection{NMSDstop.\+cpp}
+\mbox{\hyperlink{_n_m_s_dstop_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_m_s_dstop_8h}{NMSDstop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00006}\mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{00006}} \mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{NMSDstop::NMSDstop}}()}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00009}00009 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00011}\mbox{\hyperlink{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}{00011}} \mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{NMSDstop::NMSDstop}}(\textcolor{keywordtype}{size\_t} niter) : \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}(niter)\{\}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00014}00014 \textcolor{keywordtype}{double} NMSDstop::val\_mean(\mbox{\hyperlink{class_n_m_status}{NMStatus}} *status)\textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00015}00015     \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00016}00016     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < status-\/>get\_npoints(); ++i)}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00017}00017         sum += status-\/>get\_value(i);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00018}00018     \textcolor{keywordflow}{return} sum / status-\/>get\_npoints();}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00021}\mbox{\hyperlink{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}{00021}} \mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{NMSDstop::NMSDstop}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}\& other) : \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}(other), epsilon(other.epsilon)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00025}\mbox{\hyperlink{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}{00025}} \mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{NMSDstop::NMSDstop}}(\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}\&\& other) : \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}(other), epsilon(other.epsilon)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00026}00026     other.epsilon = 0;}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00029}00029 \textcolor{keywordtype}{void} NMSDstop::swap(\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}\& other) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00030}00030     \mbox{\hyperlink{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}{StopCriterion::swap}}(other);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00031}00031     std::swap(epsilon, other.epsilon);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00034}\mbox{\hyperlink{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}{00034}} \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}\& \mbox{\hyperlink{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}{NMSDstop::operator=}}(\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} other) \textcolor{keyword}{noexcept}\{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00035}00035     this-\/>swap(other);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00036}00036     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00037}00037 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00039}00039 \textcolor{keywordtype}{double} NMSDstop::val\_sd(\mbox{\hyperlink{class_n_m_status}{NMStatus}} *status) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00040}00040     \textcolor{keywordtype}{double} mean = val\_mean(status), sum = 0;}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00041}00041     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < status-\/>get\_npoints(); ++i)}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00042}00042         sum += pow(status-\/>get\_value(i) -\/ mean, 2);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00043}00043     \textcolor{keywordflow}{return} sum / status-\/>get\_npoints();}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00046}\mbox{\hyperlink{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}{00046}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}{NMSDstop::criterion}}(\mbox{\hyperlink{class_method_status}{MethodStatus}} *status)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00047}00047     \mbox{\hyperlink{class_n_m_status}{NMStatus}}* info = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_n_m_status}{NMStatus}}*\textcolor{keyword}{>}(status);}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00048}00048     \textcolor{keywordflow}{if} (!info) \textcolor{keywordflow}{throw} std::bad\_cast();}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00050}00050     \textcolor{keywordflow}{if} (info-\/>\mbox{\hyperlink{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}{get\_n\_iter}}() > \mbox{\hyperlink{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}{max\_iter}}) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00051}00051     \textcolor{keywordflow}{if} (info-\/>\mbox{\hyperlink{class_n_m_status_a7be9b9a5b746dd1bf8f5adb569d79b63}{get\_out\_of\_area\_flg}}()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00052}00052     \textcolor{keywordflow}{if} (info-\/>\mbox{\hyperlink{class_n_m_status_a72088ce30b888e8c479b07893be28559}{get\_npoints}}() == 0) \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}NMStatus::value has length NMStatus::get\_n() = 0."{}});}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00054}00054     \textcolor{comment}{//std::cout << "{}Iteration "{} << status-\/>get\_n\_iter() << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00055}00055     \textcolor{keywordflow}{if} (val\_sd(info) < epsilon || status-\/>\mbox{\hyperlink{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}{get\_n\_iter}}() > \mbox{\hyperlink{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}{max\_iter}}) \{}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00056}00056        \textcolor{comment}{// std::cout << "{}SD = "{} << val\_sd(info) << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00057}00057         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00059}00059     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_n_m_s_dstop_8cpp_source_l00060}00060 \}}
+
+\end{DoxyCode}

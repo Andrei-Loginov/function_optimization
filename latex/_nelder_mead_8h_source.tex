@@ -1,0 +1,37 @@
+\hypertarget{_nelder_mead_8h_source}{}\doxysection{Nelder\+Mead.\+h}
+\mbox{\hyperlink{_nelder_mead_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef NELDERMEAD\_H}}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00002}00002 \textcolor{preprocessor}{\#define NELDERMEAD\_H}}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_optimization_method_8h}{OptimizationMethod.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_m_status_8h}{NMStatus.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00011}\mbox{\hyperlink{class_nelder_mead}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_nelder_mead}{NelderMead}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}\{}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00012}00012 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00013}\mbox{\hyperlink{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}{00013}}     std::vector<std::vector<double>> \mbox{\hyperlink{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}{simplex\_}}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00014}\mbox{\hyperlink{class_nelder_mead_ace665ce8466fddb7841a5e210e69dfb3}{00014}}     std::vector<double> \mbox{\hyperlink{class_nelder_mead_ace665ce8466fddb7841a5e210e69dfb3}{simplex\_fun\_value\_}}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00015}\mbox{\hyperlink{class_nelder_mead_a1ef6e727a501667b61a82162ef302eae}{00015}}     std::vector<double> \mbox{\hyperlink{class_nelder_mead_a1ef6e727a501667b61a82162ef302eae}{curr\_point\_}}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00016}\mbox{\hyperlink{class_nelder_mead_a788942ba9bfae2b9d543c61904dfc10c}{00016}}     \textcolor{keywordtype}{size\_t} index\_h, index\_l, \mbox{\hyperlink{class_nelder_mead_a788942ba9bfae2b9d543c61904dfc10c}{index\_g}}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00017}00017     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}{init\_simplex}}(); }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00018}00018     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nelder_mead_ada36f8e08dc6a40ba313e7b0c316c070}{evaluate\_fun\_simplex}}(); }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00019}00019     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nelder_mead_a31efba400f580653cadbd90a2ee41721}{make\_iter}}(); }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00020}00020     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nelder_mead_a0efdabcf6db7b1c6f8931be7dbe7ef2f}{find\_indices}}(); }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00021}00021     \mbox{\hyperlink{class_method_status}{MethodStatus}}* \mbox{\hyperlink{class_nelder_mead_ab45b7df4d5c6c6a3022677bea34d7fd7}{get\_status}}() \textcolor{keyword}{const}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00022}00022     std::vector<double> \mbox{\hyperlink{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}{update\_trajectory}}(); }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00023}\mbox{\hyperlink{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}{00023}}     \textcolor{keywordtype}{double} alpha\_ = 1, beta\_ = 0.5, \mbox{\hyperlink{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}{gamma\_}} = 2; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00024}\mbox{\hyperlink{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}{00024}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}{out\_of\_area\_flg\_}} = \textcolor{keyword}{false}; }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00026}00026 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00028}00028     \mbox{\hyperlink{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}{NelderMead}}();}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00033}00033     \mbox{\hyperlink{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}{NelderMead}}(\mbox{\hyperlink{class_function}{Function}}* func, \mbox{\hyperlink{class_box_area}{BoxArea}}* area, \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}* crit,}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00034}00034                \textcolor{keywordtype}{double} alpha = 1, \textcolor{keywordtype}{double} beta = 0.5, \textcolor{keywordtype}{double} gamma = 2,}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00035}00035                \textcolor{keyword}{const} std::vector<std::vector<double>>\& simplex = std::vector<std::vector<double>>());}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00037}00037     \mbox{\hyperlink{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}{NelderMead}}(\mbox{\hyperlink{class_nelder_mead}{NelderMead}}\&\& other);}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00039}00039     \mbox{\hyperlink{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}{NelderMead}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_nelder_mead}{NelderMead}}\& other);}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00041}00041     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}{swap}}(\mbox{\hyperlink{class_nelder_mead}{NelderMead}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00043}00043     \mbox{\hyperlink{class_nelder_mead}{NelderMead}}\& \mbox{\hyperlink{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}{operator=}}(\mbox{\hyperlink{class_nelder_mead}{NelderMead}} other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00045}00045     \mbox{\hyperlink{struct_result}{Result}} \mbox{\hyperlink{class_nelder_mead_a587eb82284f108aa1323cf366ee7ceed}{optimize}}();}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00046}00046 \};}
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_nelder_mead_8h_source_l00048}00048 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NELDERMEAD\_H}}
+
+\end{DoxyCode}

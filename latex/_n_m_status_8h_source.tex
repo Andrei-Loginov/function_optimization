@@ -1,0 +1,26 @@
+\hypertarget{_n_m_status_8h_source}{}\doxysection{NMStatus.\+h}
+\mbox{\hyperlink{_n_m_status_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef NMSTATUS\_H}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00002}00002 \textcolor{preprocessor}{\#define NMSTATUS\_H}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00003}00003 \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_method_status_8h}{MethodStatus.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00010}\mbox{\hyperlink{class_n_m_status}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{class_n_m_status}{NMStatus}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_method_status}{MethodStatus}}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00013}00013     \textcolor{keyword}{const} std::vector<double>* value;}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00015}00015     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_n_m_status}{NMStatus}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00017}00017     \textcolor{keywordtype}{bool} out\_of\_area\_flg\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00018}00018 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00020}00020     \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus}}();}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00022}00022     \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_n_m_status}{NMStatus}}\& other);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00024}\mbox{\hyperlink{class_n_m_status_a0e6f6a2d1dd4ad5837184e5d942545c1}{00024}}     \mbox{\hyperlink{class_n_m_status_a0e6f6a2d1dd4ad5837184e5d942545c1}{NMStatus}}(\mbox{\hyperlink{class_n_m_status}{NMStatus}}\&\& other);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00026}00026     \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus}}(\textcolor{keywordtype}{size\_t} niter, \textcolor{keyword}{const} std::vector<double>* values, \textcolor{keywordtype}{bool} area\_flg = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00028}00028     \mbox{\hyperlink{class_n_m_status}{NMStatus}}\& \mbox{\hyperlink{class_n_m_status_a38cf6ded9c081269b03eb0ca46f51983}{operator=}}(\mbox{\hyperlink{class_n_m_status}{NMStatus}} other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00030}00030     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_status_a3ed6757751884df37e701dd10fc7dc83}{get\_value}}(\textcolor{keywordtype}{size\_t} ind);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00032}00032     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_n_m_status_a72088ce30b888e8c479b07893be28559}{get\_npoints}}() const noexcept;}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00034}00034     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_n_m_status_a7be9b9a5b746dd1bf8f5adb569d79b63}{get\_out\_of\_area\_flg}}() const;}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00035}00035 \};}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8h_source_l00037}00037 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NMSTATUS\_H}}
+
+\end{DoxyCode}

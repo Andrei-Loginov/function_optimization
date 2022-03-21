@@ -1,0 +1,51 @@
+\hypertarget{function_8cpp_source}{}\doxysection{function.\+cpp}
+\mbox{\hyperlink{function_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{function_8h}{function.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00004}\mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{00004}} \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function::Function}}() \{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00006}00006 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00008}\mbox{\hyperlink{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}{00008}} \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function::Function}}(\textcolor{keywordtype}{int} dim, \textcolor{keywordtype}{double} (*func)(std::vector<double>)) : ndim(dim), function(func)\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00012}\mbox{\hyperlink{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}{00012}} \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function::Function}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_function}{Function}}\& other) : ndim(other.ndim), function(other.function)\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00016}\mbox{\hyperlink{class_function_acd1625dba4a8e5eb3be0e29c7adca169}{00016}} \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function::Function}}(\mbox{\hyperlink{class_function}{Function}}\&\& other) noexcept : ndim(other.ndim), function(other.function)\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00017}00017     other.ndim = 0;}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00018}00018     other.function = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00021}\mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{00021}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{Function::eval}}(\textcolor{keyword}{const} std::vector<double>\& args)\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00022}00022     \textcolor{keywordflow}{return} function(args);}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00025}\mbox{\hyperlink{class_function_a2136d8fff483320f33a4128647f1cf58}{00025}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_a2136d8fff483320f33a4128647f1cf58}{Function::operator()}}(\textcolor{keyword}{const} std::vector<double>\& args)\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00026}00026     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}}(args);}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00029}\mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{Function::swap}}(\mbox{\hyperlink{class_function}{Function}}\& other) \textcolor{keyword}{noexcept}\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00030}00030     std::swap(ndim, other.ndim);}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00031}00031     std::swap(function, other.function);}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00034}\mbox{\hyperlink{class_function_a7875f2da6268bf86501b4f9a871d277f}{00034}} \mbox{\hyperlink{class_function}{Function}}\& \mbox{\hyperlink{class_function_a7875f2da6268bf86501b4f9a871d277f}{Function::operator=}}(\mbox{\hyperlink{class_function}{Function}} other)\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00035}00035     this-\/>\mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{swap}}(other);}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00036}00036     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00037}00037 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00039}\mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{00039}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{Function::dim}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00040}00040     \textcolor{keywordflow}{return} ndim;}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00043}\mbox{\hyperlink{class_function_aacb7817ce56421fad01a96b6c1a586e5}{00043}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_aacb7817ce56421fad01a96b6c1a586e5}{Function::set\_func}}(\textcolor{keywordtype}{int} new\_dim, \textcolor{keywordtype}{double} (*new\_func)(std::vector<double>))\{}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00044}00044     ndim = new\_dim;}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00045}00045     function = new\_func;}
+\DoxyCodeLine{\Hypertarget{function_8cpp_source_l00046}00046 \}}
+
+\end{DoxyCode}

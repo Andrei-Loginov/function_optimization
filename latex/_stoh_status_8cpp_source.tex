@@ -1,0 +1,32 @@
+\hypertarget{_stoh_status_8cpp_source}{}\doxysection{Stoh\+Status.\+cpp}
+\mbox{\hyperlink{_stoh_status_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stoh_status_8h}{StohStatus.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00005}\mbox{\hyperlink{class_stoh_status_adea0f3284d8e408d7ba8ff14928f17e3}{00005}} \mbox{\hyperlink{class_stoh_status_adea0f3284d8e408d7ba8ff14928f17e3}{StohStatus::StohStatus}}() : \mbox{\hyperlink{class_method_status}{MethodStatus}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00007}00007 \mbox{\hyperlink{class_stoh_status_adea0f3284d8e408d7ba8ff14928f17e3}{StohStatus::StohStatus}}(\textcolor{keywordtype}{size\_t} niter, \textcolor{keywordtype}{size\_t} iter\_after\_improve) : \mbox{\hyperlink{class_method_status}{MethodStatus}}(niter),}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00008}00008                                                                             niter\_after\_improve\_(iter\_after\_improve)\{}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00012}\mbox{\hyperlink{class_stoh_status_afd1c53b12500b732a999b7d9c7a69af5}{00012}} \mbox{\hyperlink{class_stoh_status_adea0f3284d8e408d7ba8ff14928f17e3}{StohStatus::StohStatus}}(\mbox{\hyperlink{class_stoh_status}{StohStatus}}\&\& other) : \mbox{\hyperlink{class_method_status}{MethodStatus}}(other), niter\_after\_improve\_(other.niter\_after\_improve\_)\{}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00015}\mbox{\hyperlink{class_stoh_status_a79188daa8226aa9859fafd8d65294004}{00015}} \mbox{\hyperlink{class_stoh_status_adea0f3284d8e408d7ba8ff14928f17e3}{StohStatus::StohStatus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stoh_status}{StohStatus}}\& other) : \mbox{\hyperlink{class_method_status}{MethodStatus}}(other), niter\_after\_improve\_(other.niter\_after\_improve\_)\{\}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00017}\mbox{\hyperlink{class_stoh_status_a1290284c55bbe704dce5b3a551686b8a}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stoh_status_a1290284c55bbe704dce5b3a551686b8a}{StohStatus::swap}}(\mbox{\hyperlink{class_stoh_status}{StohStatus}}\& other) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00018}00018     \mbox{\hyperlink{class_method_status_a04f4893c49e13df705979caa3b264017}{MethodStatus::swap}}(other);}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00019}00019     std::swap(niter\_after\_improve\_, other.niter\_after\_improve\_);}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00020}00020 \}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00022}\mbox{\hyperlink{class_stoh_status_a47ca505e8f0956b8e5b8d269bc0e46bf}{00022}} \mbox{\hyperlink{class_stoh_status}{StohStatus}}\& \mbox{\hyperlink{class_stoh_status_a47ca505e8f0956b8e5b8d269bc0e46bf}{StohStatus::operator=}}(\mbox{\hyperlink{class_stoh_status}{StohStatus}} other) \textcolor{keyword}{noexcept}\{}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00023}00023     this-\/>swap(other);}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00024}00024     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00027}\mbox{\hyperlink{class_stoh_status_adcc345c05d59ba242f83eb24a5ac32ad}{00027}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_stoh_status_adcc345c05d59ba242f83eb24a5ac32ad}{StohStatus::get\_niter\_after\_improve}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00028}00028     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_stoh_status_a56ba4a276d6910bb383573e648d530bf}{niter\_after\_improve\_}};}
+\DoxyCodeLine{\Hypertarget{_stoh_status_8cpp_source_l00029}00029 \}}
+
+\end{DoxyCode}

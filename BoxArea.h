@@ -5,6 +5,8 @@
 #include <fstream>
 #define BOXAREA_H
 
+/** \file */
+
 struct dimension_limits{
     double lower = -1, upper = 1;
     dimension_limits() {}

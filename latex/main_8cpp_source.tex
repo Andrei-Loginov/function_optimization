@@ -1,0 +1,70 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{function_8h}{function.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_nelder_mead_8h}{NelderMead.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_m_s_dstop_8h}{NMSDstop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stohastic_optimization_8h}{StohasticOptimization.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stoh_iter_stop_8h}{StohIterStop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010 \textcolor{keywordtype}{double} sqr(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011     \textcolor{keywordflow}{return} x[0]*x[0];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014 \textcolor{keywordtype}{double} my\_sqrt(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015     \textcolor{keywordflow}{return} sqrt(x[0]);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018 \textcolor{keywordtype}{double} my\_func(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019     \textcolor{keywordflow}{return} x[0] + x[1] * x[0];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022 \textcolor{keywordtype}{double} parabolic(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023     \textcolor{keywordflow}{return} x[0]*x[0] + x[1]*x[1];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026 \textcolor{keywordtype}{double} Rosenbrock\_2d(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027     \textcolor{keywordflow}{return} pow(1-\/ x[0], 2) + 100 * pow(x[1] -\/ pow(x[0],2), 2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030 \textcolor{keywordtype}{double} Rosenbrock\_3d(std::vector<double> x)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031     \textcolor{keywordflow}{return} pow(1 -\/ x[0], 2) + 100* pow(x[1] -\/ pow(x[0], 2), 2) + pow(1 -\/ x[1], 2) + 100* pow(x[2] -\/ pow(x[1], 2), 2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034 \textcolor{keywordtype}{int} main()\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035     SingletonGenerator::get\_mt().seed(475);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036     \mbox{\hyperlink{class_function}{Function}} f(2, parabolic);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037     std::vector<dimension\_limits> lim = \{\mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(-\/10, 10), \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(-\/10, 10)\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038     \mbox{\hyperlink{class_nelder_mead}{NelderMead}} optimizer(\&f, \textcolor{keyword}{new} \mbox{\hyperlink{class_box_area}{BoxArea}}(2, lim), \textcolor{keyword}{new} \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}(1000));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039     \textcolor{comment}{//Result res = optimizer.optimize();}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040     \textcolor{comment}{//std::cout << res.x[0] << "{} "{} << res.x[1] << "{} "{} << res.y << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041     \textcolor{comment}{//std::cout << "{}Finished!\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042     \mbox{\hyperlink{class_function}{Function}} ros(2, Rosenbrock\_2d);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043     std::vector<double> arg = \{1, 1\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044     std::cout << \textcolor{stringliteral}{"{}Evaluate ros at (1, 1): "{}} << ros.eval(arg) << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045     std::vector<std::vector<double>> init\_simplex(3), init\_simplex3d(4);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046     init\_simplex[0] = \{0, 0\}; init\_simplex[1] = \{-\/1, -\/1\}; init\_simplex[2] = \{1.5, 1.5\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047     \mbox{\hyperlink{class_nelder_mead}{NelderMead}} optimRos(\&ros, \textcolor{keyword}{new} \mbox{\hyperlink{class_box_area}{BoxArea}}(2, lim), \textcolor{keyword}{new} \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}(100), 1, 0.5, 2, init\_simplex);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048     \mbox{\hyperlink{struct_result}{Result}} res = optimRos.optimize();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049     \textcolor{keywordflow}{if} (res.\mbox{\hyperlink{struct_result_a8074883a1161d151c83e2b246db33e8d}{out\_of\_area\_flg}})}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050         std::cout << \textcolor{stringliteral}{"{}The method was stopped becuase one of points has gone outside the are. The lsast iteration: "{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051     std::cout << \textcolor{stringliteral}{"{}Iterations: "{}} << res.\mbox{\hyperlink{struct_result_abcd42f5f29cf5593a56a0c66e3416854}{niter}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052     std::cout << \textcolor{stringliteral}{"{}f("{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[0] << \textcolor{stringliteral}{"{}, "{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[1] << \textcolor{stringliteral}{"{}) = "{}} << res.\mbox{\hyperlink{struct_result_a48c419d1661b003ef584437bf085f074}{y}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053     std::vector<dimension\_limits> lim3 = \{\mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(-\/10, 10), \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(-\/10, 10), \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(-\/10, 10)\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054     \mbox{\hyperlink{class_function}{Function}} ros3(3, Rosenbrock\_3d);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055     init\_simplex3d[0] = \{0, 0, 0\}; init\_simplex3d[1] = \{-\/1, -\/1, -\/1\}; init\_simplex3d[2] = \{1.5, 1.5, 1.5\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056     init\_simplex3d[3] = \{2, 2, 2\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057     \mbox{\hyperlink{class_nelder_mead}{NelderMead}} optimRos3(\&ros3, \textcolor{keyword}{new} \mbox{\hyperlink{class_box_area}{BoxArea}}(3, lim3), \textcolor{keyword}{new} \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}(100), 1, 0.5, 2, init\_simplex3d);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058     res = optimRos3.optimize();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059     std::cout << \textcolor{stringliteral}{"{}Iterations: "{}} << res.\mbox{\hyperlink{struct_result_abcd42f5f29cf5593a56a0c66e3416854}{niter}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060     std::cout << res.\mbox{\hyperlink{struct_result_a8074883a1161d151c83e2b246db33e8d}{out\_of\_area\_flg}} << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[0] << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[1] << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[2] << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a48c419d1661b003ef584437bf085f074}{y}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062     \mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}} random\_optim(\&ros, \textcolor{keyword}{new} \mbox{\hyperlink{class_box_area}{BoxArea}}(2, lim), \textcolor{keyword}{new} \mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}(1000000, 100000));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063     res = random\_optim.optimize();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064     std::cout << \textcolor{stringliteral}{"{}Ierations: "{}} << res.\mbox{\hyperlink{struct_result_abcd42f5f29cf5593a56a0c66e3416854}{niter}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065     std::cout << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[0] << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}[1] << \textcolor{stringliteral}{"{} "{}} << res.\mbox{\hyperlink{struct_result_a48c419d1661b003ef584437bf085f074}{y}} << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067 \}}
+
+\end{DoxyCode}

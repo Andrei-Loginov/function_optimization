@@ -1,3 +1,4 @@
+/** \file */
 #include "BoxArea.h"
 
 BoxArea::BoxArea(){

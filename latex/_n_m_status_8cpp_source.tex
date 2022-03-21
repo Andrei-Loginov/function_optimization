@@ -1,0 +1,43 @@
+\hypertarget{_n_m_status_8cpp_source}{}\doxysection{NMStatus.\+cpp}
+\mbox{\hyperlink{_n_m_status_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_m_status_8h}{NMStatus.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00005}\mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{00005}} \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus::NMStatus}}()\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00007}00007 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00009}\mbox{\hyperlink{class_n_m_status_ae1d777e34e7286fd1d610301bae3fc0f}{00009}} \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus::NMStatus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_n_m_status}{NMStatus}}\& other) : \mbox{\hyperlink{class_method_status}{MethodStatus}}(other), value(other.value)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00011}00011 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00013}\mbox{\hyperlink{class_n_m_status_ae9b167b55d9dfdb564ec096db1a43402}{00013}} \mbox{\hyperlink{class_n_m_status_a6fb1cc467a600c5e95dcb13d8cf5f032}{NMStatus::NMStatus}}(\textcolor{keywordtype}{size\_t} niter, \textcolor{keyword}{const} std::vector<double>* values, \textcolor{keywordtype}{bool} area\_flg) : \mbox{\hyperlink{class_method_status}{MethodStatus}}(niter), value(values),}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00014}00014                                                                                      out\_of\_area\_flg\_(area\_flg)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00019}00019 \textcolor{keywordtype}{void} NMStatus::swap(\mbox{\hyperlink{class_n_m_status}{NMStatus}}\& other) \textcolor{keyword}{noexcept}\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00020}00020     \mbox{\hyperlink{class_method_status_a04f4893c49e13df705979caa3b264017}{MethodStatus::swap}}(other);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00021}00021     std::swap(value, other.value);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00022}00022     std::swap(out\_of\_area\_flg\_, other.out\_of\_area\_flg\_);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00025}\mbox{\hyperlink{class_n_m_status_a38cf6ded9c081269b03eb0ca46f51983}{00025}} \mbox{\hyperlink{class_n_m_status}{NMStatus}}\& \mbox{\hyperlink{class_n_m_status_a38cf6ded9c081269b03eb0ca46f51983}{NMStatus::operator=}}(\mbox{\hyperlink{class_n_m_status}{NMStatus}} other) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00026}00026     this-\/>swap(other);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00027}00027     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00030}\mbox{\hyperlink{class_n_m_status_a3ed6757751884df37e701dd10fc7dc83}{00030}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_status_a3ed6757751884df37e701dd10fc7dc83}{NMStatus::get\_value}}(\textcolor{keywordtype}{size\_t} ind)\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00031}00031     \textcolor{keywordflow}{return} value-\/>at(ind);}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00034}\mbox{\hyperlink{class_n_m_status_a72088ce30b888e8c479b07893be28559}{00034}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_n_m_status_a72088ce30b888e8c479b07893be28559}{NMStatus::get\_npoints}}() const noexcept\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00035}00035     \textcolor{keywordflow}{return} value-\/>size();}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00038}\mbox{\hyperlink{class_n_m_status_a7be9b9a5b746dd1bf8f5adb569d79b63}{00038}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_n_m_status_a7be9b9a5b746dd1bf8f5adb569d79b63}{NMStatus::get\_out\_of\_area\_flg}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00039}00039     \textcolor{keywordflow}{return} out\_of\_area\_flg\_;}
+\DoxyCodeLine{\Hypertarget{_n_m_status_8cpp_source_l00040}00040 \}}
+
+\end{DoxyCode}

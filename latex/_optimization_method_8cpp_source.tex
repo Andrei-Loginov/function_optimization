@@ -1,0 +1,99 @@
+\hypertarget{_optimization_method_8cpp_source}{}\doxysection{Optimization\+Method.\+cpp}
+\mbox{\hyperlink{_optimization_method_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_optimization_method_8h}{OptimizationMethod.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00005}\mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{00005}} \mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{OptimizationMethod::OptimizationMethod}}()\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00006}00006 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00008}\mbox{\hyperlink{class_optimization_method_a14a857fa54e09efb5c287364813ac73d}{00008}} \mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{OptimizationMethod::OptimizationMethod}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}\& other) : target\_func\_(other.target\_func\_), area\_(other.area\_),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00009}00009                                                                         stop\_crit\_(other.stop\_crit\_)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00011}00011 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00013}\mbox{\hyperlink{class_optimization_method_a19ccab542e6927a825edc3dc41cf73a7}{00013}} \mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{OptimizationMethod::OptimizationMethod}}(\mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}\&\& other) : target\_func\_(std::move(other.target\_func\_)),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00014}00014                                                                      area\_(std::move(other.area\_)),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00015}00015                                                                     stop\_crit\_(std::move(other.stop\_crit\_)),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00016}00016                                                                     ndim\_(other.ndim\_)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00018}00018     other.ndim\_ = 0;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00021}\mbox{\hyperlink{class_optimization_method_a5800e493f6513479e344bdf1a0aeec96}{00021}} \mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{OptimizationMethod::OptimizationMethod}}(\mbox{\hyperlink{class_function}{Function}}* func, \mbox{\hyperlink{class_box_area}{BoxArea}}* area, \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}* crit) : target\_func\_(func),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00022}00022                                                                                              area\_(area),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00023}00023                                                                                              stop\_crit\_(crit),}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00024}00024                                                                                              ndim\_(area\_-\/>dim())\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00025}00025     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}{target\_func\_}}-\/>\mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}() != area-\/>dim())}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00026}00026         \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}OptimizationMethod(Function*, BoxArea*, StopCriterion*): inequal number of dimensions."{}});}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00029}\mbox{\hyperlink{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}{OptimizationMethod::swap}}(\mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}\& other) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00030}00030      std::swap(other.target\_func\_, target\_func\_);}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00031}00031      std::swap(area\_, other.area\_);}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00032}00032      std::swap(stop\_crit\_, other.stop\_crit\_);}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00033}00033      std::swap(ndim\_, other.ndim\_);}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00037}\mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{00037}} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{OptimizationMethod::get\_unif}}(\textcolor{keywordtype}{double} lower, \textcolor{keywordtype}{double} upper)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00038}00038     std::uniform\_real\_distribution<double> unif\_real(lower, upper);}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00039}00039     \textcolor{keywordflow}{return} unif\_real(SingletonGenerator::get\_mt());}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00042}\mbox{\hyperlink{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}{OptimizationMethod::search}}()\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00043}00043     \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_optimization_method_afc2ae02ea75d58bd84091bd931649e08}{stop\_crit\_}}-\/>\mbox{\hyperlink{class_stop_criterion_a7122632ab6029cc2675cebf795088ccb}{criterion}}(\mbox{\hyperlink{class_optimization_method_a89196e52377f217acc8744f9be7249a7}{get\_status}}()))\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00044}00044         \mbox{\hyperlink{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}{make\_iter}}();}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00045}00045         ++\mbox{\hyperlink{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}{niter\_}};}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00049}\mbox{\hyperlink{_optimization_method_8cpp_a35d53fe4678065576f601b4096e9f141}{00049}} std::vector<double> \mbox{\hyperlink{_optimization_method_8cpp_a35d53fe4678065576f601b4096e9f141}{operator+}}(\textcolor{keyword}{const} std::vector<double>\& lhs, \textcolor{keyword}{const} std::vector<double>\& rhs)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00050}00050     \textcolor{keywordflow}{if} (lhs.size() != rhs.size())}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00051}00051         \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}Inequal sizes of vectors"{}});}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00052}00052     std::vector<double> ans(lhs.size());}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00053}00053     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < lhs.size(); ++i)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00054}00054         ans[i] = lhs[i] + rhs[i];}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00055}00055     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00058}\mbox{\hyperlink{_optimization_method_8cpp_ac244a509e195ac8ac5d1b31251e5107b}{00058}} std::vector<double> \mbox{\hyperlink{_optimization_method_8cpp_ac244a509e195ac8ac5d1b31251e5107b}{operator-\/}}(\textcolor{keyword}{const} std::vector<double>\& lhs, \textcolor{keyword}{const} std::vector<double>\& rhs)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00059}00059     \textcolor{keywordflow}{if} (lhs.size() != rhs.size())}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00060}00060         \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}Inequal sizes of vectors"{}});}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00061}00061     std::vector<double> ans(lhs.size());}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00062}00062     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < lhs.size(); ++i)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00063}00063         ans[i] = lhs[i] -\/ rhs[i];}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00064}00064     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00065}00065 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00067}\mbox{\hyperlink{_optimization_method_8cpp_a7ba32a567a942db7fb444e49e8ffa50e}{00067}} std::vector<double> \mbox{\hyperlink{_optimization_method_8cpp_a7ba32a567a942db7fb444e49e8ffa50e}{operator*}}(\textcolor{keyword}{const} std::vector<double>\& v, \textcolor{keywordtype}{double} a)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00068}00068     std::vector<double> ans(v.size());}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00069}00069     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < ans.size(); ++i)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00070}00070         ans[i] = v[i] * a;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00071}00071     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00074}\mbox{\hyperlink{_optimization_method_8cpp_a2040ef599ccad8ab1960ed9c01b37c53}{00074}} std::vector<double> \mbox{\hyperlink{_optimization_method_8cpp_a7ba32a567a942db7fb444e49e8ffa50e}{operator*}}(\textcolor{keywordtype}{double} a, \textcolor{keyword}{const} std::vector<double>\& v)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00075}00075     \textcolor{keywordflow}{return} v*a;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00078}\mbox{\hyperlink{_optimization_method_8cpp_a4e0073f945b76d8850480cde6c054856}{00078}} std::vector<double> \mbox{\hyperlink{_optimization_method_8cpp_a4e0073f945b76d8850480cde6c054856}{operator/}}(\textcolor{keyword}{const} std::vector<double>\& v, \textcolor{keywordtype}{double} a)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00079}00079     \textcolor{keywordflow}{if} (fabs(a) < eps)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00080}00080         \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}Division by zero"{}});}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00081}00081     std::vector<double> ans(v.size());}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00082}00082     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < v.size(); ++i)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00083}00083         ans[i] = v[i] / a;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00084}00084     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00085}00085 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00087}\mbox{\hyperlink{_optimization_method_8cpp_a9cac0698d24b52acf65531797213307c}{00087}} std::ostream\& \mbox{\hyperlink{_optimization_method_8cpp_a9cac0698d24b52acf65531797213307c}{operator<<}}(std::ostream\& stream, \textcolor{keyword}{const} std::vector<double>\& v)\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00088}00088     stream << \textcolor{stringliteral}{"{}Vector of size "{}} << v.size() << \textcolor{stringliteral}{"{}: "{}};}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00089}00089     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} iter = v.begin(); iter != v.end(); ++iter)}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00090}00090         stream << *iter << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00091}00091     \textcolor{keywordflow}{return} stream;}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00094}\mbox{\hyperlink{class_optimization_method_a5b31c270b4f2305fde003951a7a70dc6}{00094}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_optimization_method_a5b31c270b4f2305fde003951a7a70dc6}{OptimizationMethod::get\_n\_iter}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00095}00095     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}{niter\_}};}
+\DoxyCodeLine{\Hypertarget{_optimization_method_8cpp_source_l00096}00096 \}}
+
+\end{DoxyCode}

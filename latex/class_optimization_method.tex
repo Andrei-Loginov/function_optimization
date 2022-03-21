@@ -1,0 +1,320 @@
+\hypertarget{class_optimization_method}{}\doxysection{Optimization\+Method Class Reference}
+\label{class_optimization_method}\index{OptimizationMethod@{OptimizationMethod}}
+
+
+Абстрактный базовый класс методов оптимизации  
+
+
+
+
+{\ttfamily \#include $<$Optimization\+Method.\+h$>$}
+
+Inheritance diagram for Optimization\+Method\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_optimization_method}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_result}{Result}} \mbox{\hyperlink{class_optimization_method_ac230b55a5c1cfffa656eaf8d13a97384}{optimize}} ()=0
+\begin{DoxyCompactList}\small\item\em Вызов функции search. Возвращает результат работы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}{Optimization\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimization_method_a14a857fa54e09efb5c287364813ac73d}{Optimization\+Method}} (const \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimization_method_a19ccab542e6927a825edc3dc41cf73a7}{Optimization\+Method}} (\mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Конструктор перемещения \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimization_method_a5800e493f6513479e344bdf1a0aeec96}{Optimization\+Method}} (\mbox{\hyperlink{class_function}{Function}} $\ast$func, \mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$area, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$crit)
+\begin{DoxyCompactList}\small\item\em Конструктор, задающий target\+\_\+func\+\_\+ = func, area\+\_\+ = area, stop\+\_\+crit\+\_\+ = crit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}{swap}} (\mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Метод обмена. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$ \mbox{\hyperlink{class_optimization_method_a89196e52377f217acc8744f9be7249a7}{get\+\_\+status}} () const =0
+\begin{DoxyCompactList}\small\item\em Метод создает объект \mbox{\hyperlink{class_method_status}{Method\+Status}}, содержащий информацию о текущем состоянии алгоритма, и возвращает указатель на этот объект. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}{make\+\_\+iter}} ()=0
+\begin{DoxyCompactList}\small\item\em Шаг алгоритма оптимизации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}{search}} ()
+\begin{DoxyCompactList}\small\item\em Метод, осуществляющий поиск точки минимума функции. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_optimization_method_a5b31c270b4f2305fde003951a7a70dc6}{get\+\_\+n\+\_\+iter}} () const
+\begin{DoxyCompactList}\small\item\em Метод, возвращающий число осущественных итераций. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{get\+\_\+unif}} (double lower=0, double upper=1)
+\begin{DoxyCompactList}\small\item\em Метод, моделирующий случайную величину, равномерно распределенную на интервале (lower, upper). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_function}{Function}} $\ast$ \mbox{\hyperlink{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}{target\+\_\+func\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Указатель на функцию, для которой нужно найти минимум. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$ \mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Укзатель объект \mbox{\hyperlink{class_box_area}{Box\+Area}}, задающий границы области. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$ \mbox{\hyperlink{class_optimization_method_afc2ae02ea75d58bd84091bd931649e08}{stop\+\_\+crit\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em Указатель на критерий остановки. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Размерность аргумента функции. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}{niter\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em Число совершенных итераций. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\+\_\+trajectory\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Предполагаемые точки мнимума на каждой итерации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный базовый класс методов оптимизации 
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00051}{51}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}\label{class_optimization_method_a8490a7cd0e3334f7e61469377c7d4217}} 
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{OptimizationMethod()}{OptimizationMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Optimization\+Method\+::\+Optimization\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конструктор по умолчанию 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_a14a857fa54e09efb5c287364813ac73d}\label{class_optimization_method_a14a857fa54e09efb5c287364813ac73d}} 
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{OptimizationMethod()}{OptimizationMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Optimization\+Method\+::\+Optimization\+Method (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конструктор копирования 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_a19ccab542e6927a825edc3dc41cf73a7}\label{class_optimization_method_a19ccab542e6927a825edc3dc41cf73a7}} 
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{OptimizationMethod()}{OptimizationMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Optimization\+Method\+::\+Optimization\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конструктор перемещения 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_a5800e493f6513479e344bdf1a0aeec96}\label{class_optimization_method_a5800e493f6513479e344bdf1a0aeec96}} 
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\index{OptimizationMethod@{OptimizationMethod}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{OptimizationMethod()}{OptimizationMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Optimization\+Method\+::\+Optimization\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} $\ast$}]{func,  }\item[{\mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$}]{area,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$}]{crit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конструктор, задающий target\+\_\+func\+\_\+ = func, area\+\_\+ = area, stop\+\_\+crit\+\_\+ = crit. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_optimization_method_a5b31c270b4f2305fde003951a7a70dc6}\label{class_optimization_method_a5b31c270b4f2305fde003951a7a70dc6}} 
+\index{OptimizationMethod@{OptimizationMethod}!get\_n\_iter@{get\_n\_iter}}
+\index{get\_n\_iter@{get\_n\_iter}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{get\_n\_iter()}{get\_n\_iter()}}
+{\footnotesize\ttfamily size\+\_\+t Optimization\+Method\+::get\+\_\+n\+\_\+iter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Метод, возвращающий число осущественных итераций. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_a89196e52377f217acc8744f9be7249a7}\label{class_optimization_method_a89196e52377f217acc8744f9be7249a7}} 
+\index{OptimizationMethod@{OptimizationMethod}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$ Optimization\+Method\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Метод создает объект \mbox{\hyperlink{class_method_status}{Method\+Status}}, содержащий информацию о текущем состоянии алгоритма, и возвращает указатель на этот объект. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nelder_mead_ab45b7df4d5c6c6a3022677bea34d7fd7}{Nelder\+Mead}}, and \mbox{\hyperlink{class_stohastic_optimization_ab3db35cc4e52e5f47a39e81470aa613b}{Stohastic\+Optimization}}.
+
+\mbox{\Hypertarget{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}\label{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}} 
+\index{OptimizationMethod@{OptimizationMethod}!get\_unif@{get\_unif}}
+\index{get\_unif@{get\_unif}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{get\_unif()}{get\_unif()}}
+{\footnotesize\ttfamily double Optimization\+Method\+::get\+\_\+unif (\begin{DoxyParamCaption}\item[{double}]{lower = {\ttfamily 0},  }\item[{double}]{upper = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Метод, моделирующий случайную величину, равномерно распределенную на интервале (lower, upper). 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}\label{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}} 
+\index{OptimizationMethod@{OptimizationMethod}!make\_iter@{make\_iter}}
+\index{make\_iter@{make\_iter}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{make\_iter()}{make\_iter()}}
+{\footnotesize\ttfamily virtual void Optimization\+Method\+::make\+\_\+iter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Шаг алгоритма оптимизации. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nelder_mead_a31efba400f580653cadbd90a2ee41721}{Nelder\+Mead}}, and \mbox{\hyperlink{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}{Stohastic\+Optimization}}.
+
+\mbox{\Hypertarget{class_optimization_method_ac230b55a5c1cfffa656eaf8d13a97384}\label{class_optimization_method_ac230b55a5c1cfffa656eaf8d13a97384}} 
+\index{OptimizationMethod@{OptimizationMethod}!optimize@{optimize}}
+\index{optimize@{optimize}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_result}{Result}} Optimization\+Method\+::optimize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Вызов функции search. Возвращает результат работы. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nelder_mead_a587eb82284f108aa1323cf366ee7ceed}{Nelder\+Mead}}, and \mbox{\hyperlink{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}{Stohastic\+Optimization}}.
+
+\mbox{\Hypertarget{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}\label{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}} 
+\index{OptimizationMethod@{OptimizationMethod}!search@{search}}
+\index{search@{search}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily void Optimization\+Method\+::search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Метод, осуществляющий поиск точки минимума функции. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+\mbox{\Hypertarget{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}\label{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}} 
+\index{OptimizationMethod@{OptimizationMethod}!swap@{swap}}
+\index{swap@{swap}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Optimization\+Method\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_optimization_method}{Optimization\+Method}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Метод обмена. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_optimization_method_8cpp_source}{Optimization\+Method.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_optimization_method_a3d03a560e765765545542edea3cf742c}\label{class_optimization_method_a3d03a560e765765545542edea3cf742c}} 
+\index{OptimizationMethod@{OptimizationMethod}!area\_@{area\_}}
+\index{area\_@{area\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{area\_}{area\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_box_area}{Box\+Area}}$\ast$ Optimization\+Method\+::area\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Укзатель объект \mbox{\hyperlink{class_box_area}{Box\+Area}}, задающий границы области. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00068}{68}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}\label{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}} 
+\index{OptimizationMethod@{OptimizationMethod}!ndim\_@{ndim\_}}
+\index{ndim\_@{ndim\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{ndim\_}{ndim\_}}
+{\footnotesize\ttfamily size\+\_\+t Optimization\+Method\+::ndim\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Размерность аргумента функции. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00072}{72}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}\label{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}} 
+\index{OptimizationMethod@{OptimizationMethod}!niter\_@{niter\_}}
+\index{niter\_@{niter\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{niter\_}{niter\_}}
+{\footnotesize\ttfamily size\+\_\+t Optimization\+Method\+::niter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Число совершенных итераций. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00074}{74}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{class_optimization_method_afc2ae02ea75d58bd84091bd931649e08}\label{class_optimization_method_afc2ae02ea75d58bd84091bd931649e08}} 
+\index{OptimizationMethod@{OptimizationMethod}!stop\_crit\_@{stop\_crit\_}}
+\index{stop\_crit\_@{stop\_crit\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{stop\_crit\_}{stop\_crit\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}}$\ast$ Optimization\+Method\+::stop\+\_\+crit\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Указатель на критерий остановки. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00070}{70}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}\label{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}} 
+\index{OptimizationMethod@{OptimizationMethod}!target\_func\_@{target\_func\_}}
+\index{target\_func\_@{target\_func\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{target\_func\_}{target\_func\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_function}{Function}}$\ast$ Optimization\+Method\+::target\+\_\+func\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Указатель на функцию, для которой нужно найти минимум. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00066}{66}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}\label{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}} 
+\index{OptimizationMethod@{OptimizationMethod}!x\_trajectory\_@{x\_trajectory\_}}
+\index{x\_trajectory\_@{x\_trajectory\_}!OptimizationMethod@{OptimizationMethod}}
+\doxysubsubsection{\texorpdfstring{x\_trajectory\_}{x\_trajectory\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Optimization\+Method\+::x\+\_\+trajectory\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Предполагаемые точки мнимума на каждой итерации. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00076}{76}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_optimization_method_8h}{Optimization\+Method.\+h}}\item 
+\mbox{\hyperlink{_optimization_method_8cpp}{Optimization\+Method.\+cpp}}\end{DoxyCompactItemize}

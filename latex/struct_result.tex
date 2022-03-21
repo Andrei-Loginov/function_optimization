@@ -1,0 +1,113 @@
+\hypertarget{struct_result}{}\doxysection{Result Struct Reference}
+\label{struct_result}\index{Result@{Result}}
+
+
+Класс \mbox{\hyperlink{struct_result}{Result}} содержит результаты работы метода оптимизации.  
+
+
+
+
+{\ttfamily \#include $<$Optimization\+Method.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_result_a84e30f4619fbd29cd97825ab9a061d5a}{Result}} (std\+::vector$<$ double $>$ point, double value, size\+\_\+t iterations, bool area\+\_\+flg=false)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{struct_result_a6ddd4746159991deb803e4516dc1b167}{x}}
+\begin{DoxyCompactList}\small\item\em Предполагаема точка минимума \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_result_a48c419d1661b003ef584437bf085f074}{y}}
+\begin{DoxyCompactList}\small\item\em Значение функции в точке x. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{struct_result_abcd42f5f29cf5593a56a0c66e3416854}{niter}}
+\begin{DoxyCompactList}\small\item\em Число итераций \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_result_a8074883a1161d151c83e2b246db33e8d}{out\+\_\+of\+\_\+area\+\_\+flg}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \mbox{\hyperlink{struct_result}{Result}} содержит результаты работы метода оптимизации. 
+
+Класс содержит точку минимума функции, ее значение в этой точке, число совершенных итераций, флаг выхода за пределы области. 
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00022}{22}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_result_a84e30f4619fbd29cd97825ab9a061d5a}\label{struct_result_a84e30f4619fbd29cd97825ab9a061d5a}} 
+\index{Result@{Result}!Result@{Result}}
+\index{Result@{Result}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}}
+{\footnotesize\ttfamily Result\+::\+Result (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{point,  }\item[{double}]{value,  }\item[{size\+\_\+t}]{iterations,  }\item[{bool}]{area\+\_\+flg = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00028}{28}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_result_abcd42f5f29cf5593a56a0c66e3416854}\label{struct_result_abcd42f5f29cf5593a56a0c66e3416854}} 
+\index{Result@{Result}!niter@{niter}}
+\index{niter@{niter}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{niter}{niter}}
+{\footnotesize\ttfamily size\+\_\+t Result\+::niter}
+
+
+
+Число итераций 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00025}{25}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{struct_result_a8074883a1161d151c83e2b246db33e8d}\label{struct_result_a8074883a1161d151c83e2b246db33e8d}} 
+\index{Result@{Result}!out\_of\_area\_flg@{out\_of\_area\_flg}}
+\index{out\_of\_area\_flg@{out\_of\_area\_flg}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{out\_of\_area\_flg}{out\_of\_area\_flg}}
+{\footnotesize\ttfamily bool Result\+::out\+\_\+of\+\_\+area\+\_\+flg = false}
+
+Флаг выхода за пределы области 
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00026}{26}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{struct_result_a6ddd4746159991deb803e4516dc1b167}\label{struct_result_a6ddd4746159991deb803e4516dc1b167}} 
+\index{Result@{Result}!x@{x}}
+\index{x@{x}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Result\+::x}
+
+
+
+Предполагаема точка минимума 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00023}{23}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+\mbox{\Hypertarget{struct_result_a48c419d1661b003ef584437bf085f074}\label{struct_result_a48c419d1661b003ef584437bf085f074}} 
+\index{Result@{Result}!y@{y}}
+\index{y@{y}!Result@{Result}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double Result\+::y}
+
+
+
+Значение функции в точке x. 
+
+
+
+Definition at line \mbox{\hyperlink{_optimization_method_8h_source_l00024}{24}} of file \mbox{\hyperlink{_optimization_method_8h_source}{Optimization\+Method.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_optimization_method_8h}{Optimization\+Method.\+h}}\end{DoxyCompactItemize}

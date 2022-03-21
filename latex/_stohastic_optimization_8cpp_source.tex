@@ -1,0 +1,88 @@
+\hypertarget{_stohastic_optimization_8cpp_source}{}\doxysection{Stohastic\+Optimization.\+cpp}
+\mbox{\hyperlink{_stohastic_optimization_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stohastic_optimization_8h}{StohasticOptimization.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00005}\mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{00005}} \mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{StohasticOptimization::StohasticOptimization}}() : \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00007}\mbox{\hyperlink{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}{00007}} \mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{StohasticOptimization::StohasticOptimization}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}}\& other) : \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}(other),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00008}00008                                             p\_(other.p\_), delta\_(other.delta\_), curr\_y\_(other.curr\_y\_),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00009}00009                                             first\_point\_(other.first\_point\_), niter\_after\_improvment\_(other.niter\_after\_improvment\_) \{\}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00011}\mbox{\hyperlink{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}{00011}} \mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{StohasticOptimization::StohasticOptimization}}(\mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}}\&\& other) : \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}(other),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00012}00012                                             p\_(other.p\_), delta\_(other.delta\_), curr\_y\_(other.curr\_y\_),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00013}00013                                             first\_point\_(std::move(other.first\_point\_)),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00014}00014                                             niter\_after\_improvment\_(other.niter\_after\_improvment\_)\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00015}00015     other.p\_ = 0;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00016}00016     other.delta\_ = 0;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00017}00017     other.curr\_y\_ = 0;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00018}00018     other.niter\_after\_improvment\_ = 0;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00021}\mbox{\hyperlink{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}{StohasticOptimization::swap}}(\mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}}\& other) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00022}00022     \mbox{\hyperlink{class_optimization_method_ac376ec577e3c3f36c350fda1ea4c6156}{OptimizationMethod::swap}}(other);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00023}00023     std::swap(p\_, other.p\_);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00024}00024     std::swap(delta\_, other.delta\_);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00025}00025     std::swap(curr\_y\_, other.curr\_y\_);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00026}00026     std::swap(first\_point\_, other.first\_point\_);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00027}00027     std::swap(niter\_after\_improvment\_, other.niter\_after\_improvment\_);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00030}\mbox{\hyperlink{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}{00030}} \mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}}\& \mbox{\hyperlink{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}{StohasticOptimization::operator=}}(\mbox{\hyperlink{class_stohastic_optimization}{StohasticOptimization}} other) \textcolor{keyword}{noexcept}\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00031}00031     this-\/>swap(other);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00032}00032     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00033}00033 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00035}\mbox{\hyperlink{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}{00035}} \mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{StohasticOptimization::StohasticOptimization}}(\mbox{\hyperlink{class_function}{Function}}* func, \mbox{\hyperlink{class_box_area}{BoxArea}}* area, \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}* crit, \textcolor{keywordtype}{double} p, \textcolor{keywordtype}{double} delta,}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00036}00036                                              \textcolor{keyword}{const} std::vector<double>\& first\_point) :}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00037}00037     \mbox{\hyperlink{class_optimization_method}{OptimizationMethod}}(func, area, crit), p\_(p), delta\_(delta), first\_point\_(first\_point)\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00038}00038     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}}.size() \&\& func-\/>\mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}() != \mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}}.size())}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00039}00039         \textcolor{keywordflow}{throw} std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00040}00040      \textcolor{stringliteral}{"{}StohasticOptimization(Function*, BoxArea*, StopCriterion*, double, double, const vector<double>\&): inequal number of dimensions"{}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00045}\mbox{\hyperlink{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}{00045}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}{StohasticOptimization::set\_first\_point}}(\textcolor{keyword}{const} std::vector<double> \&point)\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00046}00046     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}{target\_func\_}}-\/>\mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}() == point.size())\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00047}00047         \mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}} = point;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00048}00048         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00050}00050     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00051}00051 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00053}\mbox{\hyperlink{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}{00053}} \mbox{\hyperlink{struct_result}{Result}} \mbox{\hyperlink{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}{StohasticOptimization::optimize}}()\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00054}00054     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}}.size())\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00055}00055         \mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}}.resize(\mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\_}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00056}00056         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\_}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00057}00057             \mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}}[i] = \mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{get\_unif}}(\mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).lower, \mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).upper);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00059}00059     \mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\_trajectory\_}}.push\_back(\mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\_point\_}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00060}00060     \mbox{\hyperlink{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}{curr\_y\_}} = \mbox{\hyperlink{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}{target\_func\_}}-\/>\mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}}(\mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\_trajectory\_}}.back());}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00061}00061     \mbox{\hyperlink{class_optimization_method_a0865e9243146f8f7b70edc28f89b6a09}{search}}();}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00062}00062     \textcolor{keywordflow}{return} \mbox{\hyperlink{struct_result}{Result}}(\mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\_trajectory\_}}.back(), \mbox{\hyperlink{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}{curr\_y\_}}, \mbox{\hyperlink{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}{niter\_}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00065}\mbox{\hyperlink{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}{00065}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}{StohasticOptimization::make\_iter}}()\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00066}00066     std::vector<double> candidate(\mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\_}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00067}00067     std::vector<double> curr\_x = \mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\_trajectory\_}}.back();}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00068}00068     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{get\_unif}}(0, 1) > \mbox{\hyperlink{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}{p\_}})}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00069}00069         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\_}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00070}00070             candidate[i] = \mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{get\_unif}}(\mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).lower, \mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).upper);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00071}00071     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00072}00072         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{class_optimization_method_a417d15435742a7c8f38b6d295dd3c526}{ndim\_}}; ++i)}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00073}00073             candidate[i] = \mbox{\hyperlink{class_optimization_method_a2e2ee3ab4205f82a29cf812a2c4db6c9}{get\_unif}}(std::max(curr\_x[i] -\/ delta\_, \mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).lower),}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00074}00074                                     std::min(curr\_x[i] + delta\_, \mbox{\hyperlink{class_optimization_method_a3d03a560e765765545542edea3cf742c}{area\_}}-\/>get\_limits(i).upper));}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00076}00076     \textcolor{keywordtype}{double} candidate\_y = \mbox{\hyperlink{class_optimization_method_ad6ac48716b0816c79952aecbbe343fde}{target\_func\_}}-\/>\mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}}(candidate);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00077}00077     \textcolor{keywordflow}{if} (candidate\_y < \mbox{\hyperlink{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}{curr\_y\_}})\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00078}00078         \mbox{\hyperlink{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}{curr\_y\_}} = candidate\_y;}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00079}00079         \mbox{\hyperlink{class_optimization_method_a73ff57bb6d7d745f91c242724c270fd5}{x\_trajectory\_}}.push\_back(candidate);}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00080}00080     \} \textcolor{keywordflow}{else} ++\mbox{\hyperlink{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}{niter\_after\_improvment\_}};}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00083}\mbox{\hyperlink{class_stohastic_optimization_ab3db35cc4e52e5f47a39e81470aa613b}{00083}} \mbox{\hyperlink{class_method_status}{MethodStatus}}* \mbox{\hyperlink{class_stohastic_optimization_ab3db35cc4e52e5f47a39e81470aa613b}{StohasticOptimization::get\_status}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00084}00084     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_stoh_status}{StohStatus}}(\mbox{\hyperlink{class_optimization_method_a88ab35862468ac14c90a7c66fae06242}{niter\_}}, \mbox{\hyperlink{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}{niter\_after\_improvment\_}});}
+\DoxyCodeLine{\Hypertarget{_stohastic_optimization_8cpp_source_l00085}00085 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,173 @@
+\hypertarget{class_method_status}{}\doxysection{Method\+Status Class Reference}
+\label{class_method_status}\index{MethodStatus@{MethodStatus}}
+
+
+Класс \mbox{\hyperlink{class_method_status}{Method\+Status}} является абстрактным базовым для классов, содержащих информацию о текущем состоянии объекта \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}}.  
+
+
+
+
+{\ttfamily \#include $<$Method\+Status.\+h$>$}
+
+Inheritance diagram for Method\+Status\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_method_status}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{Method\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_method_status_afffad0e456a2848f275846f217e7e491}{Method\+Status}} (const \mbox{\hyperlink{class_method_status}{Method\+Status}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_method_status_a943bf6fe85a77b1e7cfe8b39986b46b2}{Method\+Status}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em noexcept Конструктор перемещения \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_method_status_ab1ce770cedc13cef76d58d766a9dbceb}{Method\+Status}} (size\+\_\+t niter)
+\begin{DoxyCompactList}\small\item\em Конструктор, устанавливающий n\+\_\+iter\+\_\+ = niter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_method_status_a04f4893c49e13df705979caa3b264017}{swap}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em noexcept метод обмена \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_method_status}{Method\+Status}} \& \mbox{\hyperlink{class_method_status_a99f9727dfe7a474d751ff3a6a70eeea4}{operator=}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} other)
+\begin{DoxyCompactList}\small\item\em noexcept оператор присваивания \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}{get\+\_\+n\+\_\+iter}} () const
+\begin{DoxyCompactList}\small\item\em Данный метод возвращает номер текущей итерации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}{n\+\_\+iter\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Номер текущей итерации \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \mbox{\hyperlink{class_method_status}{Method\+Status}} является абстрактным базовым для классов, содержащих информацию о текущем состоянии объекта \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}}. 
+
+Definition at line \mbox{\hyperlink{_method_status_8h_source_l00010}{10}} of file \mbox{\hyperlink{_method_status_8h_source}{Method\+Status.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}\label{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}} 
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{MethodStatus()}{MethodStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Method\+Status\+::\+Method\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+\mbox{\Hypertarget{class_method_status_afffad0e456a2848f275846f217e7e491}\label{class_method_status_afffad0e456a2848f275846f217e7e491}} 
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{MethodStatus()}{MethodStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Method\+Status\+::\+Method\+Status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_method_status}{Method\+Status}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+\mbox{\Hypertarget{class_method_status_a943bf6fe85a77b1e7cfe8b39986b46b2}\label{class_method_status_a943bf6fe85a77b1e7cfe8b39986b46b2}} 
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{MethodStatus()}{MethodStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Method\+Status\+::\+Method\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_method_status}{Method\+Status}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+noexcept Конструктор перемещения 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+\mbox{\Hypertarget{class_method_status_ab1ce770cedc13cef76d58d766a9dbceb}\label{class_method_status_ab1ce770cedc13cef76d58d766a9dbceb}} 
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\index{MethodStatus@{MethodStatus}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{MethodStatus()}{MethodStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Method\+Status\+::\+Method\+Status (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{niter }\end{DoxyParamCaption})}
+
+
+
+Конструктор, устанавливающий n\+\_\+iter\+\_\+ = niter. 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}\label{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}} 
+\index{MethodStatus@{MethodStatus}!get\_n\_iter@{get\_n\_iter}}
+\index{get\_n\_iter@{get\_n\_iter}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{get\_n\_iter()}{get\_n\_iter()}}
+{\footnotesize\ttfamily size\+\_\+t Method\+Status\+::get\+\_\+n\+\_\+iter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Данный метод возвращает номер текущей итерации 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+\mbox{\Hypertarget{class_method_status_a99f9727dfe7a474d751ff3a6a70eeea4}\label{class_method_status_a99f9727dfe7a474d751ff3a6a70eeea4}} 
+\index{MethodStatus@{MethodStatus}!operator=@{operator=}}
+\index{operator=@{operator=}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_method_status}{Method\+Status}} \& Method\+Status\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_method_status}{Method\+Status}}}]{other }\end{DoxyParamCaption})}
+
+
+
+noexcept оператор присваивания 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+\mbox{\Hypertarget{class_method_status_a04f4893c49e13df705979caa3b264017}\label{class_method_status_a04f4893c49e13df705979caa3b264017}} 
+\index{MethodStatus@{MethodStatus}!swap@{swap}}
+\index{swap@{swap}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Method\+Status\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_method_status}{Method\+Status}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+noexcept метод обмена 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_method_status_8cpp_source}{Method\+Status.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}\label{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}} 
+\index{MethodStatus@{MethodStatus}!n\_iter\_@{n\_iter\_}}
+\index{n\_iter\_@{n\_iter\_}!MethodStatus@{MethodStatus}}
+\doxysubsubsection{\texorpdfstring{n\_iter\_}{n\_iter\_}}
+{\footnotesize\ttfamily size\+\_\+t Method\+Status\+::n\+\_\+iter\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Номер текущей итерации \mbox{\hyperlink{class_optimization_method}{Optimization\+Method}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_method_status_8h_source_l00027}{27}} of file \mbox{\hyperlink{_method_status_8h_source}{Method\+Status.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_method_status_8h}{Method\+Status.\+h}}\item 
+\mbox{\hyperlink{_method_status_8cpp}{Method\+Status.\+cpp}}\end{DoxyCompactItemize}

@@ -1,5 +1,7 @@
 #include "NelderMead.h"
-#define debug_nm
+//#define debug_nm
+
+/** \file */
 
 NelderMead::NelderMead(){
 
@@ -49,7 +51,7 @@ void NelderMead::swap(NelderMead &other) noexcept {
     std::swap(out_of_area_flg_, other.out_of_area_flg_);
 }
 
-NelderMead& NelderMead::operator=(NelderMead other){
+NelderMead& NelderMead::operator=(NelderMead other) noexcept {
     this->swap(other);
     return *this;
 }
@@ -95,7 +97,7 @@ void NelderMead::make_iter(){
         evaluate_fun_simplex();
     }*/
     find_indices();
-    update_trajectory();
+    curr_point_ = update_trajectory();
     for (size_t i = 0; i < simplex_.size(); ++i)
         if (!area_->is_in(simplex_[i])){
             out_of_area_flg_ = true;

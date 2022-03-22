@@ -1,5 +1,7 @@
 #include "StohIterStop.h"
 
+/** \file */
+
 StohIterStop::StohIterStop(){
 
 }

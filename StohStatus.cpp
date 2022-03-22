@@ -1,5 +1,9 @@
 #include "StohStatus.h"
 
+/** \file */
+
+StohStatus::StohStatus() : MethodStatus() {}
+
 StohStatus::StohStatus(size_t niter, size_t iter_after_improve) : MethodStatus(niter),
                                                                             niter_after_improve_(iter_after_improve){
 

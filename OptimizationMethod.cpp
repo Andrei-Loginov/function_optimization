@@ -1,5 +1,7 @@
 #include "OptimizationMethod.h"
 
+/** \file */
+
 OptimizationMethod::OptimizationMethod(){
 }
 
@@ -24,7 +26,7 @@ OptimizationMethod::OptimizationMethod(Function* func, BoxArea* area, StopCriter
         throw std::invalid_argument("OptimizationMethod(Function*, BoxArea*, StopCriterion*): inequal number of dimensions.");
 }
 
-void OptimizationMethod::swap(OptimizationMethod& other){
+void OptimizationMethod::swap(OptimizationMethod& other) noexcept {
      std::swap(other.target_func_, target_func_);
      std::swap(area_, other.area_);
      std::swap(stop_crit_, other.stop_crit_);

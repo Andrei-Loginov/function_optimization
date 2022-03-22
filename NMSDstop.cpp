@@ -1,12 +1,15 @@
 #include "NMSDstop.h"
 #include <iostream>
 
+/** \file */
+
 NMSDstop::NMSDstop()
 {
 
 }
 
 NMSDstop::NMSDstop(size_t niter) : StopCriterion(niter){}
+
 
 double NMSDstop::val_mean(NMStatus *status)noexcept {
     double sum = 0;

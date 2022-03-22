@@ -1,5 +1,7 @@
 #include "MethodStatus.h"
 
+/** \file */
+
 MethodStatus::MethodStatus()
 {
 

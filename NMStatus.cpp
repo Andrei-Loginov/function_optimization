@@ -1,5 +1,7 @@
 #include "NMStatus.h"
 
+/** \file */
+
 NMStatus::NMStatus(){
 
 }
@@ -20,7 +22,7 @@ void NMStatus::swap(NMStatus& other) noexcept{
     std::swap(out_of_area_flg_, other.out_of_area_flg_);
 }
 
-NMStatus& NMStatus::operator=(NMStatus other){
+NMStatus& NMStatus::operator=(NMStatus other) noexcept {
     this->swap(other);
     return *this;
 }
@@ -29,7 +31,7 @@ double NMStatus::get_value(size_t ind){
     return value->at(ind);
 }
 
-size_t NMStatus::get_npoints() noexcept{
+size_t NMStatus::get_npoints() const noexcept{
     return value->size();
 }
 

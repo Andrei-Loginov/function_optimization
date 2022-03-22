@@ -1,5 +1,7 @@
 #include "StopCriterion.h"
 
+/** \file */
+
 StopCriterion::StopCriterion(){
 
 }

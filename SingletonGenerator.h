@@ -2,7 +2,11 @@
 #ifndef SINGLETONGENERATOR_H
 #define SINGLETONGENERATOR_H
 #include <random>
+/** \file */
 
+/*!
+ * \brief Класс SingletonGenerator позволяет использовать один ГПСЧ во всей программе.
+ */
 
 class SingletonGenerator
 {

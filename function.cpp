@@ -1,3 +1,4 @@
+/** \file */
 #include "function.h"
 
 Function::Function() {

@@ -1,5 +1,37 @@
 #include "StohasticOptimization.h"
 
+/** \file */
+
+StohasticOptimization::StohasticOptimization() : OptimizationMethod() {}
+
+StohasticOptimization::StohasticOptimization(const StohasticOptimization& other) : OptimizationMethod(other),
+                                            p_(other.p_), delta_(other.delta_), curr_y_(other.curr_y_),
+                                            first_point_(other.first_point_), niter_after_improvment_(other.niter_after_improvment_) {}
+
+StohasticOptimization::StohasticOptimization(StohasticOptimization&& other) : OptimizationMethod(other),
+                                            p_(other.p_), delta_(other.delta_), curr_y_(other.curr_y_),
+                                            first_point_(std::move(other.first_point_)),
+                                            niter_after_improvment_(other.niter_after_improvment_){
+    other.p_ = 0;
+    other.delta_ = 0;
+    other.curr_y_ = 0;
+    other.niter_after_improvment_ = 0;
+}
+
+void StohasticOptimization::swap(StohasticOptimization& other) noexcept {
+    OptimizationMethod::swap(other);
+    std::swap(p_, other.p_);
+    std::swap(delta_, other.delta_);
+    std::swap(curr_y_, other.curr_y_);
+    std::swap(first_point_, other.first_point_);
+    std::swap(niter_after_improvment_, other.niter_after_improvment_);
+}
+
+StohasticOptimization& StohasticOptimization::operator=(StohasticOptimization other) noexcept{
+    this->swap(other);
+    return *this;
+}
+
 StohasticOptimization::StohasticOptimization(Function* func, BoxArea* area, StopCriterion* crit, double p, double delta,
                                              const std::vector<double>& first_point) :
     OptimizationMethod(func, area, crit), p_(p), delta_(delta), first_point_(first_point){

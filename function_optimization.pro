@@ -20,7 +20,8 @@ SOURCES += \
         StohasticOptimization.cpp \
         StopCriterion.cpp \
         function.cpp \
-        main.cpp
+        main.cpp \
+        qcustomplot.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -39,4 +40,5 @@ HEADERS += \
     StohStatus.h \
     StohasticOptimization.h \
     StopCriterion.h \
-    function.h
+    function.h \
+    qcustomplot.h

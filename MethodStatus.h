@@ -17,6 +17,7 @@ public:
     MethodStatus(MethodStatus&& other) noexcept;
     //! Конструктор, устанавливающий n_iter_ = niter
     MethodStatus(size_t niter);
+    virtual ~MethodStatus() {}
     //!noexcept метод обмена
     void swap(MethodStatus& other) noexcept;
     //!noexcept оператор присваивания

@@ -23,6 +23,7 @@ public:
     StohStatus(StohStatus&& other);
     //! Конструктор копирования
     StohStatus(const StohStatus& other);
+    ~StohStatus() {}
     //! Оператор присваивания noexcept.
     StohStatus& operator=(StohStatus other) noexcept;
     //! Геттер niter_after_improve_.

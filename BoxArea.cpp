@@ -1,5 +1,6 @@
 /** \file */
 #include "BoxArea.h"
+#include <iostream>
 
 BoxArea::BoxArea(){
 }
@@ -16,8 +17,13 @@ BoxArea::BoxArea(BoxArea&& other) : ndim_(other.ndim_), limits_(other.limits_) {
     other.limits_.resize(0);
 }
 
+BoxArea::~BoxArea(){
+    limits_.clear();
+}
+
 bool BoxArea::is_in(const std::vector<double>& point) const{
     if (point.size() != limits_.size()) return false;
+    //std::cout << "is_in()\n";
     for (size_t i = 0; i < point.size(); ++i)
         if (point[i] < limits_[i].lower || point[i] > limits_[i].upper) return false;
     return true;

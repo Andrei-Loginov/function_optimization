@@ -24,6 +24,8 @@ public:
     NMStatus(NMStatus&& other);
     //! Конструктор, задающий значения полей n_iter_, value, out_of_area_flg.
     NMStatus(size_t niter, const std::vector<double>* values, bool area_flg = false);
+    //! Деструктор.
+    ~NMStatus(){}
     //! noexcept оператор присваивания.
     NMStatus& operator=(NMStatus other) noexcept;
     //! Метод, вовзращающий значение функии в вершине симплекса с индекосм ind.

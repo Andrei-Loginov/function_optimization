@@ -24,6 +24,8 @@ public:
     StohIterStop(StohIterStop&& other);
     //! Конструктор копирования
     StohIterStop(const StohIterStop& other);
+
+    ~StohIterStop() {}
     //! Метод swap
     void swap(StohIterStop& other) noexcept;
     //! Оператор присваивания

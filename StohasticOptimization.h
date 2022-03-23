@@ -29,6 +29,9 @@ public:
     //! Конструктор, задающий функцию, область, критерий остановки, параметр p_, delta_ и first_point_.
     StohasticOptimization(Function* func, BoxArea* area, StopCriterion* crit, double p = 0.5, double delta = 0.5,
                           const std::vector<double>& first_point = std::vector<double>());
+    //! Деструктор.
+    ~StohasticOptimization() {first_point_.clear();}
+
     //! Оператор присваивания.
     StohasticOptimization& operator=(StohasticOptimization other) noexcept;
     //!Сеттер начальной точки.

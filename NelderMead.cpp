@@ -65,13 +65,7 @@ void NelderMead::init_simplex(){
     }
     niter_ = 0;
     x_trajectory_.resize(0);
-   /* std::cout << "Initialized simplex!\n";
-    for (size_t i = 0; i < ndim_ + 1; ++i){
-        for (size_t j = 0; j < ndim_; ++j)
-            std::cout << simplex_[i][j] << " ";
-        std::cout << "\t" << target_func_->eval(simplex_[i]) << "\n";
-    }
-*/
+
 
 }
 
@@ -118,15 +112,7 @@ void NelderMead::make_iter(){
         return;
     }
     f_r = target_func_->eval(x_r);
-/*
-    std::cout << "Iteration " << niter_ << "\n";
-    std::cout << "Simplex values:\n";
-    for (size_t i = 0; i < simplex_.size(); ++i)
-        std::cout << "\t" << simplex_[i] << "\n\tf(x) = " << simplex_fun_value_[i] << '\n';
-    std::cout << "Indices:\n\th = " << index_h << "\n\tg = " << index_g << "\n\tl = " << index_l << "\n";
-    std::cout << "x_r:\n\t" << x_r << "\n\tf(x_r) = " << f_r << "\n";
-    std::cout << "Center of mass:\n\t" << x_trajectory_[niter_] << "\n_______________\n";
-*/
+
     if (f_r < simplex_fun_value_[index_l]){
         x_e = (1 - gamma_) * x_trajectory_[niter_] + gamma_ * x_r;
         if (!area_->is_in(x_e)){
@@ -192,15 +178,32 @@ std::vector<double> NelderMead::update_trajectory(){
 
 void NelderMead::find_indices(){
     index_h = simplex_.size()  + 1;
+        index_g = simplex_.size() + 1;
+        index_l = simplex_.size() + 1;
+        for (size_t i = 0; i < ndim_ + 1; ++i){
+            if (index_h == simplex_.size() + 1 || simplex_fun_value_[i] > simplex_fun_value_[index_h]){
+                index_g = index_h;
+                index_h = i;
+            } else if (index_g == simplex_.size() + 1 || simplex_fun_value_[i] > simplex_fun_value_[index_g])
+                index_g = i;
+            if (index_l == simplex_.size() + 1 || simplex_fun_value_[i] < simplex_fun_value_[index_l])
+                index_l = i;
+        }
+    /*
+    index_h = simplex_.size() + 1;
     index_g = simplex_.size() + 1;
-    index_l = simplex_.size() + 1;
-    for (size_t i = 0; i < ndim_ + 1; ++i){
-        if (index_h == simplex_.size() + 1 || simplex_fun_value_[i] > simplex_fun_value_[index_h]){
-            index_g = index_h;
+
+
+    for (size_t i = 0; i < ndim_ + 1; ++ i)
+        if (index_h == simplex_.size() + 1 || simplex_fun_value_[i] > simplex_fun_value_[index_h])
             index_h = i;
-        } else if (index_g == simplex_.size() + 1 || simplex_fun_value_[i] > simplex_fun_value_[index_g])
-            index_g = i;
+
+    for (size_t i = 0; i < ndim_ + 1; ++ i)
         if (index_l == simplex_.size() + 1 || simplex_fun_value_[i] < simplex_fun_value_[index_l])
             index_l = i;
-    }
+    index_g = index_l;
+    for (size_t i = 0; i < ndim_ + 1; ++i)
+        if (i != index_h and simplex_fun_value_[i] > simplex_fun_value_[index_g])
+            index_h = i;
+            */
 }

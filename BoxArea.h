@@ -25,6 +25,7 @@ public:
     BoxArea(size_t dim, const std::vector<dimension_limits>& lim);
     BoxArea(const BoxArea& other);
     BoxArea(BoxArea&& other);
+    ~BoxArea();
 
     size_t dim() const;
     void swap(BoxArea& other) noexcept;

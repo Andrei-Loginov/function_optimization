@@ -14,6 +14,7 @@
 #include <stdexcept>
 
 #define eps 1e-5
+
 /*!
  * \brief Класс Result содержит результаты работы метода оптимизации.
  *
@@ -29,6 +30,7 @@ struct Result{
                                                                                                 y(value),
                                                                                                 niter(iterations),
                                                                                                 out_of_area_flg(area_flg){}
+    Result(){}
 };
 
 //! Оператор сложения векторов одинаковой длины.
@@ -90,6 +92,7 @@ protected:
 public:
     //! Вызов функции search. Возвращает результат работы.
     virtual Result optimize() = 0;
+    virtual ~OptimizationMethod() {x_trajectory_.clear();}
 };
 
 #endif // OPTIMIZATIONMETHOD_H

@@ -10,6 +10,9 @@ NMSDstop::NMSDstop()
 
 NMSDstop::NMSDstop(size_t niter) : StopCriterion(niter){}
 
+NMSDstop::NMSDstop(size_t niter, double epsi) : StopCriterion(niter), epsilon(epsi){
+
+}
 
 double NMSDstop::val_mean(NMStatus *status)noexcept {
     double sum = 0;

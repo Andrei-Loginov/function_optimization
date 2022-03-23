@@ -17,6 +17,8 @@ MethodStatus::MethodStatus(MethodStatus&& other) noexcept : n_iter_(other.n_iter
 
 MethodStatus::MethodStatus(size_t niter) : n_iter_(niter){}
 
+
+
 void MethodStatus::swap(MethodStatus& other) noexcept {
     std::swap(this->n_iter_, other.n_iter_);
 }

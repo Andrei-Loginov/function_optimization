@@ -18,15 +18,23 @@ Inheritance diagram for NMSDstop\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}{NMSDstop}} ()
+\mbox{\Hypertarget{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}\label{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}} 
+{\bfseries NMSDstop} ()
 \begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}{NMSDstop}} (size\+\_\+t niter)
+\mbox{\Hypertarget{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}\label{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}} 
+{\bfseries NMSDstop} (size\+\_\+t niter)
 \begin{DoxyCompactList}\small\item\em Конструктор, создающий критерий остановки только по числу итераций \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}{NMSDstop}} (const \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&other)
+\mbox{\Hypertarget{class_n_m_s_dstop_a3e12aea411ad64f6003f09bef6e2f30e}\label{class_n_m_s_dstop_a3e12aea411ad64f6003f09bef6e2f30e}} 
+{\bfseries NMSDstop} (size\+\_\+t niter, double epsi)
+\begin{DoxyCompactList}\small\item\em Конструктор, устанавливающий максимальное число итераций и точность. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}\label{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}} 
+{\bfseries NMSDstop} (const \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&other)
 \begin{DoxyCompactList}\small\item\em Конструктор копирования \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}{NMSDstop}} (\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&\&other)
+\mbox{\Hypertarget{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}\label{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}} 
+{\bfseries NMSDstop} (\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&\&other)
 \begin{DoxyCompactList}\small\item\em Конструктор перемещения \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \& \mbox{\hyperlink{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}{operator=}} (\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} other) noexcept
+\mbox{\Hypertarget{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}\label{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}} 
+\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \& {\bfseries operator=} (\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} other) noexcept
 \begin{DoxyCompactList}\small\item\em noexcept Оператор присваивания \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}{criterion}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$status)
 \begin{DoxyCompactList}\small\item\em Критерий остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -35,69 +43,6 @@ bool \mbox{\hyperlink{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}{crite
 
 \doxysubsection{Detailed Description}
 Класс \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} реализует критерий остановки алгоритма Нелдера-\/Мида по стандартному отклонению значений функции в вершинах симплекса и по числу итераций. 
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8h_source_l00012}{12}} of file \mbox{\hyperlink{_n_m_s_dstop_8h_source}{NMSDstop.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}\label{class_n_m_s_dstop_a5d5ca00e1ec16540ee867d5fcc5e7025}} 
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\doxysubsubsection{\texorpdfstring{NMSDstop()}{NMSDstop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily NMSDstop\+::\+NMSDstop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Конструктор по умолчанию 
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
-
-\mbox{\Hypertarget{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}\label{class_n_m_s_dstop_a15a9b8196d1dbf578cb0b7cd3cf1f774}} 
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\doxysubsubsection{\texorpdfstring{NMSDstop()}{NMSDstop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily NMSDstop\+::\+NMSDstop (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{niter }\end{DoxyParamCaption})}
-
-
-
-Конструктор, создающий критерий остановки только по числу итераций 
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
-
-\mbox{\Hypertarget{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}\label{class_n_m_s_dstop_a5f537ac61ba784cda6a6cee58fb92571}} 
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\doxysubsubsection{\texorpdfstring{NMSDstop()}{NMSDstop()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily NMSDstop\+::\+NMSDstop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор копирования 
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
-
-\mbox{\Hypertarget{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}\label{class_n_m_s_dstop_a9fdd75097c250802b99a1a0ae29ce1ec}} 
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\index{NMSDstop@{NMSDstop}!NMSDstop@{NMSDstop}}
-\doxysubsubsection{\texorpdfstring{NMSDstop()}{NMSDstop()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily NMSDstop\+::\+NMSDstop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \&\&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор перемещения 
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}\label{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}} 
@@ -113,24 +58,6 @@ Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00025}{25}} of fil
 
 
 Implements \mbox{\hyperlink{class_stop_criterion_a7122632ab6029cc2675cebf795088ccb}{Stop\+Criterion}}.
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
-
-\mbox{\Hypertarget{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}\label{class_n_m_s_dstop_a42e89363afc7656e699ed9e479f44d5e}} 
-\index{NMSDstop@{NMSDstop}!operator=@{operator=}}
-\index{operator=@{operator=}!NMSDstop@{NMSDstop}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}} \& NMSDstop\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_n_m_s_dstop}{NMSDstop}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-noexcept Оператор присваивания 
-
-
-
-Definition at line \mbox{\hyperlink{_n_m_s_dstop_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_n_m_s_dstop_8cpp_source}{NMSDstop.\+cpp}}.
 
 
 

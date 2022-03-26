@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Function Optimization: NMSDstop.h Source File</title>
+<title>Function optimization: NMSDstop.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Function Optimization
+   <div id="projectname">Function optimization
    </div>
   </td>
  </tr>
@@ -65,36 +65,38 @@ $(function() {
   <div class="headertitle"><div class="title">NMSDstop.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_n_m_s_dstop_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef NMSDSTOP_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define NMSDSTOP_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_n_m_status_8h.html">NMStatus.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_stop_criterion_8h.html">StopCriterion.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_n_m_s_dstop.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_stop_criterion.html">StopCriterion</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">double</span> val_mean(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>* status) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">double</span> val_sd(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>*status) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">double</span> epsilon = 1e-8;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<span class="keywordtype">size_t</span> niter);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; other);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp;&amp; other);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; <a class="code hl_function" href="class_n_m_s_dstop.html#a42e89363afc7656e699ed9e479f44d5e">operator=</a>(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a> other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n_m_s_dstop.html#ae3ec14660aea524d56be5567a5e5adca">criterion</a>(<a class="code hl_class" href="class_method_status.html">MethodStatus</a>* status);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">// NMSDSTOP_H</span></div>
+<a href="_n_m_s_dstop_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef NMSDSTOP_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define NMSDSTOP_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_n_m_status_8h.html">NMStatus.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_stop_criterion_8h.html">StopCriterion.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_n_m_s_dstop.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_stop_criterion.html">StopCriterion</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">double</span> val_mean(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>* status) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">double</span> val_sd(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>*status) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">double</span> epsilon = 1e-8;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<span class="keywordtype">size_t</span> niter);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<span class="keywordtype">size_t</span> niter, <span class="keywordtype">double</span> epsi);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; other);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop</a>(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp;&amp; other);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a>&amp; <a class="code hl_function" href="class_n_m_s_dstop.html#a42e89363afc7656e699ed9e479f44d5e">operator=</a>(<a class="code hl_class" href="class_n_m_s_dstop.html">NMSDstop</a> other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n_m_s_dstop.html#ae3ec14660aea524d56be5567a5e5adca">criterion</a>(<a class="code hl_class" href="class_method_status.html">MethodStatus</a>* status);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// NMSDSTOP_H</span></div>
 <div class="ttc" id="a_n_m_status_8h_html"><div class="ttname"><a href="_n_m_status_8h.html">NMStatus.h</a></div></div>
 <div class="ttc" id="a_stop_criterion_8h_html"><div class="ttname"><a href="_stop_criterion_8h.html">StopCriterion.h</a></div></div>
-<div class="ttc" id="aclass_method_status_html"><div class="ttname"><a href="class_method_status.html">MethodStatus</a></div><div class="ttdoc">Класс MethodStatus является абстрактным базовым для классов, содержащих информацию о текущем состояни...</div><div class="ttdef"><b>Definition:</b> <a href="_method_status_8h_source.html#l00010">MethodStatus.h:10</a></div></div>
-<div class="ttc" id="aclass_n_m_s_dstop_html"><div class="ttname"><a href="class_n_m_s_dstop.html">NMSDstop</a></div><div class="ttdoc">Класс NMSDstop реализует критерий остановки алгоритма Нелдера-Мида по стандартному отклонению значени...</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_s_dstop_8h_source.html#l00012">NMSDstop.h:13</a></div></div>
-<div class="ttc" id="aclass_n_m_s_dstop_html_a42e89363afc7656e699ed9e479f44d5e"><div class="ttname"><a href="class_n_m_s_dstop.html#a42e89363afc7656e699ed9e479f44d5e">NMSDstop::operator=</a></div><div class="ttdeci">NMSDstop &amp; operator=(NMSDstop other) noexcept</div><div class="ttdoc">noexcept Оператор присваивания</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_s_dstop_8cpp_source.html#l00034">NMSDstop.cpp:34</a></div></div>
-<div class="ttc" id="aclass_n_m_s_dstop_html_a5d5ca00e1ec16540ee867d5fcc5e7025"><div class="ttname"><a href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop::NMSDstop</a></div><div class="ttdeci">NMSDstop()</div><div class="ttdoc">Конструктор по умолчанию</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_s_dstop_8cpp_source.html#l00006">NMSDstop.cpp:6</a></div></div>
-<div class="ttc" id="aclass_n_m_s_dstop_html_ae3ec14660aea524d56be5567a5e5adca"><div class="ttname"><a href="class_n_m_s_dstop.html#ae3ec14660aea524d56be5567a5e5adca">NMSDstop::criterion</a></div><div class="ttdeci">bool criterion(MethodStatus *status)</div><div class="ttdoc">Критерий остановки</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_s_dstop_8cpp_source.html#l00046">NMSDstop.cpp:46</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html"><div class="ttname"><a href="class_n_m_status.html">NMStatus</a></div><div class="ttdoc">Класс NMStatus содержит информацию о текщем состоянии NelderMead.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8h_source.html#l00010">NMStatus.h:11</a></div></div>
-<div class="ttc" id="aclass_stop_criterion_html"><div class="ttname"><a href="class_stop_criterion.html">StopCriterion</a></div><div class="ttdoc">Абстарктный класс критерия остановки метода оптимизации.</div><div class="ttdef"><b>Definition:</b> <a href="_stop_criterion_8h_source.html#l00014">StopCriterion.h:15</a></div></div>
+<div class="ttc" id="aclass_method_status_html"><div class="ttname"><a href="class_method_status.html">MethodStatus</a></div><div class="ttdoc">Класс MethodStatus является абстрактным базовым для классов, содержащих информацию о текущем состояни...</div><div class="ttdef"><b>Definition:</b> MethodStatus.h:11</div></div>
+<div class="ttc" id="aclass_n_m_s_dstop_html"><div class="ttname"><a href="class_n_m_s_dstop.html">NMSDstop</a></div><div class="ttdoc">Класс NMSDstop реализует критерий остановки алгоритма Нелдера-Мида по стандартному отклонению значени...</div><div class="ttdef"><b>Definition:</b> NMSDstop.h:14</div></div>
+<div class="ttc" id="aclass_n_m_s_dstop_html_a42e89363afc7656e699ed9e479f44d5e"><div class="ttname"><a href="class_n_m_s_dstop.html#a42e89363afc7656e699ed9e479f44d5e">NMSDstop::operator=</a></div><div class="ttdeci">NMSDstop &amp; operator=(NMSDstop other) noexcept</div><div class="ttdoc">noexcept Оператор присваивания</div><div class="ttdef"><b>Definition:</b> NMSDstop.cpp:37</div></div>
+<div class="ttc" id="aclass_n_m_s_dstop_html_a5d5ca00e1ec16540ee867d5fcc5e7025"><div class="ttname"><a href="class_n_m_s_dstop.html#a5d5ca00e1ec16540ee867d5fcc5e7025">NMSDstop::NMSDstop</a></div><div class="ttdeci">NMSDstop()</div><div class="ttdoc">Конструктор по умолчанию</div><div class="ttdef"><b>Definition:</b> NMSDstop.cpp:6</div></div>
+<div class="ttc" id="aclass_n_m_s_dstop_html_ae3ec14660aea524d56be5567a5e5adca"><div class="ttname"><a href="class_n_m_s_dstop.html#ae3ec14660aea524d56be5567a5e5adca">NMSDstop::criterion</a></div><div class="ttdeci">bool criterion(MethodStatus *status)</div><div class="ttdoc">Критерий остановки</div><div class="ttdef"><b>Definition:</b> NMSDstop.cpp:49</div></div>
+<div class="ttc" id="aclass_n_m_status_html"><div class="ttname"><a href="class_n_m_status.html">NMStatus</a></div><div class="ttdoc">Класс NMStatus содержит информацию о текщем состоянии NelderMead.</div><div class="ttdef"><b>Definition:</b> NMStatus.h:12</div></div>
+<div class="ttc" id="aclass_stop_criterion_html"><div class="ttname"><a href="class_stop_criterion.html">StopCriterion</a></div><div class="ttdoc">Абстарктный класс критерия остановки метода оптимизации.</div><div class="ttdef"><b>Definition:</b> StopCriterion.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

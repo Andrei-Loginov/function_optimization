@@ -1,9 +1,11 @@
-/** \file */
+#pragma once
 #ifndef STOHASTICOPTIMIZATION_H
 #define STOHASTICOPTIMIZATION_H
 
 #include "OptimizationMethod.h"
 #include "StohIterStop.h"
+
+/** \file */
 
 /*!
  * \brief Класс StohasticOptimization содержит в себе реализацию случайного поиска точки минимума функции в области.

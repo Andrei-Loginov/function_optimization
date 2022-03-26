@@ -1,3 +1,4 @@
+#pragma once
 #ifndef METHODSTATUS_H
 #include <stddef.h>
 #include <stdexcept>

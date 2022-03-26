@@ -1,27 +1,29 @@
 \hypertarget{_stoh_iter_stop_8h_source}{}\doxysection{Stoh\+Iter\+Stop.\+h}
 \mbox{\hyperlink{_stoh_iter_stop_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00001}00001 }
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00002}00002 \textcolor{preprocessor}{\#ifndef STOHITERSTOP\_H}}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00003}00003 \textcolor{preprocessor}{\#define STOHITERSTOP\_H}}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stop_criterion_8h}{StopCriterion.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stoh_status_8h}{StohStatus.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00013}\mbox{\hyperlink{class_stoh_iter_stop}{00013}} \textcolor{keyword}{class }\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00014}00014 \{}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00015}00015 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00017}\mbox{\hyperlink{class_stoh_iter_stop_a403181453179d20a797ca1d0e588d9da}{00017}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_stoh_iter_stop_a403181453179d20a797ca1d0e588d9da}{max\_iter\_after\_improvment}} = 10000;}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00018}00018 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00020}00020     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}();}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00022}00022     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}{max\_iter}}, \textcolor{keywordtype}{size\_t} max\_after\_improve = 10000);}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00024}00024     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\&\& other);}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00026}00026     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& other);}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00028}00028     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stoh_iter_stop_a2ce1823b7004ee5f097c1e6186396846}{swap}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00030}00030     \mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& \mbox{\hyperlink{class_stoh_iter_stop_ae5236d879258b8e2d3ff67bb7faf9668}{operator=}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}} other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00032}00032     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_stoh_iter_stop_ad51a88ac27337d520470eebf572737a9}{criterion}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}* status);}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00033}00033 \};}
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{_stoh_iter_stop_8h_source_l00035}00035 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STOHITERSTOP\_H}}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef STOHITERSTOP\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define STOHITERSTOP\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stop_criterion_8h}{StopCriterion.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stoh_status_8h}{StohStatus.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_stoh_iter_stop_a403181453179d20a797ca1d0e588d9da}{max\_iter\_after\_improvment}} = 10000;}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}{max\_iter}}, \textcolor{keywordtype}{size\_t} max\_after\_improve = 10000);}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\&\& other);}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_stoh_iter_stop_a8ba350c1e5af3cf036f5bcea7d1294b9}{StohIterStop}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& other);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_stoh_iter_stop}{\string~StohIterStop}}() \{\}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stoh_iter_stop_a2ce1823b7004ee5f097c1e6186396846}{swap}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}}\& \mbox{\hyperlink{class_stoh_iter_stop_ae5236d879258b8e2d3ff67bb7faf9668}{operator=}}(\mbox{\hyperlink{class_stoh_iter_stop}{StohIterStop}} other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_stoh_iter_stop_ad51a88ac27337d520470eebf572737a9}{criterion}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}* status);}
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STOHITERSTOP\_H}}
 
 \end{DoxyCode}

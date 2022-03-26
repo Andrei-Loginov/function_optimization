@@ -46,6 +46,7 @@ std::vector<double> operator/(const std::vector<double>&v, double a);
 //! Оператор вывода для вектора.
 std::ostream& operator<<(std::ostream& stream, const std::vector<double>& v);
 
+
 /*!
  * \brief Абстрактный базовый класс методов оптимизации
  */

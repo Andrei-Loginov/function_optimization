@@ -19,92 +19,41 @@ Inheritance diagram for Stop\+Criterion\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 virtual bool \mbox{\hyperlink{class_stop_criterion_a7122632ab6029cc2675cebf795088ccb}{criterion}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$)=0
-\begin{DoxyCompactList}\small\item\em Максимальное число итераций. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_stop_criterion_af7b92baa5a3b42110e04f6c645b80b20}{operator()}} (\mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Критерий остановки. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stop_criterion_af7b92baa5a3b42110e04f6c645b80b20}\label{class_stop_criterion_af7b92baa5a3b42110e04f6c645b80b20}} 
+bool {\bfseries operator()} (\mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Оператор вызова критерия остановки. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}{swap}} (\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&other) noexcept
+\mbox{\Hypertarget{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}\label{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Метод swap. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stop_criterion_a171a6bcfdc00b8ade761c0fa9b38db7b}{Stop\+Criterion}} ()
+\mbox{\Hypertarget{class_stop_criterion_a171a6bcfdc00b8ade761c0fa9b38db7b}\label{class_stop_criterion_a171a6bcfdc00b8ade761c0fa9b38db7b}} 
+{\bfseries Stop\+Criterion} ()
 \begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stop_criterion_a2108c5c8d061170c9fca08b4620e5968}{Stop\+Criterion}} (size\+\_\+t max\+\_\+n\+\_\+iter)
+\mbox{\Hypertarget{class_stop_criterion_a2108c5c8d061170c9fca08b4620e5968}\label{class_stop_criterion_a2108c5c8d061170c9fca08b4620e5968}} 
+{\bfseries Stop\+Criterion} (size\+\_\+t max\+\_\+n\+\_\+iter)
 \begin{DoxyCompactList}\small\item\em Конструктор, задающий максимальное число итераций. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stop_criterion_ac543a76e634697e0da1f2d9990c6961b}{Stop\+Criterion}} (const \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&other)
-\item 
-\mbox{\hyperlink{class_stop_criterion_a98d6f68858877e127c2239d4734a9b0e}{Stop\+Criterion}} (\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&\&other) noexcept
-\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_stop_criterion_ac543a76e634697e0da1f2d9990c6961b}\label{class_stop_criterion_ac543a76e634697e0da1f2d9990c6961b}} 
+{\bfseries Stop\+Criterion} (const \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stop_criterion_a98d6f68858877e127c2239d4734a9b0e}\label{class_stop_criterion_a98d6f68858877e127c2239d4734a9b0e}} 
+{\bfseries Stop\+Criterion} (\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Конструктор перемещения. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{class_stop_criterion_afdeaa089f9aeb9a252e8da449bb5c007}{name}}
+\mbox{\Hypertarget{class_stop_criterion_afdeaa089f9aeb9a252e8da449bb5c007}\label{class_stop_criterion_afdeaa089f9aeb9a252e8da449bb5c007}} 
+std\+::string {\bfseries name}
 \begin{DoxyCompactList}\small\item\em Название критерия. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}{max\+\_\+iter}} = 100
-\begin{DoxyCompactList}\small\item\em Конструктор перемещения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}\label{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}} 
+size\+\_\+t {\bfseries max\+\_\+iter} = 100
+\begin{DoxyCompactList}\small\item\em Максимальное число итераций. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Абстарктный класс критерия остановки метода оптимизации. 
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8h_source_l00014}{14}} of file \mbox{\hyperlink{_stop_criterion_8h_source}{Stop\+Criterion.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_stop_criterion_a171a6bcfdc00b8ade761c0fa9b38db7b}\label{class_stop_criterion_a171a6bcfdc00b8ade761c0fa9b38db7b}} 
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{StopCriterion()}{StopCriterion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily Stop\+Criterion\+::\+Stop\+Criterion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Конструктор по умолчанию. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-\mbox{\Hypertarget{class_stop_criterion_a2108c5c8d061170c9fca08b4620e5968}\label{class_stop_criterion_a2108c5c8d061170c9fca08b4620e5968}} 
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{StopCriterion()}{StopCriterion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily Stop\+Criterion\+::\+Stop\+Criterion (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{max\+\_\+n\+\_\+iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Конструктор, задающий максимальное число итераций. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-\mbox{\Hypertarget{class_stop_criterion_ac543a76e634697e0da1f2d9990c6961b}\label{class_stop_criterion_ac543a76e634697e0da1f2d9990c6961b}} 
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{StopCriterion()}{StopCriterion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Stop\+Criterion\+::\+Stop\+Criterion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-\mbox{\Hypertarget{class_stop_criterion_a98d6f68858877e127c2239d4734a9b0e}\label{class_stop_criterion_a98d6f68858877e127c2239d4734a9b0e}} 
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\index{StopCriterion@{StopCriterion}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{StopCriterion()}{StopCriterion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily Stop\+Criterion\+::\+Stop\+Criterion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [noexcept]}}
-
-
-
-Конструктор копирования. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_stop_criterion_a7122632ab6029cc2675cebf795088ccb}\label{class_stop_criterion_a7122632ab6029cc2675cebf795088ccb}} 
@@ -115,70 +64,11 @@ Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00014}{14}} of 
 
 
 
-Максимальное число итераций. 
-
 Критерий остановки. 
 
+
+
 Implemented in \mbox{\hyperlink{class_n_m_s_dstop_ae3ec14660aea524d56be5567a5e5adca}{NMSDstop}}, and \mbox{\hyperlink{class_stoh_iter_stop_ad51a88ac27337d520470eebf572737a9}{Stoh\+Iter\+Stop}}.
-
-\mbox{\Hypertarget{class_stop_criterion_af7b92baa5a3b42110e04f6c645b80b20}\label{class_stop_criterion_af7b92baa5a3b42110e04f6c645b80b20}} 
-\index{StopCriterion@{StopCriterion}!operator()@{operator()}}
-\index{operator()@{operator()}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
-{\footnotesize\ttfamily bool Stop\+Criterion\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$}]{method }\end{DoxyParamCaption})}
-
-
-
-Оператор вызова критерия остановки. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-\mbox{\Hypertarget{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}\label{class_stop_criterion_a6c179a9f79f4b39cdf16ee3795708c33}} 
-\index{StopCriterion@{StopCriterion}!swap@{swap}}
-\index{swap@{swap}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
-{\footnotesize\ttfamily void Stop\+Criterion\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [noexcept]}}
-
-
-
-Метод swap. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_stop_criterion_8cpp_source}{Stop\+Criterion.\+cpp}}.
-
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}\label{class_stop_criterion_a07e098e8d36b43be363f3efdf29fb6e0}} 
-\index{StopCriterion@{StopCriterion}!max\_iter@{max\_iter}}
-\index{max\_iter@{max\_iter}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{max\_iter}{max\_iter}}
-{\footnotesize\ttfamily size\+\_\+t Stop\+Criterion\+::max\+\_\+iter = 100\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Конструктор перемещения. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8h_source_l00023}{23}} of file \mbox{\hyperlink{_stop_criterion_8h_source}{Stop\+Criterion.\+h}}.
-
-\mbox{\Hypertarget{class_stop_criterion_afdeaa089f9aeb9a252e8da449bb5c007}\label{class_stop_criterion_afdeaa089f9aeb9a252e8da449bb5c007}} 
-\index{StopCriterion@{StopCriterion}!name@{name}}
-\index{name@{name}!StopCriterion@{StopCriterion}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily std\+::string Stop\+Criterion\+::name\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Название критерия. 
-
-
-
-Definition at line \mbox{\hyperlink{_stop_criterion_8h_source_l00017}{17}} of file \mbox{\hyperlink{_stop_criterion_8h_source}{Stop\+Criterion.\+h}}.
 
 
 

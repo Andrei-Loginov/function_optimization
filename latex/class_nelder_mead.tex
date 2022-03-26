@@ -18,153 +18,91 @@ Inheritance diagram for Nelder\+Mead\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}{Nelder\+Mead}} ()
+\mbox{\Hypertarget{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}\label{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}} 
+{\bfseries Nelder\+Mead} ()
 \begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_nelder_mead_ad5f44a4d02753d21d0deb4d5e9c49b8f}{Nelder\+Mead}} (\mbox{\hyperlink{class_function}{Function}} $\ast$func, \mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$area, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$crit, double alpha=1, double beta=0.\+5, double gamma=2, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&simplex=std\+::vector$<$ std\+::vector$<$ double $>$ $>$())
 \item 
-\mbox{\hyperlink{class_nelder_mead_a512d3a14a0cd5e1feea99ef75d30f3c5}{Nelder\+Mead}} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&\&other)
+\mbox{\Hypertarget{class_nelder_mead_a512d3a14a0cd5e1feea99ef75d30f3c5}\label{class_nelder_mead_a512d3a14a0cd5e1feea99ef75d30f3c5}} 
+{\bfseries Nelder\+Mead} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&\&other)
 \begin{DoxyCompactList}\small\item\em Констуктор перемещения \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_nelder_mead_a5ab333cf2e2e9872079fdcd001615dae}{Nelder\+Mead}} (const \mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&other)
+\mbox{\Hypertarget{class_nelder_mead_a5ab333cf2e2e9872079fdcd001615dae}\label{class_nelder_mead_a5ab333cf2e2e9872079fdcd001615dae}} 
+{\bfseries Nelder\+Mead} (const \mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&other)
 \begin{DoxyCompactList}\small\item\em Конструктор копирования \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}{swap}} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&other) noexcept
+\mbox{\Hypertarget{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}\label{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Метод обмена noexcept. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \& \mbox{\hyperlink{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}{operator=}} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} other) noexcept
+\mbox{\Hypertarget{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}\label{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}} 
+\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \& {\bfseries operator=} (\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} other) noexcept
 \begin{DoxyCompactList}\small\item\em noexcept оператор присваивания \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_result}{Result}} \mbox{\hyperlink{class_nelder_mead_a587eb82284f108aa1323cf366ee7ceed}{optimize}} ()
 \begin{DoxyCompactList}\small\item\em Метод, осуществляющий поиск точки минимума и вовращающий результат работы алгоритма. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}{init\+\_\+simplex}} ()
-\begin{DoxyCompactList}\small\item\em Инициализация симлпекса случайными точками \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_nelder_mead_ada36f8e08dc6a40ba313e7b0c316c070}{evaluate\+\_\+fun\+\_\+simplex}} ()
-\begin{DoxyCompactList}\small\item\em Метод, вычисляющий значения simplex\+\_\+fun\+\_\+value\+\_\+ в точках simplex\+\_\+. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}\label{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}} 
+void {\bfseries init\+\_\+simplex} ()
+\begin{DoxyCompactList}\small\item\em Инициализация симплекса случайными точками. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_aa23c5267b9e75389d957ddba70e5e50f}\label{class_nelder_mead_aa23c5267b9e75389d957ddba70e5e50f}} 
+void {\bfseries eval\+\_\+fun\+\_\+simplex} ()
+\begin{DoxyCompactList}\small\item\em Вычисление значений фуннкции в вершинах симплекса. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_a60b3b5d53f343763c52c44dead52e1d2}\label{class_nelder_mead_a60b3b5d53f343763c52c44dead52e1d2}} 
+void {\bfseries sort\+\_\+points\+\_\+} ()
+\begin{DoxyCompactList}\small\item\em Сортировка индексов вершин симплекса по значению функции в них. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_nelder_mead_a31efba400f580653cadbd90a2ee41721}{make\+\_\+iter}} ()
-\begin{DoxyCompactList}\small\item\em Метод, совершающий итерацию алгоритмма Нелдера-\/Мида \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_nelder_mead_a0efdabcf6db7b1c6f8931be7dbe7ef2f}{find\+\_\+indices}} ()
-\begin{DoxyCompactList}\small\item\em Метод поиска индексов точек \$x\+\_\+h\$, \$x\+\_\+l\$, \$x\+\_\+g\$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Метод, осуществляющий 1 итерацию алгоритма Нелдера-\/Мида. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}\label{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}} 
+std\+::vector$<$ double $>$ {\bfseries update\+\_\+trajectory} ()
+\item 
 \mbox{\hyperlink{class_method_status}{Method\+Status}} $\ast$ \mbox{\hyperlink{class_nelder_mead_ab45b7df4d5c6c6a3022677bea34d7fd7}{get\+\_\+status}} () const
-\begin{DoxyCompactList}\small\item\em Метод, создающий указатель на объект типа \mbox{\hyperlink{class_method_status}{Method\+Status}} (\mbox{\hyperlink{class_n_m_status}{NMStatus}}), содержащий информацию о текущем состоянии алгоритма \end{DoxyCompactList}\item 
-std\+::vector$<$ double $>$ \mbox{\hyperlink{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}{update\+\_\+trajectory}} ()
-\begin{DoxyCompactList}\small\item\em Метод вычисляет центр масс точек симплекса за исключением точки \$x\+\_\+h\$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Метод, создающий указатель на объект типа \mbox{\hyperlink{class_method_status}{Method\+Status}} (\mbox{\hyperlink{class_n_m_status}{NMStatus}}), содержащий информацию о текущем состоянии алгоритма \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}{simplex\+\_\+}}
+\mbox{\Hypertarget{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}\label{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries simplex\+\_\+}
 \begin{DoxyCompactList}\small\item\em Точки симплекса \end{DoxyCompactList}\item 
-std\+::vector$<$ double $>$ \mbox{\hyperlink{class_nelder_mead_ace665ce8466fddb7841a5e210e69dfb3}{simplex\+\_\+fun\+\_\+value\+\_\+}}
-\begin{DoxyCompactList}\small\item\em Значения функции в вершинах симплекса \end{DoxyCompactList}\item 
-std\+::vector$<$ double $>$ \mbox{\hyperlink{class_nelder_mead_a1ef6e727a501667b61a82162ef302eae}{curr\+\_\+point\+\_\+}}
-\begin{DoxyCompactList}\small\item\em Центр масс текщуего симплекса \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{class_nelder_mead_a58cf3307302c66cb643f2280157d346e}{index\+\_\+h}}
+\mbox{\Hypertarget{class_nelder_mead_a6908b0dc020c03b8cd4f0cffcb178751}\label{class_nelder_mead_a6908b0dc020c03b8cd4f0cffcb178751}} 
+std\+::vector$<$ \mbox{\hyperlink{structpoint__y}{point\+\_\+y}} $>$ {\bfseries simplex\+\_\+fun\+\_\+}
+\begin{DoxyCompactList}\small\item\em Значения функции в вершинах симплекса и индексы точек. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_ad7ab1df8dd20c8c6111d3387981bf3bc}\label{class_nelder_mead_ad7ab1df8dd20c8c6111d3387981bf3bc}} 
+std\+::vector$<$ double $>$ {\bfseries simplex\+\_\+y\+\_\+}
 \item 
-size\+\_\+t \mbox{\hyperlink{class_nelder_mead_a8b99c1ab9504fdee49fa454a7dbf5177}{index\+\_\+l}}
+\mbox{\Hypertarget{class_nelder_mead_a900e0b9915a9cabb2c63a71c45ef26cb}\label{class_nelder_mead_a900e0b9915a9cabb2c63a71c45ef26cb}} 
+std\+::vector$<$ double $>$ {\bfseries centroid\+\_\+}
+\begin{DoxyCompactList}\small\item\em Центр масс всех вершин симплекса, кроме той, что с наибольшим значением. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_a01e967c20a9afb314ccb2ad73915125e}\label{class_nelder_mead_a01e967c20a9afb314ccb2ad73915125e}} 
+double {\bfseries alpha\+\_\+} = 1
 \item 
-size\+\_\+t \mbox{\hyperlink{class_nelder_mead_a788942ba9bfae2b9d543c61904dfc10c}{index\+\_\+g}}
-\begin{DoxyCompactList}\small\item\em Индексы точек \$x\+\_\+h\$, \$x\+\_\+l\$, \$x\+\_\+g\$ симплекса \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_nelder_mead_a01e967c20a9afb314ccb2ad73915125e}{alpha\+\_\+}} = 1
+\mbox{\Hypertarget{class_nelder_mead_aea67537aa0149e145b71655f283b0b3f}\label{class_nelder_mead_aea67537aa0149e145b71655f283b0b3f}} 
+double {\bfseries beta\+\_\+} = 0.\+5
 \item 
-double \mbox{\hyperlink{class_nelder_mead_aea67537aa0149e145b71655f283b0b3f}{beta\+\_\+}} = 0.\+5
-\item 
-double \mbox{\hyperlink{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}{gamma\+\_\+}} = 2
+\mbox{\Hypertarget{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}\label{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}} 
+double {\bfseries gamma\+\_\+} = 2
 \begin{DoxyCompactList}\small\item\em Коэффициенты отражения, сжатия и растяжения. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}{out\+\_\+of\+\_\+area\+\_\+flg\+\_\+}} = false
-\begin{DoxyCompactList}\small\item\em Флаг выхода за пределы области. В случае, если он принимает значение true, алгоритм останавливается. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}\label{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}} 
+bool {\bfseries out\+\_\+of\+\_\+area\+\_\+flg\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Флаг выхода за пределы области. В случае, если он принимает значение true, алгоритм останавливается. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nelder_mead_a86bdfb5a04ed6a55be6530ad36c7d6c1}\label{class_nelder_mead_a86bdfb5a04ed6a55be6530ad36c7d6c1}} 
+size\+\_\+t {\bfseries dim\+\_\+}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Класс \mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} содержит в себе реализацию алгоритма Нелдера-\/Мида поиска минимума функции, заданной объектом \mbox{\hyperlink{class_function}{Function}}, в области заданной объектом \mbox{\hyperlink{class_box_area}{Box\+Area}}. 
 
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00011}{11}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}\label{class_nelder_mead_a83d79de428300b30c9fcf28642350b74}} 
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{NelderMead()}{NelderMead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily Nelder\+Mead\+::\+Nelder\+Mead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Конструктор по умолчанию 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
 \mbox{\Hypertarget{class_nelder_mead_ad5f44a4d02753d21d0deb4d5e9c49b8f}\label{class_nelder_mead_ad5f44a4d02753d21d0deb4d5e9c49b8f}} 
 \index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
 \index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{NelderMead()}{NelderMead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{NelderMead()}{NelderMead()}}
 {\footnotesize\ttfamily Nelder\+Mead\+::\+Nelder\+Mead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} $\ast$}]{func,  }\item[{\mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$}]{area,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$}]{crit,  }\item[{double}]{alpha = {\ttfamily 1},  }\item[{double}]{beta = {\ttfamily 0.5},  }\item[{double}]{gamma = {\ttfamily 2},  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{simplex = {\ttfamily std\+:\+:vector$<$std\+:\+:vector$<$double$>$$>$()} }\end{DoxyParamCaption})}
 
 ! Конструктор, задающий функцию, которую нужно оптимизировать, область, критерий остановки, коэффициенты сжатия, отражения, растяжения и начальный симплекс.
 
 Если simplex является пустым вектором, то симплекс инициализируется случайными точками. 
 
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a512d3a14a0cd5e1feea99ef75d30f3c5}\label{class_nelder_mead_a512d3a14a0cd5e1feea99ef75d30f3c5}} 
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{NelderMead()}{NelderMead()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Nelder\+Mead\+::\+Nelder\+Mead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&\&}]{other }\end{DoxyParamCaption})}
-
-
-
-Констуктор перемещения 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a5ab333cf2e2e9872079fdcd001615dae}\label{class_nelder_mead_a5ab333cf2e2e9872079fdcd001615dae}} 
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\index{NelderMead@{NelderMead}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{NelderMead()}{NelderMead()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily Nelder\+Mead\+::\+Nelder\+Mead (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор копирования 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-
-
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_nelder_mead_ada36f8e08dc6a40ba313e7b0c316c070}\label{class_nelder_mead_ada36f8e08dc6a40ba313e7b0c316c070}} 
-\index{NelderMead@{NelderMead}!evaluate\_fun\_simplex@{evaluate\_fun\_simplex}}
-\index{evaluate\_fun\_simplex@{evaluate\_fun\_simplex}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{evaluate\_fun\_simplex()}{evaluate\_fun\_simplex()}}
-{\footnotesize\ttfamily void Nelder\+Mead\+::evaluate\+\_\+fun\+\_\+simplex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Метод, вычисляющий значения simplex\+\_\+fun\+\_\+value\+\_\+ в точках simplex\+\_\+. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a0efdabcf6db7b1c6f8931be7dbe7ef2f}\label{class_nelder_mead_a0efdabcf6db7b1c6f8931be7dbe7ef2f}} 
-\index{NelderMead@{NelderMead}!find\_indices@{find\_indices}}
-\index{find\_indices@{find\_indices}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{find\_indices()}{find\_indices()}}
-{\footnotesize\ttfamily void Nelder\+Mead\+::find\+\_\+indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Метод поиска индексов точек \$x\+\_\+h\$, \$x\+\_\+l\$, \$x\+\_\+g\$. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
 \mbox{\Hypertarget{class_nelder_mead_ab45b7df4d5c6c6a3022677bea34d7fd7}\label{class_nelder_mead_ab45b7df4d5c6c6a3022677bea34d7fd7}} 
 \index{NelderMead@{NelderMead}!get\_status@{get\_status}}
 \index{get\_status@{get\_status}!NelderMead@{NelderMead}}
@@ -179,24 +117,6 @@ Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00193}{193}} of fi
 
 Implements \mbox{\hyperlink{class_optimization_method_a89196e52377f217acc8744f9be7249a7}{Optimization\+Method}}.
 
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00180}{180}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}\label{class_nelder_mead_a04017609d20706dd2c758cd6f0e7aea4}} 
-\index{NelderMead@{NelderMead}!init\_simplex@{init\_simplex}}
-\index{init\_simplex@{init\_simplex}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{init\_simplex()}{init\_simplex()}}
-{\footnotesize\ttfamily void Nelder\+Mead\+::init\+\_\+simplex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Инициализация симлпекса случайными точками 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
 \mbox{\Hypertarget{class_nelder_mead_a31efba400f580653cadbd90a2ee41721}\label{class_nelder_mead_a31efba400f580653cadbd90a2ee41721}} 
 \index{NelderMead@{NelderMead}!make\_iter@{make\_iter}}
 \index{make\_iter@{make\_iter}!NelderMead@{NelderMead}}
@@ -205,29 +125,11 @@ Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00059}{59}} of fil
 
 
 
-Метод, совершающий итерацию алгоритмма Нелдера-\/Мида 
+Метод, осуществляющий 1 итерацию алгоритма Нелдера-\/Мида. 
 
 
 
 Implements \mbox{\hyperlink{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}{Optimization\+Method}}.
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}\label{class_nelder_mead_a4dc6e9c20a8906f04c4f13fffe931b30}} 
-\index{NelderMead@{NelderMead}!operator=@{operator=}}
-\index{operator=@{operator=}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \& Nelder\+Mead\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-noexcept оператор присваивания 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
 
 \mbox{\Hypertarget{class_nelder_mead_a587eb82284f108aa1323cf366ee7ceed}\label{class_nelder_mead_a587eb82284f108aa1323cf366ee7ceed}} 
 \index{NelderMead@{NelderMead}!optimize@{optimize}}
@@ -242,165 +144,6 @@ Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00054}{54}} of fil
 
 
 Implements \mbox{\hyperlink{class_optimization_method_ac230b55a5c1cfffa656eaf8d13a97384}{Optimization\+Method}}.
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}\label{class_nelder_mead_ad654b4974ee085a05997d973d5beb851}} 
-\index{NelderMead@{NelderMead}!swap@{swap}}
-\index{swap@{swap}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
-{\footnotesize\ttfamily void Nelder\+Mead\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nelder_mead}{Nelder\+Mead}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Метод обмена noexcept. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}\label{class_nelder_mead_a03aebcdee69b5a75ac10ce3952a0e814}} 
-\index{NelderMead@{NelderMead}!update\_trajectory@{update\_trajectory}}
-\index{update\_trajectory@{update\_trajectory}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{update\_trajectory()}{update\_trajectory()}}
-{\footnotesize\ttfamily std\+::vector$<$ double $>$ Nelder\+Mead\+::update\+\_\+trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Метод вычисляет центр масс точек симплекса за исключением точки \$x\+\_\+h\$. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8cpp_source_l00185}{185}} of file \mbox{\hyperlink{_nelder_mead_8cpp_source}{Nelder\+Mead.\+cpp}}.
-
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_nelder_mead_a01e967c20a9afb314ccb2ad73915125e}\label{class_nelder_mead_a01e967c20a9afb314ccb2ad73915125e}} 
-\index{NelderMead@{NelderMead}!alpha\_@{alpha\_}}
-\index{alpha\_@{alpha\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{alpha\_}{alpha\_}}
-{\footnotesize\ttfamily double Nelder\+Mead\+::alpha\+\_\+ = 1\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00023}{23}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_aea67537aa0149e145b71655f283b0b3f}\label{class_nelder_mead_aea67537aa0149e145b71655f283b0b3f}} 
-\index{NelderMead@{NelderMead}!beta\_@{beta\_}}
-\index{beta\_@{beta\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{beta\_}{beta\_}}
-{\footnotesize\ttfamily double Nelder\+Mead\+::beta\+\_\+ = 0.\+5\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00023}{23}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a1ef6e727a501667b61a82162ef302eae}\label{class_nelder_mead_a1ef6e727a501667b61a82162ef302eae}} 
-\index{NelderMead@{NelderMead}!curr\_point\_@{curr\_point\_}}
-\index{curr\_point\_@{curr\_point\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{curr\_point\_}{curr\_point\_}}
-{\footnotesize\ttfamily std\+::vector$<$double$>$ Nelder\+Mead\+::curr\+\_\+point\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Центр масс текщуего симплекса 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00015}{15}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}\label{class_nelder_mead_a44e922a9a736d5cccd7373979fd78aeb}} 
-\index{NelderMead@{NelderMead}!gamma\_@{gamma\_}}
-\index{gamma\_@{gamma\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{gamma\_}{gamma\_}}
-{\footnotesize\ttfamily double Nelder\+Mead\+::gamma\+\_\+ = 2\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Коэффициенты отражения, сжатия и растяжения. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00023}{23}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a788942ba9bfae2b9d543c61904dfc10c}\label{class_nelder_mead_a788942ba9bfae2b9d543c61904dfc10c}} 
-\index{NelderMead@{NelderMead}!index\_g@{index\_g}}
-\index{index\_g@{index\_g}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{index\_g}{index\_g}}
-{\footnotesize\ttfamily size\+\_\+t Nelder\+Mead\+::index\+\_\+g\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Индексы точек \$x\+\_\+h\$, \$x\+\_\+l\$, \$x\+\_\+g\$ симплекса 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00016}{16}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a58cf3307302c66cb643f2280157d346e}\label{class_nelder_mead_a58cf3307302c66cb643f2280157d346e}} 
-\index{NelderMead@{NelderMead}!index\_h@{index\_h}}
-\index{index\_h@{index\_h}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{index\_h}{index\_h}}
-{\footnotesize\ttfamily size\+\_\+t Nelder\+Mead\+::index\+\_\+h\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00016}{16}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a8b99c1ab9504fdee49fa454a7dbf5177}\label{class_nelder_mead_a8b99c1ab9504fdee49fa454a7dbf5177}} 
-\index{NelderMead@{NelderMead}!index\_l@{index\_l}}
-\index{index\_l@{index\_l}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{index\_l}{index\_l}}
-{\footnotesize\ttfamily size\+\_\+t Nelder\+Mead\+::index\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00016}{16}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}\label{class_nelder_mead_afe9c9d4fea9a0f9bd71de7f603ca4f5e}} 
-\index{NelderMead@{NelderMead}!out\_of\_area\_flg\_@{out\_of\_area\_flg\_}}
-\index{out\_of\_area\_flg\_@{out\_of\_area\_flg\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{out\_of\_area\_flg\_}{out\_of\_area\_flg\_}}
-{\footnotesize\ttfamily bool Nelder\+Mead\+::out\+\_\+of\+\_\+area\+\_\+flg\+\_\+ = false\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Флаг выхода за пределы области. В случае, если он принимает значение true, алгоритм останавливается. 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00024}{24}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}\label{class_nelder_mead_a3fc13990db6282a124bf6efa67375f17}} 
-\index{NelderMead@{NelderMead}!simplex\_@{simplex\_}}
-\index{simplex\_@{simplex\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{simplex\_}{simplex\_}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ Nelder\+Mead\+::simplex\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Точки симплекса 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00013}{13}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
-
-\mbox{\Hypertarget{class_nelder_mead_ace665ce8466fddb7841a5e210e69dfb3}\label{class_nelder_mead_ace665ce8466fddb7841a5e210e69dfb3}} 
-\index{NelderMead@{NelderMead}!simplex\_fun\_value\_@{simplex\_fun\_value\_}}
-\index{simplex\_fun\_value\_@{simplex\_fun\_value\_}!NelderMead@{NelderMead}}
-\doxysubsubsection{\texorpdfstring{simplex\_fun\_value\_}{simplex\_fun\_value\_}}
-{\footnotesize\ttfamily std\+::vector$<$double$>$ Nelder\+Mead\+::simplex\+\_\+fun\+\_\+value\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Значения функции в вершинах симплекса 
-
-
-
-Definition at line \mbox{\hyperlink{_nelder_mead_8h_source_l00014}{14}} of file \mbox{\hyperlink{_nelder_mead_8h_source}{Nelder\+Mead.\+h}}.
 
 
 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Function Optimization: NelderMead.h File Reference</title>
+<title>Function optimization: NelderMead.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Function Optimization
+   <div id="projectname">Function optimization
    </div>
   </td>
  </tr>
@@ -63,20 +63,33 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">NelderMead.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_optimization_method_8h_source.html">OptimizationMethod.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_n_m_status_8h_source.html">NMStatus.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 </div>
 <p><a href="_nelder_mead_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpoint__y.html">point_y</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура <a class="el" href="structpoint__y.html" title="Структура point_y позволяет осуществлять сотрировку вершин симплекса по значению функции в ней без пе...">point_y</a> позволяет осуществлять сотрировку вершин симплекса по значению функции в ней без перестановок самих координат точек.  <a href="structpoint__y.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nelder_mead.html">NelderMead</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс <a class="el" href="class_nelder_mead.html" title="Класс NelderMead содержит в себе реализацию алгоритма Нелдера-Мида поиска минимума функции,...">NelderMead</a> содержит в себе реализацию алгоритма Нелдера-Мида поиска минимума функции, заданной объектом <a class="el" href="class_function.html" title="Данный класс является оберткой для укзателя на вещественнозначную функцию, принимающую в качестве арг...">Function</a>, в области заданной объектом <a class="el" href="class_box_area.html">BoxArea</a>.  <a href="class_nelder_mead.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad1541e270c845f4dbf10385f58be8028"><td class="memItemLeft" align="right" valign="top"><a id="ad1541e270c845f4dbf10385f58be8028" name="ad1541e270c845f4dbf10385f58be8028"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>comp_point_y</b> (const <a class="el" href="structpoint__y.html">point_y</a> &amp;left, const <a class="el" href="structpoint__y.html">point_y</a> &amp;right)</td></tr>
+<tr class="memdesc:ad1541e270c845f4dbf10385f58be8028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Компаратор для <a class="el" href="structpoint__y.html" title="Структура point_y позволяет осуществлять сотрировку вершин симплекса по значению функции в ней без пе...">point_y</a>. <br /></td></tr>
+<tr class="separator:ad1541e270c845f4dbf10385f58be8028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

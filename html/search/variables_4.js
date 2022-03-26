@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_5fg_0',['index_g',['../class_nelder_mead.html#a788942ba9bfae2b9d543c61904dfc10c',1,'NelderMead']]]
+  ['idx_0',['idx',['../structpoint__y.html#a6bc9f8dc4b6e9160fffd47c5c5440ec3',1,'point_y']]]
 ];

@@ -1,42 +1,43 @@
 \hypertarget{_box_area_8h_source}{}\doxysection{Box\+Area.\+h}
 \mbox{\hyperlink{_box_area_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00002}00002 \textcolor{preprocessor}{\#ifndef BOXAREA\_H}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <cassert>}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <fstream>}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00006}00006 \textcolor{preprocessor}{\#define BOXAREA\_H}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00010}\mbox{\hyperlink{structdimension__limits}{00010}} \textcolor{keyword}{struct }\mbox{\hyperlink{structdimension__limits}{dimension\_limits}}\{}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00011}00011     \textcolor{keywordtype}{double} lower = -\/1, upper = 1;}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00012}00012     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}() \{\}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00013}00013     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(\textcolor{keywordtype}{double} low, \textcolor{keywordtype}{double} up) : lower(low), upper(up) \{\}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00014}00014     \textcolor{keyword}{explicit} \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(std::pair<double, double> lim) : lower(lim.first), upper(lim.second) \{\}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00015}00015 \};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00017}\mbox{\hyperlink{class_box_area}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{class_box_area}{BoxArea}}}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00018}00018 \{}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00019}00019 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00020}00020     \textcolor{keywordtype}{size\_t} ndim\_ = 0;}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00021}00021     std::vector<dimension\_limits> limits\_;}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00023}00023 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00024}00024     \mbox{\hyperlink{class_box_area}{BoxArea}}();}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00025}00025     \mbox{\hyperlink{class_box_area}{BoxArea}}(\textcolor{keywordtype}{size\_t} dim, \textcolor{keyword}{const} std::vector<dimension\_limits>\& lim);}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00026}00026     \mbox{\hyperlink{class_box_area}{BoxArea}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_box_area}{BoxArea}}\& other);}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00027}00027     \mbox{\hyperlink{class_box_area}{BoxArea}}(\mbox{\hyperlink{class_box_area}{BoxArea}}\&\& other);}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00029}00029     \textcolor{keywordtype}{size\_t} dim() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00030}00030     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_box_area}{BoxArea}}\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00031}00031     \mbox{\hyperlink{class_box_area}{BoxArea}}\& operator=(\mbox{\hyperlink{class_box_area}{BoxArea}} other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00032}00032     \textcolor{keywordtype}{bool} is\_in(\textcolor{keyword}{const} std::vector<double>\& point) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00033}00033     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}} get\_limits(\textcolor{keywordtype}{size\_t} i) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00034}00034     \textcolor{keyword}{friend} \textcolor{keywordtype}{void} BoxSwap(\mbox{\hyperlink{class_box_area}{BoxArea}}\& lhs, \mbox{\hyperlink{class_box_area}{BoxArea}}\& rhs);}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00035}00035     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& stream, \textcolor{keyword}{const} \mbox{\hyperlink{class_box_area}{BoxArea}}\& area);}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00037}00037 \};}
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00038}00038 }
-\DoxyCodeLine{\Hypertarget{_box_area_8h_source_l00039}00039 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BOXAREA\_H}}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef BOXAREA\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define BOXAREA\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{10 \textcolor{keyword}{struct }\mbox{\hyperlink{structdimension__limits}{dimension\_limits}}\{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{double} lower = -\/1, upper = 1;}
+\DoxyCodeLine{12     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}() \{\}}
+\DoxyCodeLine{13     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(\textcolor{keywordtype}{double} low, \textcolor{keywordtype}{double} up) : lower(low), upper(up) \{\}}
+\DoxyCodeLine{14     \textcolor{keyword}{explicit} \mbox{\hyperlink{structdimension__limits}{dimension\_limits}}(std::pair<double, double> lim) : lower(lim.first), upper(lim.second) \{\}}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_box_area}{BoxArea}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{size\_t} ndim\_ = 0;}
+\DoxyCodeLine{21     std::vector<dimension\_limits> limits\_;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_box_area}{BoxArea}}();}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_box_area}{BoxArea}}(\textcolor{keywordtype}{size\_t} dim, \textcolor{keyword}{const} std::vector<dimension\_limits>\& lim);}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_box_area}{BoxArea}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_box_area}{BoxArea}}\& other);}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_box_area}{BoxArea}}(\mbox{\hyperlink{class_box_area}{BoxArea}}\&\& other);}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_box_area}{\string~BoxArea}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{size\_t} dim() \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_box_area}{BoxArea}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_box_area}{BoxArea}}\& operator=(\mbox{\hyperlink{class_box_area}{BoxArea}} other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} is\_in(\textcolor{keyword}{const} std::vector<double>\& point) \textcolor{keyword}{const};}
+\DoxyCodeLine{34     \mbox{\hyperlink{structdimension__limits}{dimension\_limits}} get\_limits(\textcolor{keywordtype}{size\_t} i) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{friend} \textcolor{keywordtype}{void} BoxSwap(\mbox{\hyperlink{class_box_area}{BoxArea}}\& lhs, \mbox{\hyperlink{class_box_area}{BoxArea}}\& rhs);}
+\DoxyCodeLine{36     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& stream, \textcolor{keyword}{const} \mbox{\hyperlink{class_box_area}{BoxArea}}\& area);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BOXAREA\_H}}
 
 \end{DoxyCode}

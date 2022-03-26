@@ -31,11 +31,13 @@ double Rosenbrock_3d(std::vector<double> x){
     return pow(1 - x[0], 2) + 100* pow(x[1] - pow(x[0], 2), 2) + pow(1 - x[1], 2) + 100* pow(x[2] - pow(x[1], 2), 2);
 }
 
-double abs_of_sum(std::vector<double> x){
-    return abs(x[0] + x[1] + x[2]);
+double sum_of_abs(std::vector<double> x){
+    return abs(x[0]) + abs(x[1]) + abs(x[2]);
 }
 
 int main(){
+    std::cout << Rosenbrock_2d({1, 1}) << "\n";
+
     SingletonGenerator::get_mt().seed(475);
     OptimizationMethod* optimizer = nullptr;
     Function f;
@@ -60,7 +62,7 @@ int main(){
                 func_index = -1;
                 while (func_index < 1 || func_index > 4){
                     std::cout << "Set function:\n\t1 --- Rosenbrock 2d\n\t2 --- Rosenbrock 3d\n\t";
-                    std::cout << "3 --- abs of sum 3d\n\t4 --- parabola 2d\n";
+                    std::cout << "3 --- sum of abs 3d\n\t4 --- parabola 2d\n";
                     std::cin >> func_index;
                 }
                 switch(func_index) {
@@ -71,7 +73,7 @@ int main(){
                     f = Function(3, Rosenbrock_3d);
                     break;
                 case 3:
-                    f = Function(3, abs_of_sum);
+                    f = Function(3, sum_of_abs);
                     break;
                 case 4:
                     f = Function(2, parabolic);
@@ -96,7 +98,7 @@ int main(){
                 std::cout << "Set optimization method.";
                 method_index = -1;
                 while (method_index < 1 || method_index > 2){
-                    std::cout << "\n\t1 --- Stohastic\n\t2 --- Nelder-Mead";
+                    std::cout << "\n\t1 --- Stohastic\n\t2 --- Nelder-Mead\n";
                     std::cin >> method_index;
                 }
                 std::cout << "Parameters of algorithm.";

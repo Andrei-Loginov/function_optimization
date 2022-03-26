@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Function Optimization: BoxArea.h Source File</title>
+<title>Function optimization: BoxArea.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Function Optimization
+   <div id="projectname">Function optimization
    </div>
   </td>
  </tr>
@@ -90,20 +90,21 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_box_area.html">BoxArea</a>(<span class="keywordtype">size_t</span> dim, <span class="keyword">const</span> std::vector&lt;dimension_limits&gt;&amp; lim);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_box_area.html">BoxArea</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; other);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="class_box_area.html">BoxArea</a>(<a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp;&amp; other);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">size_t</span> dim() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; operator=(<a class="code hl_class" href="class_box_area.html">BoxArea</a> other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> is_in(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; point) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="structdimension__limits.html">dimension_limits</a> get_limits(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> BoxSwap(<a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; lhs, <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; rhs);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; area);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">// BOXAREA_H</span></div>
-<div class="ttc" id="aclass_box_area_html"><div class="ttname"><a href="class_box_area.html">BoxArea</a></div><div class="ttdef"><b>Definition:</b> <a href="_box_area_8h_source.html#l00017">BoxArea.h:18</a></div></div>
-<div class="ttc" id="astructdimension__limits_html"><div class="ttname"><a href="structdimension__limits.html">dimension_limits</a></div><div class="ttdef"><b>Definition:</b> <a href="_box_area_8h_source.html#l00010">BoxArea.h:10</a></div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="class_box_area.html">~BoxArea</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">size_t</span> dim() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; operator=(<a class="code hl_class" href="class_box_area.html">BoxArea</a> other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> is_in(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; point) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_struct" href="structdimension__limits.html">dimension_limits</a> get_limits(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> BoxSwap(<a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; lhs, <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; rhs);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code hl_class" href="class_box_area.html">BoxArea</a>&amp; area);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// BOXAREA_H</span></div>
+<div class="ttc" id="aclass_box_area_html"><div class="ttname"><a href="class_box_area.html">BoxArea</a></div><div class="ttdef"><b>Definition:</b> BoxArea.h:18</div></div>
+<div class="ttc" id="astructdimension__limits_html"><div class="ttname"><a href="structdimension__limits.html">dimension_limits</a></div><div class="ttdef"><b>Definition:</b> BoxArea.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

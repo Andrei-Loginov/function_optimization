@@ -1,8 +1,21 @@
+#pragma once
 #ifndef NELDERMEAD_H
 #define NELDERMEAD_H
 #include "OptimizationMethod.h"
 #include "NMStatus.h"
+#include <algorithm>
 /** \file */
+
+//! Структура point_y позволяет осуществлять сотрировку вершин симплекса по значению функции в ней без перестановок самих координат точек.
+struct point_y {
+    double value;  //!< Значение функцци в вершине симплекса с индексом idx.
+    size_t idx; //!< Индекс точки
+};
+
+//! Компаратор для point_y
+bool comp_point_y(const point_y& left, const point_y& right);
+
+
 /**
  * @brief Класс NelderMead содержит в себе реализацию алгоритма Нелдера-Мида поиска минимума функции, заданной объектом Function, в области
  * заданной объектом BoxArea.
@@ -11,6 +24,26 @@
 class NelderMead : public OptimizationMethod{
 protected:
     std::vector<std::vector<double>> simplex_; //!< Точки симплекса
+    std::vector<point_y> simplex_fun_; //!< Значения функции в вершинах симплекса и индексы точек.
+    std::vector<double> simplex_y_;
+    std::vector<double> centroid_; //!< Центр масс всех вершин симплекса, кроме той, что с наибольшим значением.
+    double alpha_ = 1, beta_ = 0.5, gamma_ = 2; //!< Коэффициенты отражения, сжатия и растяжения.
+    bool out_of_area_flg_ = false; //!< Флаг выхода за пределы области. В случае, если он принимает значение true, алгоритм останавливается.
+    size_t dim_;
+
+    void init_simplex(); //!< Инициализация симплекса случайными точками.
+    void eval_fun_simplex(); //!< Вычисление значений фуннкции в вершинах симплекса.
+    void sort_points_(); //!< Сортировка индексов вершин симплекса по значению функции в них.
+    void make_iter(); //!< Метод, осуществляющий 1 итерацию алгоритма Нелдера-Мида.
+    std::vector<double> update_trajectory();
+
+    MethodStatus* get_status() const; //!< Метод, создающий указатель на объект типа MethodStatus (NMStatus), содержащий информацию о текущем состоянии алгоритма
+
+
+
+
+
+    /*
     std::vector<double> simplex_fun_value_; //!< Значения функции в вершинах симплекса
     std::vector<double> curr_point_; //!< Центр масс текщуего симплекса
     size_t index_h, index_l, index_g; //!< Индексы точек $x_h$, $x_l$, $x_g$ симплекса
@@ -18,10 +51,10 @@ protected:
     void evaluate_fun_simplex(); //!<Метод, вычисляющий значения simplex_fun_value_ в точках simplex_
     void make_iter(); //!< Метод, совершающий итерацию алгоритмма Нелдера-Мида
     void find_indices(); //!< Метод поиска индексов точек $x_h$, $x_l$, $x_g$
-    MethodStatus* get_status() const; //!< Метод, создающий указатель на объект типа MethodStatus (NMStatus), содержащий информацию о текущем состоянии алгоритма
+
     std::vector<double> update_trajectory(); //!< Метод вычисляет центр масс точек симплекса за исключением точки $x_h$
-    double alpha_ = 1, beta_ = 0.5, gamma_ = 2; //!< Коэффициенты отражения, сжатия и растяжения.
-    bool out_of_area_flg_ = false; //!< Флаг выхода за пределы области. В случае, если он принимает значение true, алгоритм останавливается.
+*/
+
 
 public:
     //! Конструктор по умолчанию

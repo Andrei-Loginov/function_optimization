@@ -1,30 +1,30 @@
 \hypertarget{function_8h_source}{}\doxysection{function.\+h}
 \mbox{\hyperlink{function_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00002}00002 \textcolor{preprocessor}{\#ifndef FUNCTION\_H}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00004}00004 \textcolor{preprocessor}{\#define FUNCTION\_H}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00006}00006 \textcolor{comment}{//\#define debug}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00013}\mbox{\hyperlink{class_function}{00013}} \textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_function}{Function}}}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00014}00014 \{}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00015}00015     \textcolor{keywordtype}{int} ndim = 0; }
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00016}00016     double (*function)(std::vector<double>) = \textcolor{keyword}{nullptr}; }
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00017}00017 }
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00018}00018 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00020}00020     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}();}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00022}00022     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}, \textcolor{keywordtype}{double} (*func)(std::vector<double>));}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00024}00024     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_function}{Function}}\& other);}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00026}00026     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\mbox{\hyperlink{class_function}{Function}}\&\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00028}00028     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{swap}}(\mbox{\hyperlink{class_function}{Function}}\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00030}00030     \mbox{\hyperlink{class_function}{Function}}\& \mbox{\hyperlink{class_function_a7875f2da6268bf86501b4f9a871d277f}{operator=}}(\mbox{\hyperlink{class_function}{Function}} other);}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00032}00032     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_a2136d8fff483320f33a4128647f1cf58}{operator()}}(\textcolor{keyword}{const} std::vector<double>\& args) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00034}00034     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}}(\textcolor{keyword}{const} std::vector<double>\& args) \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00036}00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_aacb7817ce56421fad01a96b6c1a586e5}{set\_func}}(\textcolor{keywordtype}{int} new\_dim, \textcolor{keywordtype}{double} (*new\_func)(std::vector<double>));}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00038}00038     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00039}00039 \};}
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00040}00040 }
-\DoxyCodeLine{\Hypertarget{function_8h_source_l00041}00041 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FUNCTION\_H}}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef FUNCTION\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define FUNCTION\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{//\#define debug}}
+\DoxyCodeLine{13 \textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_function}{Function}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} ndim = 0; }
+\DoxyCodeLine{16     double (*function)(std::vector<double>) = \textcolor{keyword}{nullptr}; }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}();}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}, \textcolor{keywordtype}{double} (*func)(std::vector<double>));}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_function}{Function}}\& other);}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\mbox{\hyperlink{class_function}{Function}}\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{swap}}(\mbox{\hyperlink{class_function}{Function}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_function}{Function}}\& \mbox{\hyperlink{class_function_a7875f2da6268bf86501b4f9a871d277f}{operator=}}(\mbox{\hyperlink{class_function}{Function}} other);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_a2136d8fff483320f33a4128647f1cf58}{operator()}}(\textcolor{keyword}{const} std::vector<double>\& args) \textcolor{keyword}{const};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}}(\textcolor{keyword}{const} std::vector<double>\& args) \textcolor{keyword}{const};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_function_aacb7817ce56421fad01a96b6c1a586e5}{set\_func}}(\textcolor{keywordtype}{int} new\_dim, \textcolor{keywordtype}{double} (*new\_func)(std::vector<double>));}
+\DoxyCodeLine{38     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FUNCTION\_H}}
 
 \end{DoxyCode}

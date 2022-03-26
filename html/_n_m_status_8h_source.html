@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Function Optimization: NMStatus.h Source File</title>
+<title>Function optimization: NMStatus.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Function Optimization
+   <div id="projectname">Function optimization
    </div>
   </td>
  </tr>
@@ -65,36 +65,39 @@ $(function() {
   <div class="headertitle"><div class="title">NMStatus.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_n_m_status_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef NMSTATUS_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define NMSTATUS_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_method_status_8h.html">MethodStatus.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_n_m_status.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_n_m_status.html">NMStatus</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_method_status.html">MethodStatus</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> std::vector&lt;double&gt;* value;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> out_of_area_flg_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; other);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_n_m_status.html#a0e6f6a2d1dd4ad5837184e5d942545c1">   24</a></span>    <a class="code hl_function" href="class_n_m_status.html#a0e6f6a2d1dd4ad5837184e5d942545c1">NMStatus</a>(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp;&amp; other);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>(<span class="keywordtype">size_t</span> niter, <span class="keyword">const</span> std::vector&lt;double&gt;* values, <span class="keywordtype">bool</span> area_flg = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; <a class="code hl_function" href="class_n_m_status.html#a38cf6ded9c081269b03eb0ca46f51983">operator=</a>(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a> other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_n_m_status.html#a3ed6757751884df37e701dd10fc7dc83">get_value</a>(<span class="keywordtype">size_t</span> ind);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_n_m_status.html#a72088ce30b888e8c479b07893be28559">get_npoints</a>() const noexcept;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n_m_status.html#a7be9b9a5b746dd1bf8f5adb569d79b63">get_out_of_area_flg</a>() const;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">// NMSTATUS_H</span></div>
+<a href="_n_m_status_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef NMSTATUS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define NMSTATUS_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_method_status_8h.html">MethodStatus.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_n_m_status.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_n_m_status.html">NMStatus</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_method_status.html">MethodStatus</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> std::vector&lt;double&gt;* value;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> swap(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> out_of_area_flg_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; other);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_n_m_status.html#a0e6f6a2d1dd4ad5837184e5d942545c1">   25</a></span>    <a class="code hl_function" href="class_n_m_status.html#a0e6f6a2d1dd4ad5837184e5d942545c1">NMStatus</a>(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp;&amp; other);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus</a>(<span class="keywordtype">size_t</span> niter, <span class="keyword">const</span> std::vector&lt;double&gt;* values, <span class="keywordtype">bool</span> area_flg = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_n_m_status.html#a406cd5d694c3df45ace21e3bdbfbd872">   29</a></span>    <a class="code hl_function" href="class_n_m_status.html#a406cd5d694c3df45ace21e3bdbfbd872">~NMStatus</a>(){}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_n_m_status.html">NMStatus</a>&amp; <a class="code hl_function" href="class_n_m_status.html#a38cf6ded9c081269b03eb0ca46f51983">operator=</a>(<a class="code hl_class" href="class_n_m_status.html">NMStatus</a> other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_n_m_status.html#a3ed6757751884df37e701dd10fc7dc83">get_value</a>(<span class="keywordtype">size_t</span> ind);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_n_m_status.html#a72088ce30b888e8c479b07893be28559">get_npoints</a>() const noexcept;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_n_m_status.html#a7be9b9a5b746dd1bf8f5adb569d79b63">get_out_of_area_flg</a>() const;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// NMSTATUS_H</span></div>
 <div class="ttc" id="a_method_status_8h_html"><div class="ttname"><a href="_method_status_8h.html">MethodStatus.h</a></div></div>
-<div class="ttc" id="aclass_method_status_html"><div class="ttname"><a href="class_method_status.html">MethodStatus</a></div><div class="ttdoc">Класс MethodStatus является абстрактным базовым для классов, содержащих информацию о текущем состояни...</div><div class="ttdef"><b>Definition:</b> <a href="_method_status_8h_source.html#l00010">MethodStatus.h:10</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html"><div class="ttname"><a href="class_n_m_status.html">NMStatus</a></div><div class="ttdoc">Класс NMStatus содержит информацию о текщем состоянии NelderMead.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8h_source.html#l00010">NMStatus.h:11</a></div></div>
+<div class="ttc" id="aclass_method_status_html"><div class="ttname"><a href="class_method_status.html">MethodStatus</a></div><div class="ttdoc">Класс MethodStatus является абстрактным базовым для классов, содержащих информацию о текущем состояни...</div><div class="ttdef"><b>Definition:</b> MethodStatus.h:11</div></div>
+<div class="ttc" id="aclass_n_m_status_html"><div class="ttname"><a href="class_n_m_status.html">NMStatus</a></div><div class="ttdoc">Класс NMStatus содержит информацию о текщем состоянии NelderMead.</div><div class="ttdef"><b>Definition:</b> NMStatus.h:12</div></div>
 <div class="ttc" id="aclass_n_m_status_html_a0e6f6a2d1dd4ad5837184e5d942545c1"><div class="ttname"><a href="class_n_m_status.html#a0e6f6a2d1dd4ad5837184e5d942545c1">NMStatus::NMStatus</a></div><div class="ttdeci">NMStatus(NMStatus &amp;&amp;other)</div><div class="ttdoc">Конструктор перемещения.</div></div>
-<div class="ttc" id="aclass_n_m_status_html_a38cf6ded9c081269b03eb0ca46f51983"><div class="ttname"><a href="class_n_m_status.html#a38cf6ded9c081269b03eb0ca46f51983">NMStatus::operator=</a></div><div class="ttdeci">NMStatus &amp; operator=(NMStatus other) noexcept</div><div class="ttdoc">noexcept оператор присваивания.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8cpp_source.html#l00025">NMStatus.cpp:25</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html_a3ed6757751884df37e701dd10fc7dc83"><div class="ttname"><a href="class_n_m_status.html#a3ed6757751884df37e701dd10fc7dc83">NMStatus::get_value</a></div><div class="ttdeci">double get_value(size_t ind)</div><div class="ttdoc">Метод, вовзращающий значение функии в вершине симплекса с индекосм ind.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8cpp_source.html#l00030">NMStatus.cpp:30</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html_a6fb1cc467a600c5e95dcb13d8cf5f032"><div class="ttname"><a href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus::NMStatus</a></div><div class="ttdeci">NMStatus()</div><div class="ttdoc">Конструтор по умолчанию.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8cpp_source.html#l00005">NMStatus.cpp:5</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html_a72088ce30b888e8c479b07893be28559"><div class="ttname"><a href="class_n_m_status.html#a72088ce30b888e8c479b07893be28559">NMStatus::get_npoints</a></div><div class="ttdeci">size_t get_npoints() const noexcept</div><div class="ttdoc">Геттер числа вершин в симплексе.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8cpp_source.html#l00034">NMStatus.cpp:34</a></div></div>
-<div class="ttc" id="aclass_n_m_status_html_a7be9b9a5b746dd1bf8f5adb569d79b63"><div class="ttname"><a href="class_n_m_status.html#a7be9b9a5b746dd1bf8f5adb569d79b63">NMStatus::get_out_of_area_flg</a></div><div class="ttdeci">bool get_out_of_area_flg() const</div><div class="ttdoc">Геттер флага выхода за пределы области.</div><div class="ttdef"><b>Definition:</b> <a href="_n_m_status_8cpp_source.html#l00038">NMStatus.cpp:38</a></div></div>
+<div class="ttc" id="aclass_n_m_status_html_a38cf6ded9c081269b03eb0ca46f51983"><div class="ttname"><a href="class_n_m_status.html#a38cf6ded9c081269b03eb0ca46f51983">NMStatus::operator=</a></div><div class="ttdeci">NMStatus &amp; operator=(NMStatus other) noexcept</div><div class="ttdoc">noexcept оператор присваивания.</div><div class="ttdef"><b>Definition:</b> NMStatus.cpp:25</div></div>
+<div class="ttc" id="aclass_n_m_status_html_a3ed6757751884df37e701dd10fc7dc83"><div class="ttname"><a href="class_n_m_status.html#a3ed6757751884df37e701dd10fc7dc83">NMStatus::get_value</a></div><div class="ttdeci">double get_value(size_t ind)</div><div class="ttdoc">Метод, вовзращающий значение функии в вершине симплекса с индекосм ind.</div><div class="ttdef"><b>Definition:</b> NMStatus.cpp:30</div></div>
+<div class="ttc" id="aclass_n_m_status_html_a406cd5d694c3df45ace21e3bdbfbd872"><div class="ttname"><a href="class_n_m_status.html#a406cd5d694c3df45ace21e3bdbfbd872">NMStatus::~NMStatus</a></div><div class="ttdeci">~NMStatus()</div><div class="ttdoc">Деструктор.</div><div class="ttdef"><b>Definition:</b> NMStatus.h:29</div></div>
+<div class="ttc" id="aclass_n_m_status_html_a6fb1cc467a600c5e95dcb13d8cf5f032"><div class="ttname"><a href="class_n_m_status.html#a6fb1cc467a600c5e95dcb13d8cf5f032">NMStatus::NMStatus</a></div><div class="ttdeci">NMStatus()</div><div class="ttdoc">Конструтор по умолчанию.</div><div class="ttdef"><b>Definition:</b> NMStatus.cpp:5</div></div>
+<div class="ttc" id="aclass_n_m_status_html_a72088ce30b888e8c479b07893be28559"><div class="ttname"><a href="class_n_m_status.html#a72088ce30b888e8c479b07893be28559">NMStatus::get_npoints</a></div><div class="ttdeci">size_t get_npoints() const noexcept</div><div class="ttdoc">Геттер числа вершин в симплексе.</div><div class="ttdef"><b>Definition:</b> NMStatus.cpp:34</div></div>
+<div class="ttc" id="aclass_n_m_status_html_a7be9b9a5b746dd1bf8f5adb569d79b63"><div class="ttname"><a href="class_n_m_status.html#a7be9b9a5b746dd1bf8f5adb569d79b63">NMStatus::get_out_of_area_flg</a></div><div class="ttdeci">bool get_out_of_area_flg() const</div><div class="ttdoc">Геттер флага выхода за пределы области.</div><div class="ttdef"><b>Definition:</b> NMStatus.cpp:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

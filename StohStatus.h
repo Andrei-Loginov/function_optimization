@@ -1,8 +1,10 @@
-/** \file */
+#pragma once
 #ifndef STOHSTATUS_H
 #define STOHSTATUS_H
 
 #include "MethodStatus.h"
+
+/** \file */
 
 /*!
  * \brief StohStaatus содержит информацию о текущем состоянии объекта StohasticOptimization для критерия остановки.

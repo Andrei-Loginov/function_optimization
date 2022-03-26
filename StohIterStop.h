@@ -1,9 +1,11 @@
-/** \file */
+#pragma once
 #ifndef STOHITERSTOP_H
 #define STOHITERSTOP_H
 
 #include "StopCriterion.h"
 #include "StohStatus.h"
+
+/** \file */
 
 /*!
  * @brief Класс StohIterStop содержит в себе реализацию критерия остановки стохастического поиска по числу итераций с момента последнего улучшения.

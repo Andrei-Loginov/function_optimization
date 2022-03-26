@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../struct_result.html#a6ddd4746159991deb803e4516dc1b167',1,'Result']]],
-  ['x_5ftrajectory_5f_1',['x_trajectory_',['../class_optimization_method.html#a73ff57bb6d7d745f91c242724c270fd5',1,'OptimizationMethod']]]
+  ['value_0',['value',['../structpoint__y.html#a765ca963019738e18b8100a9bed3e72e',1,'point_y']]]
 ];

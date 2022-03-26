@@ -14,174 +14,46 @@
 \item 
 \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}} ()
 \item 
-\mbox{\hyperlink{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}{Function}} (int \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}, double($\ast$func)(std\+::vector$<$ double $>$))
+\mbox{\Hypertarget{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}\label{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}} 
+{\bfseries Function} (int \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}}, double($\ast$func)(std\+::vector$<$ double $>$))
 \begin{DoxyCompactList}\small\item\em Конструктор, устанавливающий function = func размерности dim. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}{Function}} (const \mbox{\hyperlink{class_function}{Function}} \&other)
+\mbox{\Hypertarget{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}\label{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}} 
+{\bfseries Function} (const \mbox{\hyperlink{class_function}{Function}} \&other)
 \begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_function_acd1625dba4a8e5eb3be0e29c7adca169}{Function}} (\mbox{\hyperlink{class_function}{Function}} \&\&other) noexcept
+\mbox{\Hypertarget{class_function_acd1625dba4a8e5eb3be0e29c7adca169}\label{class_function_acd1625dba4a8e5eb3be0e29c7adca169}} 
+{\bfseries Function} (\mbox{\hyperlink{class_function}{Function}} \&\&other) noexcept
 \begin{DoxyCompactList}\small\item\em Конструктор перемещения. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_function_afa2da49727f0a72e58b2830191f0e3b1}{swap}} (\mbox{\hyperlink{class_function}{Function}} \&other) noexcept
+\mbox{\Hypertarget{class_function_afa2da49727f0a72e58b2830191f0e3b1}\label{class_function_afa2da49727f0a72e58b2830191f0e3b1}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_function}{Function}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Оператор обмена. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_function}{Function}} \& \mbox{\hyperlink{class_function_a7875f2da6268bf86501b4f9a871d277f}{operator=}} (\mbox{\hyperlink{class_function}{Function}} other)
+\mbox{\Hypertarget{class_function_a7875f2da6268bf86501b4f9a871d277f}\label{class_function_a7875f2da6268bf86501b4f9a871d277f}} 
+\mbox{\hyperlink{class_function}{Function}} \& {\bfseries operator=} (\mbox{\hyperlink{class_function}{Function}} other)
 \begin{DoxyCompactList}\small\item\em noexcept оператор присваивания. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_function_a2136d8fff483320f33a4128647f1cf58}{operator()}} (const std\+::vector$<$ double $>$ \&args) const
+\mbox{\Hypertarget{class_function_a2136d8fff483320f33a4128647f1cf58}\label{class_function_a2136d8fff483320f33a4128647f1cf58}} 
+double {\bfseries operator()} (const std\+::vector$<$ double $>$ \&args) const
 \begin{DoxyCompactList}\small\item\em Оператор вычисления значения функции в точке args. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_function_ab881e161a0bc984bf67df9fa73072c60}{eval}} (const std\+::vector$<$ double $>$ \&args) const
+\mbox{\Hypertarget{class_function_ab881e161a0bc984bf67df9fa73072c60}\label{class_function_ab881e161a0bc984bf67df9fa73072c60}} 
+double {\bfseries eval} (const std\+::vector$<$ double $>$ \&args) const
 \begin{DoxyCompactList}\small\item\em Метод вычисления значения функции в точке args. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_function_aacb7817ce56421fad01a96b6c1a586e5}{set\+\_\+func}} (int new\+\_\+dim, double($\ast$new\+\_\+func)(std\+::vector$<$ double $>$))
+\mbox{\Hypertarget{class_function_aacb7817ce56421fad01a96b6c1a586e5}\label{class_function_aacb7817ce56421fad01a96b6c1a586e5}} 
+void {\bfseries set\+\_\+func} (int new\+\_\+dim, double($\ast$new\+\_\+func)(std\+::vector$<$ double $>$))
 \begin{DoxyCompactList}\small\item\em Метод, присваивающий function функцию new\+\_\+func размерности new\+\_\+dim. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{class_function_a90073e225f9eba4d125c7729e4bf541f}{dim}} () const
+\mbox{\Hypertarget{class_function_a90073e225f9eba4d125c7729e4bf541f}\label{class_function_a90073e225f9eba4d125c7729e4bf541f}} 
+size\+\_\+t {\bfseries dim} () const
 \begin{DoxyCompactList}\small\item\em Метод, возвращающий размерность аргумента function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Данный класс является оберткой для укзателя на вещественнозначную функцию, принимающую в качестве аргумента std\+::vector$<$double$>$. 
 
-Definition at line \mbox{\hyperlink{function_8h_source_l00013}{13}} of file \mbox{\hyperlink{function_8h_source}{function.\+h}}.
-
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_function_ae206568fd4fd4c885e3ccff76345c4e6}\label{class_function_ae206568fd4fd4c885e3ccff76345c4e6}} 
 \index{Function@{Function}!Function@{Function}}
 \index{Function@{Function}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{Function()}{Function()}}
 {\footnotesize\ttfamily Function\+::\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Конструктор по умолчанию. 
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}\label{class_function_af76b05712c1e55ccda2a8d1cb2e2a488}} 
-\index{Function@{Function}!Function@{Function}}
-\index{Function@{Function}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily Function\+::\+Function (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{double($\ast$)(std\+::vector$<$ double $>$)}]{func }\end{DoxyParamCaption})}
-
-
-
-Конструктор, устанавливающий function = func размерности dim. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}\label{class_function_a9a76c178436c9e249ad74d6b9eb1ea73}} 
-\index{Function@{Function}!Function@{Function}}
-\index{Function@{Function}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Function\+::\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_function}{Function}} \&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор копирования. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_acd1625dba4a8e5eb3be0e29c7adca169}\label{class_function_acd1625dba4a8e5eb3be0e29c7adca169}} 
-\index{Function@{Function}!Function@{Function}}
-\index{Function@{Function}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily Function\+::\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Конструктор перемещения. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_function_a90073e225f9eba4d125c7729e4bf541f}\label{class_function_a90073e225f9eba4d125c7729e4bf541f}} 
-\index{Function@{Function}!dim@{dim}}
-\index{dim@{dim}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{dim()}{dim()}}
-{\footnotesize\ttfamily size\+\_\+t Function\+::dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Метод, возвращающий размерность аргумента function. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_ab881e161a0bc984bf67df9fa73072c60}\label{class_function_ab881e161a0bc984bf67df9fa73072c60}} 
-\index{Function@{Function}!eval@{eval}}
-\index{eval@{eval}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{eval()}{eval()}}
-{\footnotesize\ttfamily double Function\+::eval (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{args }\end{DoxyParamCaption}) const}
-
-
-
-Метод вычисления значения функции в точке args. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_a2136d8fff483320f33a4128647f1cf58}\label{class_function_a2136d8fff483320f33a4128647f1cf58}} 
-\index{Function@{Function}!operator()@{operator()}}
-\index{operator()@{operator()}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
-{\footnotesize\ttfamily double Function\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{args }\end{DoxyParamCaption}) const}
-
-
-
-Оператор вычисления значения функции в точке args. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_a7875f2da6268bf86501b4f9a871d277f}\label{class_function_a7875f2da6268bf86501b4f9a871d277f}} 
-\index{Function@{Function}!operator=@{operator=}}
-\index{operator=@{operator=}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_function}{Function}} \& Function\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}}}]{other }\end{DoxyParamCaption})}
-
-
-
-noexcept оператор присваивания. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_aacb7817ce56421fad01a96b6c1a586e5}\label{class_function_aacb7817ce56421fad01a96b6c1a586e5}} 
-\index{Function@{Function}!set\_func@{set\_func}}
-\index{set\_func@{set\_func}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{set\_func()}{set\_func()}}
-{\footnotesize\ttfamily void Function\+::set\+\_\+func (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+dim,  }\item[{double($\ast$)(std\+::vector$<$ double $>$)}]{new\+\_\+func }\end{DoxyParamCaption})}
-
-
-
-Метод, присваивающий function функцию new\+\_\+func размерности new\+\_\+dim. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-\mbox{\Hypertarget{class_function_afa2da49727f0a72e58b2830191f0e3b1}\label{class_function_afa2da49727f0a72e58b2830191f0e3b1}} 
-\index{Function@{Function}!swap@{swap}}
-\index{swap@{swap}!Function@{Function}}
-\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
-{\footnotesize\ttfamily void Function\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Оператор обмена. 
-
-
-
-Definition at line \mbox{\hyperlink{function_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{function_8cpp_source}{function.\+cpp}}.
-
-
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -18,17 +18,26 @@ Inheritance diagram for Stohastic\+Optimization\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}{Stohastic\+Optimization}} ()
+\mbox{\Hypertarget{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}\label{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}} 
+{\bfseries Stohastic\+Optimization} ()
 \begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}{Stohastic\+Optimization}} (const \mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&other)
+\mbox{\Hypertarget{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}\label{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}} 
+{\bfseries Stohastic\+Optimization} (const \mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&other)
 \begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}{Stohastic\+Optimization}} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&\&other)
+\mbox{\Hypertarget{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}\label{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}} 
+{\bfseries Stohastic\+Optimization} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&\&other)
 \begin{DoxyCompactList}\small\item\em Конструктор перемещения. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}{Stohastic\+Optimization}} (\mbox{\hyperlink{class_function}{Function}} $\ast$func, \mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$area, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$crit, double p=0.\+5, double delta=0.\+5, const std\+::vector$<$ double $>$ \&first\+\_\+point=std\+::vector$<$ double $>$())
+\mbox{\Hypertarget{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}\label{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}} 
+{\bfseries Stohastic\+Optimization} (\mbox{\hyperlink{class_function}{Function}} $\ast$func, \mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$area, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$crit, double p=0.\+5, double delta=0.\+5, const std\+::vector$<$ double $>$ \&first\+\_\+point=std\+::vector$<$ double $>$())
 \begin{DoxyCompactList}\small\item\em Конструктор, задающий функцию, область, критерий остановки, параметр p\+\_\+, delta\+\_\+ и first\+\_\+point\+\_\+. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \& \mbox{\hyperlink{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}{operator=}} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} other) noexcept
+\mbox{\Hypertarget{class_stohastic_optimization_a7cfe6e74143fab6025c12d989b4f3f6e}\label{class_stohastic_optimization_a7cfe6e74143fab6025c12d989b4f3f6e}} 
+{\bfseries $\sim$\+Stohastic\+Optimization} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}\label{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}} 
+\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \& {\bfseries operator=} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} other) noexcept
 \begin{DoxyCompactList}\small\item\em Оператор присваивания. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}{set\+\_\+first\+\_\+point}} (const std\+::vector$<$ double $>$ \&point)
+\mbox{\Hypertarget{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}\label{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}} 
+bool {\bfseries set\+\_\+first\+\_\+point} (const std\+::vector$<$ double $>$ \&point)
 \begin{DoxyCompactList}\small\item\em Сеттер начальной точки. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_result}{Result}} \mbox{\hyperlink{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}{optimize}} ()
 \begin{DoxyCompactList}\small\item\em Метод, осуществляющий поиск точки минимума и вовращающий результат работы алгоритма. \end{DoxyCompactList}\item 
@@ -39,88 +48,31 @@ bool \mbox{\hyperlink{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9
 \item 
 void \mbox{\hyperlink{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}{make\+\_\+iter}} ()
 \begin{DoxyCompactList}\small\item\em Точка \$x\+\_\+0\$. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}{swap}} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&other) noexcept
+\mbox{\Hypertarget{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}\label{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Число итераций после последнего уменьшения curr\+\_\+y\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}{p\+\_\+}}
+\mbox{\Hypertarget{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}\label{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}} 
+double {\bfseries p\+\_\+}
 \begin{DoxyCompactList}\small\item\em Параметр, определяющий вероятность моделирования точки в \$\textbackslash{}delta\$-\/окрестности \$x\+\_\+i\$. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{class_stohastic_optimization_a6ed8777b66f3c493c5ace340bf535720}{delta\+\_\+}}
+\mbox{\Hypertarget{class_stohastic_optimization_a6ed8777b66f3c493c5ace340bf535720}\label{class_stohastic_optimization_a6ed8777b66f3c493c5ace340bf535720}} 
+double {\bfseries delta\+\_\+}
 \item 
-double \mbox{\hyperlink{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}{curr\+\_\+y\+\_\+}}
+\mbox{\Hypertarget{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}\label{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}} 
+double {\bfseries curr\+\_\+y\+\_\+}
 \begin{DoxyCompactList}\small\item\em Радиус \$\textbackslash{}delta\$-\/окрестности точки \$x\+\_\+i\$. \end{DoxyCompactList}\item 
-std\+::vector$<$ double $>$ \mbox{\hyperlink{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}{first\+\_\+point\+\_\+}}
+\mbox{\Hypertarget{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}\label{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}} 
+std\+::vector$<$ double $>$ {\bfseries first\+\_\+point\+\_\+}
 \begin{DoxyCompactList}\small\item\em Наименьшее значение функции, достигнутое к текущей итерации. \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}{niter\+\_\+after\+\_\+improvment\+\_\+}} = 0
+\mbox{\Hypertarget{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}\label{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}} 
+size\+\_\+t {\bfseries niter\+\_\+after\+\_\+improvment\+\_\+} = 0
 \begin{DoxyCompactList}\small\item\em Метод, осуществляющий 1 итерацию случайного поиска. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Класс \mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} содержит в себе реализацию случайного поиска точки минимума функции в области. 
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00012}{12}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}\label{class_stohastic_optimization_a8b26fdb761cb9dcbc59474a490932f00}} 
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{StohasticOptimization()}{StohasticOptimization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily Stohastic\+Optimization\+::\+Stohastic\+Optimization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Конструктор по умолчанию. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}\label{class_stohastic_optimization_a3935d403eddcfcc381d225dbfaaabee5}} 
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{StohasticOptimization()}{StohasticOptimization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily Stohastic\+Optimization\+::\+Stohastic\+Optimization (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор копирования. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}\label{class_stohastic_optimization_a12d48e65e4e584475772c1dd1078cf9f}} 
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{StohasticOptimization()}{StohasticOptimization()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Stohastic\+Optimization\+::\+Stohastic\+Optimization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&\&}]{other }\end{DoxyParamCaption})}
-
-
-
-Конструктор перемещения. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}\label{class_stohastic_optimization_ae78e86da502bbc63d08e852d0a1515a2}} 
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\index{StohasticOptimization@{StohasticOptimization}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{StohasticOptimization()}{StohasticOptimization()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily Stohastic\+Optimization\+::\+Stohastic\+Optimization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} $\ast$}]{func,  }\item[{\mbox{\hyperlink{class_box_area}{Box\+Area}} $\ast$}]{area,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} $\ast$}]{crit,  }\item[{double}]{p = {\ttfamily 0.5},  }\item[{double}]{delta = {\ttfamily 0.5},  }\item[{const std\+::vector$<$ double $>$ \&}]{first\+\_\+point = {\ttfamily std\+:\+:vector$<$double$>$()} }\end{DoxyParamCaption})}
-
-
-
-Конструктор, задающий функцию, область, критерий остановки, параметр p\+\_\+, delta\+\_\+ и first\+\_\+point\+\_\+. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_stohastic_optimization_ab3db35cc4e52e5f47a39e81470aa613b}\label{class_stohastic_optimization_ab3db35cc4e52e5f47a39e81470aa613b}} 
@@ -137,10 +89,6 @@ Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00035}{
 
 Implements \mbox{\hyperlink{class_optimization_method_a89196e52377f217acc8744f9be7249a7}{Optimization\+Method}}.
 
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
 \mbox{\Hypertarget{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}\label{class_stohastic_optimization_ae26ca0aaae6b04b3008ed90a8273134a}} 
 \index{StohasticOptimization@{StohasticOptimization}!make\_iter@{make\_iter}}
 \index{make\_iter@{make\_iter}!StohasticOptimization@{StohasticOptimization}}
@@ -155,24 +103,6 @@ Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00083}{
 
 Implements \mbox{\hyperlink{class_optimization_method_abb9116aedc9cf649f5010b7411b5d951}{Optimization\+Method}}.
 
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}\label{class_stohastic_optimization_a1b0f158c16d726b9a1afb0cf454106fa}} 
-\index{StohasticOptimization@{StohasticOptimization}!operator=@{operator=}}
-\index{operator=@{operator=}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \& Stohastic\+Optimization\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Оператор присваивания. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
 \mbox{\Hypertarget{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}\label{class_stohastic_optimization_aa0c4e94aef20900d6f659b7bb6375461}} 
 \index{StohasticOptimization@{StohasticOptimization}!optimize@{optimize}}
 \index{optimize@{optimize}!StohasticOptimization@{StohasticOptimization}}
@@ -186,107 +116,6 @@ Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00030}{
 
 
 Implements \mbox{\hyperlink{class_optimization_method_ac230b55a5c1cfffa656eaf8d13a97384}{Optimization\+Method}}.
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}\label{class_stohastic_optimization_ab6ca2845d5247f3c6b9fa4ab95f9a653}} 
-\index{StohasticOptimization@{StohasticOptimization}!set\_first\_point@{set\_first\_point}}
-\index{set\_first\_point@{set\_first\_point}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{set\_first\_point()}{set\_first\_point()}}
-{\footnotesize\ttfamily bool Stohastic\+Optimization\+::set\+\_\+first\+\_\+point (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{point }\end{DoxyParamCaption})}
-
-
-
-Сеттер начальной точки. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}\label{class_stohastic_optimization_ac1671f62944a6c3d263ba6b058a0acd2}} 
-\index{StohasticOptimization@{StohasticOptimization}!swap@{swap}}
-\index{swap@{swap}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
-{\footnotesize\ttfamily void Stohastic\+Optimization\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stohastic_optimization}{Stohastic\+Optimization}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [noexcept]}}
-
-
-
-Число итераций после последнего уменьшения curr\+\_\+y\+\_\+. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_stohastic_optimization_8cpp_source}{Stohastic\+Optimization.\+cpp}}.
-
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}\label{class_stohastic_optimization_a218cd4fe08e140930379673f5ba3d257}} 
-\index{StohasticOptimization@{StohasticOptimization}!curr\_y\_@{curr\_y\_}}
-\index{curr\_y\_@{curr\_y\_}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{curr\_y\_}{curr\_y\_}}
-{\footnotesize\ttfamily double Stohastic\+Optimization\+::curr\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Радиус \$\textbackslash{}delta\$-\/окрестности точки \$x\+\_\+i\$. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00017}{17}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_a6ed8777b66f3c493c5ace340bf535720}\label{class_stohastic_optimization_a6ed8777b66f3c493c5ace340bf535720}} 
-\index{StohasticOptimization@{StohasticOptimization}!delta\_@{delta\_}}
-\index{delta\_@{delta\_}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{delta\_}{delta\_}}
-{\footnotesize\ttfamily double Stohastic\+Optimization\+::delta\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00016}{16}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}\label{class_stohastic_optimization_ac97b58d10d383352593ee2451eef8c77}} 
-\index{StohasticOptimization@{StohasticOptimization}!first\_point\_@{first\_point\_}}
-\index{first\_point\_@{first\_point\_}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{first\_point\_}{first\_point\_}}
-{\footnotesize\ttfamily std\+::vector$<$double$>$ Stohastic\+Optimization\+::first\+\_\+point\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Наименьшее значение функции, достигнутое к текущей итерации. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00018}{18}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}\label{class_stohastic_optimization_adb2b6bcd00e6def821b9d357187c0c98}} 
-\index{StohasticOptimization@{StohasticOptimization}!niter\_after\_improvment\_@{niter\_after\_improvment\_}}
-\index{niter\_after\_improvment\_@{niter\_after\_improvment\_}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{niter\_after\_improvment\_}{niter\_after\_improvment\_}}
-{\footnotesize\ttfamily size\+\_\+t Stohastic\+Optimization\+::niter\+\_\+after\+\_\+improvment\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Метод, осуществляющий 1 итерацию случайного поиска. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00020}{20}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
-
-\mbox{\Hypertarget{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}\label{class_stohastic_optimization_aa87f6937d0ac582fad7cc60d2ef05d4d}} 
-\index{StohasticOptimization@{StohasticOptimization}!p\_@{p\_}}
-\index{p\_@{p\_}!StohasticOptimization@{StohasticOptimization}}
-\doxysubsubsection{\texorpdfstring{p\_}{p\_}}
-{\footnotesize\ttfamily double Stohastic\+Optimization\+::p\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Параметр, определяющий вероятность моделирования точки в \$\textbackslash{}delta\$-\/окрестности \$x\+\_\+i\$. 
-
-
-
-Definition at line \mbox{\hyperlink{_stohastic_optimization_8h_source_l00015}{15}} of file \mbox{\hyperlink{_stohastic_optimization_8h_source}{Stohastic\+Optimization.\+h}}.
 
 
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef NMSTATUS_H
 #define NMSTATUS_H
 #include<vector>

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef NMSDSTOP_H
 #define NMSDSTOP_H
 #include "NMStatus.h"

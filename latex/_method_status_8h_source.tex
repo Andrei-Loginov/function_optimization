@@ -1,25 +1,27 @@
 \hypertarget{_method_status_8h_source}{}\doxysection{Method\+Status.\+h}
 \mbox{\hyperlink{_method_status_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef METHODSTATUS\_H}}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <stddef.h>}}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <stdexcept>}}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00004}00004 \textcolor{preprocessor}{\#define METHODSTATUS\_H}}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00010}\mbox{\hyperlink{class_method_status}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{class_method_status}{MethodStatus}}\{}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00011}00011 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00013}00013     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}();}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00015}00015     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_method_status}{MethodStatus}}\& other);}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00017}00017     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}\&\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00019}00019     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\textcolor{keywordtype}{size\_t} niter);}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00021}00021     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_method_status_a04f4893c49e13df705979caa3b264017}{swap}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}\& other) \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00023}00023     \mbox{\hyperlink{class_method_status}{MethodStatus}}\& \mbox{\hyperlink{class_method_status_a99f9727dfe7a474d751ff3a6a70eeea4}{operator=}}(\mbox{\hyperlink{class_method_status}{MethodStatus}} other);}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00025}00025     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}{get\_n\_iter}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00026}00026 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00027}\mbox{\hyperlink{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}{00027}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}{n\_iter\_}};}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00029}00029 }
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00030}00030 \};}
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{_method_status_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METHODSTATUS\_H}}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef METHODSTATUS\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define METHODSTATUS\_H}}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_method_status}{MethodStatus}}\{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}();}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_method_status}{MethodStatus}}\& other);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_method_status_a77c330ab127d3eda759bfa506ea29e9b}{MethodStatus}}(\textcolor{keywordtype}{size\_t} niter);}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_method_status}{\string~MethodStatus}}() \{\}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_method_status_a04f4893c49e13df705979caa3b264017}{swap}}(\mbox{\hyperlink{class_method_status}{MethodStatus}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_method_status}{MethodStatus}}\& \mbox{\hyperlink{class_method_status_a99f9727dfe7a474d751ff3a6a70eeea4}{operator=}}(\mbox{\hyperlink{class_method_status}{MethodStatus}} other);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_method_status_adbd7e1b682a90f1b9ec8c6a41b17a554}{get\_n\_iter}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_method_status_a1a534e5fb2fd75ff341ded79d3a4e196}{n\_iter\_}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METHODSTATUS\_H}}
 
 \end{DoxyCode}

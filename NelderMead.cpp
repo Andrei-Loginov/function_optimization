@@ -66,8 +66,9 @@ void NelderMead::init_simplex(){
     for (size_t i = 0; i < ndim_ + 1; ++i){
         simplex_[i].resize(ndim_);
         for (size_t j = 0; j < ndim_; ++j)
-            simplex_[i][j] = get_unif(0.75 * area_->get_limits(j).lower + 0.25 * area_->get_limits(j).upper,
-                                      0.75 * area_->get_limits(j).upper + 0.25 * area_->get_limits(j).lower);
+            simplex_[i][j] =
+                    get_unif(area_->get_limits(j).lower + 0.3 * (area_->get_limits(j).upper - area_->get_limits(j).lower),
+                                      area_->get_limits(j).upper - 0.3 * (area_->get_limits(j).upper - area_->get_limits(j).lower));
     }
     niter_ = 0;
     x_trajectory_.resize(0);
@@ -99,8 +100,6 @@ void NelderMead::make_iter(){
     size_t index_l = simplex_fun_[0].idx,
             index_h = simplex_fun_[simplex_fun_.size() - 1].idx;
 
-    //std::cout << "l, g, h: " << index_l << " " << index_g << " " << index_h << "\n";
-    //std::cout << "Centroid: " << centroid_;
     //reflection
     x_r = centroid_ + alpha_ * (centroid_ - simplex_[index_h]);
     if (!area_->is_in(x_r)){

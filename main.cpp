@@ -34,6 +34,17 @@ double Rosenbrock_3d(std::vector<double> x){
     return pow(1 - x[0], 2) + 100* pow(x[1] - pow(x[0], 2), 2) + pow(1 - x[1], 2) + 100* pow(x[2] - pow(x[1], 2), 2);
 }
 
+double Beale(std::vector<double> x){
+    double x_ = x[0], y_ = x[1];
+    return (pow((1.5 - x_ + x_ * y_), 2) + pow(2.25 - x_ +x_ * pow(y_, 2), 2) + pow(2.625 - x_ + x_ * pow(y_, 3), 2));
+}
+
+double Bukin_N6(std::vector<double> x){  //https://youtu.be/Nm44Wpy7jlU
+    double x_ = x[0], y_ = x[1];
+    return(100 * sqrt(abs(y_ - 0.01 * pow(x_,2))) + 0.01 * (x_ + 10));
+}
+
+
 double sum_of_abs(std::vector<double> x){
     return abs(x[0]) + abs(x[1]) + abs(x[2]);
 }
@@ -50,7 +61,7 @@ bool is_str_double(const std::string& str){
 
 
 int main(){
-    std::cout << Rosenbrock_2d({1, 1}) << "\n";
+    std::cout << Bukin_N6({-10, 1}) << "\n";
 
     SingletonGenerator::get_mt().seed(475);
     OptimizationMethod* optimizer = nullptr;
@@ -74,9 +85,10 @@ int main(){
             if (!scanf("%Iu", &action_index)) throw std::invalid_argument("Wrong format!"); //action_index
             if (action_index) {
                 func_index = -1;
-                while (func_index < 1 || func_index > 4){
+                while (func_index < 1 || func_index > 6){
                     std::cout << "Set function:\n\t1 --- Rosenbrock 2d\n\t2 --- Rosenbrock 3d\n\t";
-                    std::cout << "3 --- sum of abs 3d\n\t4 --- parabola 2d\n";
+                    std::cout << "3 --- sum of abs 3d\n\t4 --- parabola 2d\n\t5 - Beale function\n\t";
+                    std::cout << "6 --- Bukin function N6\n";
                     if (!scanf("%Iu", &func_index)) throw std::invalid_argument("Wrong format!");
                 }
                 switch(func_index) {
@@ -91,6 +103,12 @@ int main(){
                     break;
                 case 4:
                     f = Function(2, parabolic);
+                    break;
+                case 5:
+                    f = Function(2, Beale);
+                    break;
+                case 6:
+                    f = Function(2, Bukin_N6);
                     break;
                 }
 
